@@ -20,6 +20,7 @@ import MetricCard from "../components/portfolio/MetricCard";
 import LeadershipCard from "../components/portfolio/LeadershipCard";
 import ProjectCard from "../components/portfolio/ProjectCard";
 import GlassCard from "../components/portfolio/GlassCard";
+import ExpandableText from "../components/ExpandableText";
 
 export default function Home() {
   return (
@@ -362,50 +363,137 @@ export default function Home() {
             <GlassCard>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
+                  <ExpandableText>
                   <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "Giacomo combines strategic thinking with hands-on execution. His ability to
-                    bridge design, product, and engineering makes him invaluable to any team."
-                  </p>
+                    "Giacomo is a very good assets when it comes to build bridges between design and tech. Not only he has a very good understanding of both sides. His best characteristic is the ability to talk to both in their own languages and to be the medium across the two world, communicating efficiently needs, constraints and opportunities. Last but not least, he his a good team player, able to build boundaries with everyone in the office, which comes to a benefit to the design team. 
+                    He is also very good in research and humanistic approach. His ability to capture requirements and information out of interviews and focus groups is fantastic. Something I really value from a person in his position." </p></ExpandableText>
                   <div>
-                    <p className="font-semibold text-white">Jane Smith</p>
-                    <p className="text-sm text-[#94a3b8]">VP of Product • Tech Company</p>
+                    <p className="font-semibold text-white">Antonella Sassu</p>
+                    <p className="text-sm text-[#94a3b8]">Senior Manager Product Design B2B  • Tech Company</p>
                   </div>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0"></div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
+                  <img
+                  src="/images/profile/1756901959970.jpg"
+                  alt="Antonella Sassu" 
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                />
+                </div>
               </div>
             </GlassCard>
 
             <GlassCard delay={0.1}>
               <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
                 <div className="flex-1">
+                   <ExpandableText>
                   <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "Working with Giacomo taught me how to think about systems, not just screens.
-                    His teaching approach connects theory to real-world practice."
-                  </p>
+                    "I had the pleasure of working closely with Giacomo as a Design Lead Technologist at Dow Jones, and
+                    I can confidently say he is an exceptional professional. Giacomo played a critical role as a
+                    bridge between engineering and UX, which was instrumental in driving the success of our projects
+                    and ensuring smooth handoffs between teams.
+                    Additionally, I had the opportunity to collaborate with Giacomo on improving the User Acceptance
+                    Testing (UAT), Quality Assurance (QA), and Design acceptance processes. During this collaboration,
+                    Giacomo demonstrated his meticulous attention to detail, problem-solving skills, and dedication to
+                    optimizing workflows."
+                  </p></ExpandableText>
                   <div>
-                    <p className="font-semibold text-white">Alex Johnson</p>
-                    <p className="text-sm text-[#94a3b8]">Product Designer • Former Student</p>
+                    <p className="font-semibold text-white">Oana Stroe</p>
+                    <p className="text-sm text-[#94a3b8]">Design Lead | Product | UX Advocate• Tech Company</p>
                   </div>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0"></div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
+                   <img
+                  src="/images/profile/1710886367232.jpg"
+                  alt="Oana Stroe" 
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                />
+                </div>
               </div>
             </GlassCard>
 
             <GlassCard delay={0.2}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
+                   <ExpandableText>
                   <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "Rare combination of design craft and technical chops. Giacomo speaks
-                    developer and understands constraints—that earns immediate respect."
-                  </p>
+                    "I had the pleasure of working with Giacomo while teaching Intelligent Capital and Talent Management in the Master´s in International Business program at EAE Business School. 
+                    He not only helped organize the course and structure content but also brought invaluable expertise in cross-cultural management, ensuring students gained a truly global perspective.<br />
+                    Having taught Inclusive Leadership, I can confidently say that Giacomo embodies its principles. He fosters diverse perspectives, builds trust, and creates space where all voices are heard. 
+                    He doesn’t just lead—he empowers, ensuring that learning and collaboration thrive.<br />
+                    His communication skills stand out—clear, engaging, and adaptable. Whether leading discussions, mentoring students, or working with colleagues, he knows how to connect with people, spark thoughtful conversations, and bring key insights to life.
+                      And when it comes to collaboration, Giacomo strengthens every team he’s part of. <br />
+                      His leadership reflects the core values of global citizenship—inclusiveness, cultural competence, adaptability, and a genuine commitment to making a positive impact.
+                    I would highly recommend him for any role that values strong leadership, strategic management, and the ability to foster inclusive, cross-cultural collaboration. Any organization would be lucky to have him on board!"
+                          </p>
+                        </ExpandableText>
                   <div>
-                    <p className="font-semibold text-white">Carlos Rodriguez</p>
-                    <p className="text-sm text-[#94a3b8]">Engineering Lead • Previous Collaborator</p>
+                    <p className="font-semibold text-white"> Frank Longo </p>
+                    <p className="text-sm text-[#94a3b8]"> Higher Education Leader • Universty</p>
                   </div>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0"></div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
+                  <img
+                  src="/images/profile/1685965339196.jpg"
+                  alt="Frank Longo" 
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                />
+                </div>
               </div>
             </GlassCard>
+
+             <GlassCard delay={0.1}>
+              <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
+                <div className="flex-1">
+                   <ExpandableText>
+                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                    " I had the opportunity to be instructed by Giacomo in UX/UI at EAE. Giacomo's extensive experience
+                    and insightful perspective in this field provided me a solid foundation to effectively prepare and
+                    manage digital products. He is truly a great professional."
+                  </p></ExpandableText>
+                  <div>
+                    <p className="font-semibold text-white">Ismael Ruiz Gutierrez</p>
+                    <p className="text-sm text-[#94a3b8]">Marketing Strategy & Business Consultant • Former student</p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
+                   <img
+                  src="/images/profile/1685897244209.jpg"
+                  alt="Ismael Ruiz" 
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                />
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard delay={0.2}>
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <div className="flex-1">
+                   <ExpandableText>
+                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                    "Giacomo acted as consultant on a personal project that involved the design and implementation of a
+                    website. He mentored me and guided me through several difficult choices pointing at the direction
+                    to take for each of them. The project would not have been possible without his input. He is very
+                    professional and also fun to work with. Thanks, wish you all the best. "
+                          </p>
+                        </ExpandableText>
+                  <div>
+                    <p className="font-semibold text-white"> Sergio D'Argenio</p>
+                    <p className="text-sm text-[#94a3b8]"> Data Analyst • Tech Company</p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
+                  <img
+                  src="/images/profile/1517687171761.jpg"
+                  alt="Sergio D'Argenio" 
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                />
+                </div>
+              </div>
+            </GlassCard>
+
+
+
+
           </div>
         </div>
       </section>

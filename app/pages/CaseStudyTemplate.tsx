@@ -362,7 +362,7 @@ export default function CaseStudyTemplate({
                   View All Projects
                 </Link>
                 <a
-                  href="mailto:giacomo@example.com"
+                  href="mailto:consulting@giacomobianchi.tech"
                   className="px-8 py-4 glass rounded-xl text-white font-semibold hover:bg-[#0066ff] hover:border-[#0066ff] transition-all"
                 >
                   Let's Talk
