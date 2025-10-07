@@ -214,9 +214,9 @@ export default function Home() {
               role="Enterprise Leadership"
               title="Dow Jones Design System"
               company="Dow Jones"
-              timeframe="2021-2024"
+              timeframe= "2022-2025"
               description="Co-led enterprise design system serving 8 brands, aligning 60+ designers and generating 200K+ component references."
-              image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
+              image="/images/projects/DJ1.png"
               metrics={[
                 { value: "60%", label: "Friction Reduced" },
                 { value: "200K+", label: "Component Refs" },
@@ -231,7 +231,7 @@ export default function Home() {
               role="B2B Multi-platform"
               title="VoD Platform Redesign"
               company="Confidential Client"
-              timeframe="2020-2021"
+              timeframe="2025"
               description="Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays."
               image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
               metrics={[
@@ -248,7 +248,7 @@ export default function Home() {
               role="Growth & Business Impact"
               title="XpuntoCero Digital Transformation"
               company="XpuntoCero"
-              timeframe="2019-2020"
+              timeframe="2019-2022"
               description="Drove digital transformation resulting in 30% operational efficiency improvements."
               image="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop"
               metrics={[
@@ -265,7 +265,7 @@ export default function Home() {
               role="B2B SaaS Long-term"
               title="SGPV Product Evolution"
               company="SGPV"
-              timeframe="2016-2019"
+              timeframe="2020-2022"
               description="Led product evolution for enterprise SaaS platform over 3 years."
               image="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=450&fit=crop"
               metrics={[

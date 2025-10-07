@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 export default function ProjectIntroCard({ 
   image, 
   title, 
-  children 
+  children,
+  aspectRatio = "3:2"
 }: { 
   image: string;
   title: string;
   children: React.ReactNode;
+  aspectRatio?: string;
 }) {
   return (
     <motion.section
@@ -21,14 +23,16 @@ export default function ProjectIntroCard({
         <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-400/30 transition-all duration-300">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             {/* Left: Image */}
-            <div className="relative h-64 md:h-auto min-h-[400px]">
+
+            <div className="relative h-64 md:h-auto min-h-[400px] bg-white">
               <img
                 src={image}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0e27]/40"></div>
             </div>
+           
 
             {/* Right: Content */}
             <div className="p-8 md:p-12 flex flex-col justify-center">
