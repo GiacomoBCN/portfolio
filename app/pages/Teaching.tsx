@@ -11,28 +11,28 @@ import SectionHeader from "@/Components/portfolio/SectionHeader";
 export default function Teaching() {
   const courses = [
     {
-      name: "User Experience Design",
-      program: "Master in Digital Business & Innovation",
+      name: "Product Design (UX/UI)",
+      program: "Master in Digital Marketing",
       image: getImagePath('images/univerity/Product_D_GB.png'),
-      topics: ["User Research", "Wireframing & Prototyping", "Usability Testing", "Design Systems"],
-      outcomes: ["Students ship real products", "Industry partnerships", "Portfolio-ready work"],
-      tools: ["Figma", "Miro", "UserTesting", "Analytics"]
+      topics: ["User Research", "Information Architecture","Wireframing & Prototyping", "UI Design Patterns", "Usability Testing", "Design Systems",  "Cross-Cultural Communication",],
+      outcomes: ["End-to-End Design Process", "Practical Team Projects", "Design Thinking & Toolsk"],
+      tools: ["Figma", "Miro", "Maze","Notion",]
     },
     {
-      name: "Product Management Fundamentals",
-      program: "Master in Digital Business & Innovation",
+      name: "Cross Cultural managment",
+      program: "Master in International Business",
       image: getImagePath('images/univerity/CCM.png'),
-      topics: ["Product Strategy", "Roadmap Planning", "Stakeholder Management", "Metrics & KPIs"],
+      topics: ["Management Across Cultures", "Global Leadership", "Cultural Environment", "Organizational Culture", "Intercultural Communication", "Negotiation", "Managing Global Teams", "Ethics & Responsibility in Global Contexts" ],
       outcomes: ["Cross-functional thinking", "Business case development", "Data-driven decisions"],
       tools: ["Product Board", "JIRA", "Analytics", "SQL"]
     },
     {
-      name: "Design Thinking Workshop",
+      name: "AI Workshop",
       program: "Executive Education",
       image: getImagePath('images/univerity/AI_tools.png'),
-      topics: ["Ideation Techniques", "Rapid Prototyping", "User-Centered Innovation", "Team Collaboration"],
-      outcomes: ["Innovation frameworks", "Prototyping skills", "Team facilitation"],
-      tools: ["Miro", "Figma", "Physical Prototyping"]
+      topics: ["AI in Design Workflows", "Prompt Engineering", "Rapid Prototyping"],
+      outcomes: ["AI-Enhanced Creativity", "Prompt Engineering for Design", "AI Integration in UX Workflows"],
+      tools: ["Figma", "ChatGpt", "Midjourney",]
     }
   ];
 
@@ -253,28 +253,15 @@ export default function Teaching() {
           <GlassCard>
             <div className="prose prose-invert max-w-none">
               <p className="text-lg text-[#cbd5e1] leading-relaxed mb-6">
-                I believe the best product designers and managers learn by solving real problems, 
-                not just studying theory. My teaching approach brings industry challenges directly 
-                into the classroom.
+                I see teaching as a dialogue between theory and practice. My goal is to help students connect what they learn in class to the complexity of real professional life — where outcomes are uncertain, collaboration is essential, and critical thinking makes the difference.
               </p>
 
               <p className="text-lg text-[#cbd5e1] leading-relaxed mb-6">
-                Every project students work on mirrors what they'll face in their careers: 
-                ambiguous requirements, competing stakeholders, technical constraints, and 
-                tight deadlines. I teach them how to navigate these complexities with 
-                confidence and strategic thinking.
+                Drawing on my background in psychology and design, I approach education as a process of guided discovery. I encourage students to question, test, and refine their ideas through practice rather than memorization. Mistakes are treated as learning moments, and reflection is a constant part of the process.
               </p>
 
               <p className="text-lg text-[#cbd5e1] leading-relaxed mb-6">
-                My goal isn't just to teach design or product management—it's to develop 
-                leaders who can bridge design, product, and engineering. Students learn to 
-                speak multiple languages: the language of users, business, and technology.
-              </p>
-
-              <p className="text-lg text-[#cbd5e1] leading-relaxed">
-                The measure of success isn't grades—it's career outcomes. My students go on 
-                to lead products at top companies because they've already done the work during 
-                their studies.
+                Ultimately, I aim to prepare students who can think independently and work effectively across disciplines and cultures. Beyond technical skills, I want them to leave the classroom with a clear sense of responsibility, curiosity, and confidence in their ability to contribute meaningfully to the world around them.
               </p>
             </div>
           </GlassCard>
@@ -288,9 +275,13 @@ export default function Teaching() {
 
           <GlassCard>
             <div className="flex items-start gap-6">
-              <div className="w-16 h-16 glass rounded-full flex items-center justify-center flex-shrink-0" style={{ boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)' }}>
+            
+              <div className="w-16 h-16 glass rounded-full flex items-center justify-center flex-shrink-0 hidden md:flex" style={{ boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)' }}>
                 <Award size={32} className="text-[#00d4ff]" />
               </div>
+
+
+
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">
                   PhD in Occupational Health and Industrial Relations
