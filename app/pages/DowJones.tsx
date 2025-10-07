@@ -11,6 +11,7 @@ import MetricShowcase from "../components/casestudy/MetricShowcase";
 import LeadershipProfile from "../components/casestudy/LeadershipProfile";
 import ProjectIntroCard from "../components/work/ProjectIntroCard";
 import ProjectGallery from "../components/work/ProjectGallery";
+import { getImagePath } from '@/utils/image';
 
 export default function DowJones() {
   
@@ -127,7 +128,7 @@ export default function DowJones() {
       {/* Intro Card with your actual image */}
    
       <ProjectIntroCard 
-        image="/images/projects/brand-ds.png"
+        image={getImagePath('images/projects/brand-ds.png')}
         title="Building a Unified System at Scale"
       >
       
@@ -214,16 +215,16 @@ export default function DowJones() {
         title="Project Gallery"
         images={[
           {
-            src: "/images/projects/token1-ds.png",
-            alt: "Design System Components"
+            src:  getImagePath('images/projects/token1-ds.png'),
+            alt: "Design System"
           },
           {
-            src: "/images/projects/token2-ds.png",
+            src: getImagePath('images/projects/token2-ds.png'),
             alt: "Design Tokens"
           },
           {
-            src: "/images/projects/token3-ds.png",
-            alt: "Design System Architecture"
+            src:  getImagePath('images/projects/token3-ds.png'),
+            alt: "Design System"
           }
         ]}
       />

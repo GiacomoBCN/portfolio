@@ -216,7 +216,7 @@ export default function Home() {
               company="Dow Jones"
               timeframe= "2022-2025"
               description="Co-led enterprise design system serving 8 brands, aligning 60+ designers and generating 200K+ component references."
-              image="/images/projects/DJ1.png"
+              image={getImagePath('images/projects/DJ1.png')}
               metrics={[
                 { value: "60%", label: "Friction Reduced" },
                 { value: "200K+", label: "Component Refs" },
