@@ -140,7 +140,7 @@ export default function Home() {
             />
             <MetricCard
               icon={GraduationCap}
-              headline="500+"
+              headline="1000+"
               metrics={[
                 "Students mentored over 7 years",
                 "19 project teams annually",
@@ -168,7 +168,7 @@ export default function Home() {
                 "Mentored designers and managed contractors",
                 "Aligned 120+ cross-functional stakeholders",
                 "Built collaborative culture through critique",
-                "Taught 500+ students (7 years university level)",
+                "Taught 1000+ students (7 years university level)",
                 "Promoted design excellence through mentorship"
               ]}
               delay={0}
@@ -232,12 +232,12 @@ export default function Home() {
               title="VoD Platform Redesign"
               company="Confidential Client"
               timeframe="2020-2021"
-              description="Led multi-platform redesign reducing friction by 60% while increasing mobile traffic 40%."
+              description="Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays."
               image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
               metrics={[
-                { value: "60%", label: "Less Friction" },
-                { value: "40%", label: "Mobile Growth" },
-                { value: "3", label: "Platforms" }
+                { value: "40%", label: "Less Friction" },
+                { value: "WCAG AA", label: "Compliant" },
+                { value: "5", label: "Platforms" }
               ]}
               tags={["UX Strategy", "Mobile", "Web", "Analytics"]}
               link={createPageUrl("VoDCaseStudy")}
@@ -554,7 +554,7 @@ export default function Home() {
                   Teaching & Research
                 </h3>
                 <p className="text-[#cbd5e1] mb-8 leading-relaxed">
-                  Discover my experience teaching 500+ students and bridging academic
+                  Discover my experience teaching 1000+ students and bridging academic
                   research with industry practice.
                 </p>
                 <Link

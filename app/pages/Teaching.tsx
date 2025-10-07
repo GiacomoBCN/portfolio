@@ -1,15 +1,19 @@
 "use client";
 import React from "react";
-import { GraduationCap, Users, BookOpen, Award, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import SectionHeader from "../components/portfolio/SectionHeader";
-import GlassCard from "../components/portfolio/GlassCard";
+import { GraduationCap, Users, BookOpen, TrendingUp, Award } from "lucide-react";
+import Image from "next/image";
+import { getImagePath } from '@/utils/image';
+import ExpandableText from "@/Components/ExpandableText";
+import GlassCard from "@/Components/portfolio/GlassCard";
+import SectionHeader from "@/Components/portfolio/SectionHeader";
 
 export default function Teaching() {
   const courses = [
     {
       name: "User Experience Design",
       program: "Master in Digital Business & Innovation",
+      image: getImagePath('images/univerity/Product_D_GB.png'),
       topics: ["User Research", "Wireframing & Prototyping", "Usability Testing", "Design Systems"],
       outcomes: ["Students ship real products", "Industry partnerships", "Portfolio-ready work"],
       tools: ["Figma", "Miro", "UserTesting", "Analytics"]
@@ -17,6 +21,7 @@ export default function Teaching() {
     {
       name: "Product Management Fundamentals",
       program: "Master in Digital Business & Innovation",
+      image: getImagePath('images/univerity/CCM.png'),
       topics: ["Product Strategy", "Roadmap Planning", "Stakeholder Management", "Metrics & KPIs"],
       outcomes: ["Cross-functional thinking", "Business case development", "Data-driven decisions"],
       tools: ["Product Board", "JIRA", "Analytics", "SQL"]
@@ -24,6 +29,7 @@ export default function Teaching() {
     {
       name: "Design Thinking Workshop",
       program: "Executive Education",
+      image: getImagePath('images/univerity/AI_tools.png'),
       topics: ["Ideation Techniques", "Rapid Prototyping", "User-Centered Innovation", "Team Collaboration"],
       outcomes: ["Innovation frameworks", "Prototyping skills", "Team facilitation"],
       tools: ["Miro", "Figma", "Physical Prototyping"]
@@ -70,8 +76,7 @@ export default function Teaching() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-[#cbd5e1] mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            I bring real-world product expertise into the classroom, 
-            teaching 500+ students how to build products that matter.
+            I bring real-world product expertise into the classroom, helping 1000+ students design impactful products and navigate the challenges of cross-cultural collaboration.
           </motion.p>
         </motion.div>
       </section>
@@ -99,7 +104,7 @@ export default function Teaching() {
                     <Users size={24} className="text-[#00d4ff]" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-[#00d4ff]">500+</div>
+                    <div className="text-3xl font-bold text-[#00d4ff]">1000+</div>
                     <div className="text-sm text-[#94a3b8]">Students mentored</div>
                   </div>
                 </div>
@@ -110,7 +115,7 @@ export default function Teaching() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-[#00d4ff]">2</div>
-                    <div className="text-sm text-[#94a3b8]">Master's programs</div>
+                    <div className="text-sm text-[#94a3b8]">Master’s courses across official programs</div>
                   </div>
                 </div>
 
@@ -120,7 +125,7 @@ export default function Teaching() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-[#00d4ff]">19 teams</div>
-                    <div className="text-sm text-[#94a3b8]">Managed annually</div>
+                    <div className="text-sm text-[#94a3b8]">Guided through full product design projects each year</div>
                   </div>
                 </div>
               </div>
@@ -131,34 +136,30 @@ export default function Teaching() {
               <h3 className="text-2xl font-bold text-white mb-6">Teaching Approach</h3>
               <div className="space-y-4">
                 <div className="pb-4 border-b border-[rgba(255,255,255,0.08)]">
-                  <h4 className="font-semibold text-white mb-2">Practice-Informed Pedagogy</h4>
+                  <h4 className="font-semibold text-white mb-2">Experiential Learning</h4>
                   <p className="text-[#cbd5e1] text-sm leading-relaxed">
-                    Every lecture connects to real industry challenges I've solved. 
-                    Students learn by doing, not just listening.
+                    My teaching approach combines theory with real-world application. Students learn by doing — designing, collaborating, and reflecting — through hands-on experiences that connect academic concepts to professional practice.
                   </p>
                 </div>
 
                 <div className="pb-4 border-b border-[rgba(255,255,255,0.08)]">
-                  <h4 className="font-semibold text-white mb-2">Industry Partnerships</h4>
+                  <h4 className="font-semibold text-white mb-2">Collaborative Learning Environments</h4>
                   <p className="text-[#cbd5e1] text-sm leading-relaxed">
-                    Students work on actual business problems with live clients, 
-                    preparing them for real-world product roles.
+                    STeamwork is central to both courses. In Product Design (UX/UI), students work in design teams to deliver complete e-commerce projects. In Cross-Cultural Management, they collaborate through case studies and role plays, learning how cultural differences shape communication, leadership, and teamwork.
                   </p>
                 </div>
 
                 <div className="pb-4 border-b border-[rgba(255,255,255,0.08)]">
-                  <h4 className="font-semibold text-white mb-2">Portfolio Development</h4>
+                  <h4 className="font-semibold text-white mb-2">Skill Development through Practice</h4>
                   <p className="text-[#cbd5e1] text-sm leading-relaxed">
-                    Every project becomes a case study students can showcase. 
-                    Focus on outcomes, not just deliverables.
+                    Through project-based and interactive activities, students develop critical thinking, adaptability, and creative problem-solving skills. Each exercise is designed to help them perform effectively in diverse, multidisciplinary environments.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-white mb-2">Continuous Mentorship</h4>
+                  <h4 className="font-semibold text-white mb-2">Mentorship & Reflection</h4>
                   <p className="text-[#cbd5e1] text-sm leading-relaxed">
-                    I stay connected with students beyond graduation, helping 
-                    them navigate career transitions and job searches.
+                  I guide students throughout their learning journey, fostering awareness of their strengths and areas for growth. Reflection and feedback are key to helping them translate classroom experience into professional confidence and real-world competence.
                   </p>
                 </div>
               </div>
@@ -179,6 +180,16 @@ export default function Teaching() {
             {courses.map((course, index) => (
               <GlassCard key={index} delay={index * 0.1}>
                 <div className="mb-4">
+                  <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+                    <Image
+                      src={course.image}
+                      alt={course.name}
+                      width={400}
+                      height={300}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  
                   <h3 className="text-2xl font-bold text-white mb-2">{course.name}</h3>
                   <p className="text-sm text-[#00d4ff]">{course.program}</p>
                 </div>
@@ -282,28 +293,27 @@ export default function Teaching() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  PhD in Industrial & Organizational Psychology
+                  PhD in Occupational Health and Industrial Relations
                 </h3>
                 <p className="text-[#cbd5e1] mb-4">
-                  University of Barcelona • Focus: Human-Computer Interaction & Team Dynamics
+                  University of Bergamo • Focus: Human Factors, Behavioral Systems & Labour Regulations
                 </p>
 
                 <div className="space-y-4 mt-6">
                   <div>
                     <h4 className="font-semibold text-white mb-2">Research Focus</h4>
                     <p className="text-[#cbd5e1] text-sm leading-relaxed">
-                      My doctoral research explored how design decisions impact team collaboration 
-                      and organizational outcomes. This academic foundation informs how I approach 
-                      product leadership and design systems today.
+                     My academic journey began with a PhD at the University of Bergamo, where I explored how work environments, organizational design, and labour relations shape team performance, well-being, and collaboration. Through field research in SMEs and collaborations with healthcare organizations, I co-developed a scalable model for assessing work-related stress — integrating insights from human factors, behavioural systems, and labour law.
+                    </p>
+                     <p className="text-[#cbd5e1] text-sm leading-relaxed">
+                    Over time, my focus evolved from occupational health and organizational psychology toward technology — exploring how digital products are created, experienced, and improved through user interaction. This progression allowed me to apply evidence-based research methods to UX/UI design, team dynamics, and design system governance.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Applied to Practice</h4>
+                    <h4 className="font-semibold text-white mb-2">Applied to Practice and Teaching</h4>
                     <p className="text-[#cbd5e1] text-sm leading-relaxed">
-                      Understanding organizational psychology helps me navigate complex stakeholder 
-                      dynamics, build consensus across teams, and create systems that scale with 
-                      human behavior in mind.
+                      Today, my work bridges research and practice through industry-driven methodologies in UX/UI design and cross-cultural management. I guide teams and students in understanding how human behaviour, collaboration, and organizational design intersect — fostering scalable, people-centred frameworks that connect academic insight with real-world impact.
                     </p>
                   </div>
                 </div>

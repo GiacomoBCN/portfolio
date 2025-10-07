@@ -21,7 +21,7 @@ export default function ProductWork() {
       category: "PRODUCT STRATEGY · B2B",
       title: "VoD Platform Redesign",
       role: "Product Consultant",
-      year: "2024",
+      year: "2025",
       description: "Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays.",
       metrics: [
         { value: "40%", label: "Steps Reduced" },
@@ -123,9 +123,7 @@ export default function ProductWork() {
           </p>
           
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Over 8+ years, I've led product initiatives from enterprise design systems 
-            to B2B SaaS transformations. Each project demonstrates cross-functional 
-            leadership, strategic thinking, and measurable outcomes.
+            Over 8+ years, I’ve led digital product initiatives across B2B, B2C, and enterprise environments — from design systems to SaaS transformations. Each project reflects hands-on leadership, clear strategy, and tangible results.
           </p>
         </div>
       </section>
