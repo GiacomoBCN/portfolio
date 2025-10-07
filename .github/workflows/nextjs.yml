@@ -75,6 +75,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Copy public assets to build output
+        run: |
+          echo "Copying public folder to build output..."
+          cp -r public/* ./out/
+          echo "Public assets copied successfully"
       - name: Verify build output
         run: |
           echo "Checking build output structure..."
