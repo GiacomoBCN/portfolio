@@ -1,6 +1,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { createPageUrl } from "@/utils";
 import {
   ChevronDown,
@@ -14,6 +15,7 @@ import {
   Sparkles,
   Briefcase
 } from "lucide-react";
+
 import { motion } from "framer-motion";
 import SectionHeader from "../components/portfolio/SectionHeader";
 import MetricCard from "../components/portfolio/MetricCard";
@@ -373,12 +375,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
-                  <img
-                  src="/images/profile/1756901959970.jpg"
-                  alt="Antonella Sassu" 
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                />
+                  <Image
+                    src="/images/profile/1756901959970.jpg"
+                    alt="Antonella Sassu" 
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
                 </div>
+                
               </div>
             </GlassCard>
 
@@ -401,12 +406,14 @@ export default function Home() {
                     <p className="text-sm text-[#94a3b8]">Design Lead | Product | UX Advocate• Tech Company</p>
                   </div>
                 </div>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
-                   <img
-                  src="/images/profile/1710886367232.jpg"
-                  alt="Oana Stroe" 
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                />
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
+                  <Image
+                    src="/images/profile/1710886367232.jpg"
+                    alt="Oana Stroe" 
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
                 </div>
               </div>
             </GlassCard>
@@ -414,7 +421,7 @@ export default function Home() {
             <GlassCard delay={0.2}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
-                   <ExpandableText>
+                <ExpandableText>
                   <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
                     "I had the pleasure of working with Giacomo while teaching Intelligent Capital and Talent Management in the Master´s in International Business program at EAE Business School. 
                     He not only helped organize the course and structure content but also brought invaluable expertise in cross-cultural management, ensuring students gained a truly global perspective.<br />
@@ -425,18 +432,20 @@ export default function Home() {
                       His leadership reflects the core values of global citizenship—inclusiveness, cultural competence, adaptability, and a genuine commitment to making a positive impact.
                     I would highly recommend him for any role that values strong leadership, strategic management, and the ability to foster inclusive, cross-cultural collaboration. Any organization would be lucky to have him on board!"
                           </p>
-                        </ExpandableText>
+                  </ExpandableText>
                   <div>
                     <p className="font-semibold text-white"> Frank Longo </p>
                     <p className="text-sm text-[#94a3b8]"> Higher Education Leader • Universty</p>
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
-                  <img
-                  src="/images/profile/1685965339196.jpg"
-                  alt="Frank Longo" 
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                />
+                  <Image
+                    src="/images/profile/1685965339196.jpg"
+                    alt="Frank Longo" 
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
                 </div>
               </div>
             </GlassCard>
@@ -452,15 +461,17 @@ export default function Home() {
                   </p></ExpandableText>
                   <div>
                     <p className="font-semibold text-white">Ismael Ruiz Gutierrez</p>
-                    <p className="text-sm text-[#94a3b8]">Marketing Strategy & Business Consultant • Former student</p>
+                    <p className="text-sm text-[#94a3b8]">Marketing Strategy & Business Consultant • Former Student</p>
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
-                   <img
-                  src="/images/profile/1685897244209.jpg"
-                  alt="Ismael Ruiz" 
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                />
+                  <Image
+                    src="/images/profile/1685897244209.jpg"
+                    alt="Ismael Ruiz" 
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
                 </div>
               </div>
             </GlassCard>
@@ -482,11 +493,13 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
-                  <img
-                  src="/images/profile/1517687171761.jpg"
-                  alt="Sergio D'Argenio" 
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                />
+                  <Image
+                    src="/images/profile/1517687171761.jpg"
+                    alt="Sergio D'Argenio" 
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
                 </div>
               </div>
             </GlassCard>
