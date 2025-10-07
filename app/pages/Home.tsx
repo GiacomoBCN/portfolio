@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { createPageUrl } from "@/utils";
+import { getImagePath } from '@/utils/image';
 import {
   ChevronDown,
   Layers,
@@ -376,7 +377,7 @@ export default function Home() {
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
                   <Image
-                    src="/images/profile/1756901959970.jpg"
+                    src={getImagePath('images/profile/1756901959970.jpg')}
                     alt="Antonella Sassu" 
                     width={64}
                     height={64}
@@ -408,7 +409,8 @@ export default function Home() {
                 </div>
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
                   <Image
-                    src="/images/profile/1710886367232.jpg"
+                   
+                    src={getImagePath('images/profile/1710886367232.jpg')}
                     alt="Oana Stroe" 
                     width={64}
                     height={64}
@@ -440,7 +442,7 @@ export default function Home() {
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
                   <Image
-                    src="/images/profile/1685965339196.jpg"
+                    src={getImagePath('images/profile/1685965339196.jpg')}
                     alt="Frank Longo" 
                     width={64}
                     height={64}
@@ -466,7 +468,7 @@ export default function Home() {
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
                   <Image
-                    src="/images/profile/1685897244209.jpg"
+                    src={getImagePath('images/profile/1685897244209.jpg')}
                     alt="Ismael Ruiz" 
                     width={64}
                     height={64}
@@ -494,7 +496,8 @@ export default function Home() {
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
                   <Image
-                    src="/images/profile/1517687171761.jpg"
+                    
+                    src={getImagePath('images/profile/1517687171761.jpg')}
                     alt="Sergio D'Argenio" 
                     width={64}
                     height={64}
