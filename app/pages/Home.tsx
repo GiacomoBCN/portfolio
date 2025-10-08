@@ -1,9 +1,8 @@
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { createPageUrl } from "@/utils";
-import { getImagePath } from '@/utils/image';
+import { getImagePath } from "@/utils/image";
 import {
   ChevronDown,
   Layers,
@@ -14,7 +13,7 @@ import {
   Zap,
   Code,
   Sparkles,
-  Briefcase
+  Briefcase,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -32,10 +31,14 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center relative px-6">
         {/* Animated Background Grid */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 102, 255, 0.1) 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 102, 255, 0.1) 1px, transparent 1px)",
+              backgroundSize: "50px 50px",
+            }}
+          />
         </div>
 
         {/* Glow Effect */}
@@ -75,7 +78,8 @@ export default function Home() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-[#cbd5e1] mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            I lead cross-functional teams to build products that balance user needs with business impact.
+            I lead cross-functional teams to build products that balance user
+            needs with business impact.
           </motion.p>
 
           <motion.div
@@ -91,7 +95,7 @@ export default function Home() {
               View Product Work →
             </a>
             <Link
-            href={createPageUrl("Teaching")}
+              href={createPageUrl("Teaching")}
               className="px-8 py-4 glass rounded-xl text-white font-semibold hover:bg-[#0066ff] hover:border-[#0066ff] transition-all duration-200"
             >
               View Teaching Portfolio →
@@ -101,7 +105,12 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, repeat: Infinity, repeatType: "reverse", duration: 1.5 }}
+            transition={{
+              delay: 0.8,
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 1.5,
+            }}
             className="flex justify-center"
           >
             <ChevronDown size={32} className="text-[#0066ff] glow-blue" />
@@ -124,7 +133,7 @@ export default function Home() {
               metrics={[
                 "Designers aligned across 8 brands",
                 "200K+ component references",
-                "Co-led enterprise design system"
+                "Co-led enterprise design system",
               ]}
               delay={0}
             />
@@ -134,7 +143,7 @@ export default function Home() {
               metrics={[
                 "Friction reduction (VoD platform)",
                 "40% mobile traffic increase",
-                "30% efficiency improvement"
+                "30% efficiency improvement",
               ]}
               delay={0.1}
             />
@@ -144,7 +153,7 @@ export default function Home() {
               metrics={[
                 "Students mentored over 7 years",
                 "19 project teams annually",
-                "2 master's programs taught"
+                "2 master's programs taught",
               ]}
               delay={0.2}
             />
@@ -169,7 +178,7 @@ export default function Home() {
                 "Aligned 120+ cross-functional stakeholders",
                 "Built collaborative culture through critique",
                 "Taught 1000+ students (7 years university level)",
-                "Promoted design excellence through mentorship"
+                "Promoted design excellence through mentorship",
               ]}
               delay={0}
             />
@@ -181,7 +190,7 @@ export default function Home() {
                 "Managed feature backlog for B2B platforms",
                 "Defined success metrics and tracked KPIs",
                 "Drove decisions based on research and data",
-                "Balanced user value with business constraints"
+                "Balanced user value with business constraints",
               ]}
               delay={0.1}
             />
@@ -193,7 +202,7 @@ export default function Home() {
                 "Facilitated alignment across 8 brands",
                 "Translated complexity into actionable roadmaps",
                 "Embedded accessibility into governance",
-                "Connected design to business outcomes"
+                "Connected design to business outcomes",
               ]}
               delay={0.2}
             />
@@ -214,13 +223,13 @@ export default function Home() {
               role="Enterprise Leadership"
               title="Dow Jones Design System"
               company="Dow Jones"
-              timeframe= "2022-2025"
+              timeframe="2022-2025"
               description="Co-led enterprise design system serving 8 brands, aligning 60+ designers and generating 200K+ component references."
-              image={getImagePath('images/projects/DJ1.png')}
+              image={getImagePath("images/projects/DJ1.png")}
               metrics={[
                 { value: "60%", label: "Friction Reduced" },
                 { value: "200K+", label: "Component Refs" },
-                { value: "8", label: "Brands Unified" }
+                { value: "8", label: "Brands Unified" },
               ]}
               tags={["Design Systems", "Leadership", "Figma", "Storybook"]}
               link={createPageUrl("DowJones")}
@@ -233,11 +242,11 @@ export default function Home() {
               company="Confidential Client"
               timeframe="2025"
               description="Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays."
-              image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
+              image={getImagePath("images/projects/Vod.png")}
               metrics={[
                 { value: "40%", label: "Less Friction" },
                 { value: "WCAG AA", label: "Compliant" },
-                { value: "5", label: "Platforms" }
+                { value: "5", label: "Platforms" },
               ]}
               tags={["UX Strategy", "Mobile", "Web", "Analytics"]}
               link={createPageUrl("VoDCaseStudy")}
@@ -254,7 +263,7 @@ export default function Home() {
               metrics={[
                 { value: "30%", label: "Efficiency" },
                 { value: "500K", label: "Yearly Sales" },
-                { value: "24/7", label: "Availability" }
+                { value: "24/7", label: "Availability" },
               ]}
               tags={["Strategy", "E-commerce", "Analytics"]}
               link={createPageUrl("XpuntoCero")}
@@ -271,7 +280,7 @@ export default function Home() {
               metrics={[
                 { value: "3yrs", label: "Evolution" },
                 { value: "B2B", label: "Enterprise" },
-                { value: "100%", label: "Adoption" }
+                { value: "100%", label: "Adoption" },
               ]}
               tags={["SaaS", "Product Strategy", "Enterprise"]}
               link={createPageUrl("SGPVEvolution")}
@@ -348,10 +357,11 @@ export default function Home() {
             className="max-w-4xl mx-auto text-center"
           >
             <p className="text-lg text-[#cbd5e1] leading-relaxed">
-              My technical background allows me to prototype rapidly, participate in engineering
-              discussions, and earn developer respect. I use AI tools to validate ideas in hours,
-              not weeks—building working prototypes that teams can react to instead of debating
-              abstract specs.
+              My technical background allows me to prototype rapidly,
+              participate in engineering discussions, and earn developer
+              respect. I use AI tools to validate ideas in hours, not
+              weeks—building working prototypes that teams can react to instead
+              of debating abstract specs.
             </p>
           </motion.div>
         </div>
@@ -367,109 +377,71 @@ export default function Home() {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
                   <ExpandableText>
-                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "Giacomo is a very good assets when it comes to build bridges between design and tech. Not only he has a very good understanding of both sides. His best characteristic is the ability to talk to both in their own languages and to be the medium across the two world, communicating efficiently needs, constraints and opportunities. Last but not least, he his a good team player, able to build boundaries with everyone in the office, which comes to a benefit to the design team. 
-                    He is also very good in research and humanistic approach. His ability to capture requirements and information out of interviews and focus groups is fantastic. Something I really value from a person in his position." </p></ExpandableText>
+                    <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                      "Giacomo is a very good assets when it comes to build
+                      bridges between design and tech. Not only he has a very
+                      good understanding of both sides. His best characteristic
+                      is the ability to talk to both in their own languages and
+                      to be the medium across the two world, communicating
+                      efficiently needs, constraints and opportunities. Last but
+                      not least, he his a good team player, able to build
+                      boundaries with everyone in the office, which comes to a
+                      benefit to the design team. He is also very good in
+                      research and humanistic approach. His ability to capture
+                      requirements and information out of interviews and focus
+                      groups is fantastic. Something I really value from a
+                      person in his position."{" "}
+                    </p>
+                  </ExpandableText>
                   <div>
                     <p className="font-semibold text-white">Antonella Sassu</p>
-                    <p className="text-sm text-[#94a3b8]">Senior Manager Product Design B2B  • Tech Company</p>
+                    <p className="text-sm text-[#94a3b8]">
+                      Senior Manager Product Design B2B • Tech Company
+                    </p>
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
                   <Image
-                    src={getImagePath('images/profile/1756901959970.jpg')}
-                    alt="Antonella Sassu" 
+                    src={getImagePath("images/profile/1756901959970.jpg")}
+                    alt="Antonella Sassu"
                     width={64}
                     height={64}
                     className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   />
                 </div>
-                
               </div>
             </GlassCard>
 
             <GlassCard delay={0.1}>
               <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
                 <div className="flex-1">
-                   <ExpandableText>
-                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "I had the pleasure of working closely with Giacomo as a Design Lead Technologist at Dow Jones, and
-                    I can confidently say he is an exceptional professional. Giacomo played a critical role as a
-                    bridge between engineering and UX, which was instrumental in driving the success of our projects
-                    and ensuring smooth handoffs between teams.
-                    Additionally, I had the opportunity to collaborate with Giacomo on improving the User Acceptance
-                    Testing (UAT), Quality Assurance (QA), and Design acceptance processes. During this collaboration,
-                    Giacomo demonstrated his meticulous attention to detail, problem-solving skills, and dedication to
-                    optimizing workflows."
-                  </p></ExpandableText>
-                  <div>
-                    <p className="font-semibold text-white">Oana Stroe</p>
-                    <p className="text-sm text-[#94a3b8]">Design Lead | Product | UX Advocate• Tech Company</p>
-                  </div>
-                </div>
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
-                  <Image
-                   
-                    src={getImagePath('images/profile/1710886367232.jpg')}
-                    alt="Oana Stroe" 
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                  />
-                </div>
-              </div>
-            </GlassCard>
-
-            <GlassCard delay={0.2}>
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                <div className="flex-1">
-                <ExpandableText>
-                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "I had the pleasure of working with Giacomo while teaching Intelligent Capital and Talent Management in the Master´s in International Business program at EAE Business School. 
-                    He not only helped organize the course and structure content but also brought invaluable expertise in cross-cultural management, ensuring students gained a truly global perspective.<br />
-                    Having taught Inclusive Leadership, I can confidently say that Giacomo embodies its principles. He fosters diverse perspectives, builds trust, and creates space where all voices are heard. 
-                    He doesn’t just lead—he empowers, ensuring that learning and collaboration thrive.<br />
-                    His communication skills stand out—clear, engaging, and adaptable. Whether leading discussions, mentoring students, or working with colleagues, he knows how to connect with people, spark thoughtful conversations, and bring key insights to life.
-                      And when it comes to collaboration, Giacomo strengthens every team he’s part of. <br />
-                      His leadership reflects the core values of global citizenship—inclusiveness, cultural competence, adaptability, and a genuine commitment to making a positive impact.
-                    I would highly recommend him for any role that values strong leadership, strategic management, and the ability to foster inclusive, cross-cultural collaboration. Any organization would be lucky to have him on board!"
-                          </p>
+                  <ExpandableText>
+                    <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                      "I had the pleasure of working closely with Giacomo as a
+                      Design Lead Technologist at Dow Jones, and I can
+                      confidently say he is an exceptional professional. Giacomo
+                      played a critical role as a bridge between engineering and
+                      UX, which was instrumental in driving the success of our
+                      projects and ensuring smooth handoffs between teams.
+                      Additionally, I had the opportunity to collaborate with
+                      Giacomo on improving the User Acceptance Testing (UAT),
+                      Quality Assurance (QA), and Design acceptance processes.
+                      During this collaboration, Giacomo demonstrated his
+                      meticulous attention to detail, problem-solving skills,
+                      and dedication to optimizing workflows."
+                    </p>
                   </ExpandableText>
                   <div>
-                    <p className="font-semibold text-white"> Frank Longo </p>
-                    <p className="text-sm text-[#94a3b8]"> Higher Education Leader • Universty</p>
-                  </div>
-                </div>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
-                  <Image
-                    src={getImagePath('images/profile/1685965339196.jpg')}
-                    alt="Frank Longo" 
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                  />
-                </div>
-              </div>
-            </GlassCard>
-
-             <GlassCard delay={0.1}>
-              <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
-                <div className="flex-1">
-                   <ExpandableText>
-                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    " I had the opportunity to be instructed by Giacomo in UX/UI at EAE. Giacomo's extensive experience
-                    and insightful perspective in this field provided me a solid foundation to effectively prepare and
-                    manage digital products. He is truly a great professional."
-                  </p></ExpandableText>
-                  <div>
-                    <p className="font-semibold text-white">Ismael Ruiz Gutierrez</p>
-                    <p className="text-sm text-[#94a3b8]">Marketing Strategy & Business Consultant • Former Student</p>
+                    <p className="font-semibold text-white">Oana Stroe</p>
+                    <p className="text-sm text-[#94a3b8]">
+                      Design Lead | Product | UX Advocate• Tech Company
+                    </p>
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
                   <Image
-                    src={getImagePath('images/profile/1685897244209.jpg')}
-                    alt="Ismael Ruiz" 
+                    src={getImagePath("images/profile/1710886367232.jpg")}
+                    alt="Oana Stroe"
                     width={64}
                     height={64}
                     className="w-16 h-16 rounded-full object-cover flex-shrink-0"
@@ -481,24 +453,51 @@ export default function Home() {
             <GlassCard delay={0.2}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
-                   <ExpandableText>
-                  <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
-                    "Giacomo acted as consultant on a personal project that involved the design and implementation of a
-                    website. He mentored me and guided me through several difficult choices pointing at the direction
-                    to take for each of them. The project would not have been possible without his input. He is very
-                    professional and also fun to work with. Thanks, wish you all the best. "
-                          </p>
-                        </ExpandableText>
+                  <ExpandableText>
+                    <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                      "I had the pleasure of working with Giacomo while teaching
+                      Intelligent Capital and Talent Management in the Master´s
+                      in International Business program at EAE Business School.
+                      He not only helped organize the course and structure
+                      content but also brought invaluable expertise in
+                      cross-cultural management, ensuring students gained a
+                      truly global perspective.
+                      <br />
+                      Having taught Inclusive Leadership, I can confidently say
+                      that Giacomo embodies its principles. He fosters diverse
+                      perspectives, builds trust, and creates space where all
+                      voices are heard. He doesn’t just lead—he empowers,
+                      ensuring that learning and collaboration thrive.
+                      <br />
+                      His communication skills stand out—clear, engaging, and
+                      adaptable. Whether leading discussions, mentoring
+                      students, or working with colleagues, he knows how to
+                      connect with people, spark thoughtful conversations, and
+                      bring key insights to life. And when it comes to
+                      collaboration, Giacomo strengthens every team he’s part
+                      of. <br />
+                      His leadership reflects the core values of global
+                      citizenship—inclusiveness, cultural competence,
+                      adaptability, and a genuine commitment to making a
+                      positive impact. I would highly recommend him for any role
+                      that values strong leadership, strategic management, and
+                      the ability to foster inclusive, cross-cultural
+                      collaboration. Any organization would be lucky to have him
+                      on board!"
+                    </p>
+                  </ExpandableText>
                   <div>
-                    <p className="font-semibold text-white"> Sergio D'Argenio</p>
-                    <p className="text-sm text-[#94a3b8]"> Data Analyst • Tech Company</p>
+                    <p className="font-semibold text-white"> Frank Longo </p>
+                    <p className="text-sm text-[#94a3b8]">
+                      {" "}
+                      Higher Education Leader • Universty
+                    </p>
                   </div>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
                   <Image
-                    
-                    src={getImagePath('images/profile/1517687171761.jpg')}
-                    alt="Sergio D'Argenio" 
+                    src={getImagePath("images/profile/1685965339196.jpg")}
+                    alt="Frank Longo"
                     width={64}
                     height={64}
                     className="w-16 h-16 rounded-full object-cover flex-shrink-0"
@@ -507,9 +506,75 @@ export default function Home() {
               </div>
             </GlassCard>
 
+            <GlassCard delay={0.1}>
+              <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
+                <div className="flex-1">
+                  <ExpandableText>
+                    <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                      " I had the opportunity to be instructed by Giacomo in
+                      UX/UI at EAE. Giacomo's extensive experience and
+                      insightful perspective in this field provided me a solid
+                      foundation to effectively prepare and manage digital
+                      products. He is truly a great professional."
+                    </p>
+                  </ExpandableText>
+                  <div>
+                    <p className="font-semibold text-white">
+                      Ismael Ruiz Gutierrez
+                    </p>
+                    <p className="text-sm text-[#94a3b8]">
+                      Marketing Strategy & Business Consultant • Former Student
+                    </p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0066ff] flex-shrink-0">
+                  <Image
+                    src={getImagePath("images/profile/1685897244209.jpg")}
+                    alt="Ismael Ruiz"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
+                </div>
+              </div>
+            </GlassCard>
 
-
-
+            <GlassCard delay={0.2}>
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <div className="flex-1">
+                  <ExpandableText>
+                    <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+                      "Giacomo acted as consultant on a personal project that
+                      involved the design and implementation of a website. He
+                      mentored me and guided me through several difficult
+                      choices pointing at the direction to take for each of
+                      them. The project would not have been possible without his
+                      input. He is very professional and also fun to work with.
+                      Thanks, wish you all the best. "
+                    </p>
+                  </ExpandableText>
+                  <div>
+                    <p className="font-semibold text-white">
+                      {" "}
+                      Sergio D'Argenio
+                    </p>
+                    <p className="text-sm text-[#94a3b8]">
+                      {" "}
+                      Data Analyst • Tech Company
+                    </p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0066ff] to-[#00d4ff] flex-shrink-0">
+                  <Image
+                    src={getImagePath("images/profile/1517687171761.jpg")}
+                    alt="Sergio D'Argenio"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
+                </div>
+              </div>
+            </GlassCard>
           </div>
         </div>
       </section>
@@ -530,8 +595,8 @@ export default function Home() {
                   Product & Design Leadership
                 </h3>
                 <p className="text-[#cbd5e1] mb-8 leading-relaxed">
-                  Explore my work leading cross-functional teams, building design systems,
-                  and driving measurable business impact.
+                  Explore my work leading cross-functional teams, building
+                  design systems, and driving measurable business impact.
                 </p>
                 <a
                   href="#work"
@@ -547,20 +612,23 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#00d4ff]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
               <div className="relative z-10">
-                <div className="w-16 h-16 glass rounded-full flex items-center justify-center mb-6" style={{ boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)' }}>
+                <div
+                  className="w-16 h-16 glass rounded-full flex items-center justify-center mb-6"
+                  style={{ boxShadow: "0 0 20px rgba(0, 212, 255, 0.3)" }}
+                >
                   <GraduationCap size={32} className="text-[#00d4ff]" />
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Teaching & Research
                 </h3>
                 <p className="text-[#cbd5e1] mb-8 leading-relaxed">
-                  Discover my experience teaching 1000+ students and bridging academic
-                  research with industry practice.
+                  Discover my experience teaching 1000+ students and bridging
+                  academic research with industry practice.
                 </p>
                 <Link
-                href={createPageUrl("Teaching")}
+                  href={createPageUrl("Teaching")}
                   className="inline-block px-8 py-4 glass rounded-xl text-white font-semibold border-2 border-[#00d4ff] hover:bg-[#00d4ff] transition-all duration-200"
-                  style={{ boxShadow: '0 0 20px rgba(0, 212, 255, 0.2)' }}
+                  style={{ boxShadow: "0 0 20px rgba(0, 212, 255, 0.2)" }}
                 >
                   View Teaching Portfolio →
                 </Link>
