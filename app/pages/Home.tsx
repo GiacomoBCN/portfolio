@@ -231,7 +231,13 @@ export default function Home() {
                 { value: "200K+", label: "Component Refs" },
                 { value: "8", label: "Brands Unified" },
               ]}
-              tags={["Design Systems", "Leadership", "Figma", "Storybook"]}
+              tags={[
+                "Design Systems",
+                "Leadership",
+                "AI-Enhanced",
+                "Figma",
+                "Storybook",
+              ]}
               link={createPageUrl("DowJones")}
               delay={0}
             />
@@ -248,7 +254,7 @@ export default function Home() {
                 { value: "WCAG AA", label: "Compliant" },
                 { value: "5", label: "Platforms" },
               ]}
-              tags={["UX Strategy", "Mobile", "Web", "Analytics"]}
+              tags={["Consultant", "UX Strategy", "Web", "Multy platform"]}
               link={createPageUrl("VoDCaseStudy")}
               delay={0.1}
             />
@@ -259,13 +265,13 @@ export default function Home() {
               company="XpuntoCero"
               timeframe="2019-2022"
               description="Drove digital transformation resulting in 30% operational efficiency improvements."
-              image="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop"
+              image={getImagePath("images/projects/XP0.png")}
               metrics={[
                 { value: "30%", label: "Efficiency" },
                 { value: "500K", label: "Yearly Sales" },
                 { value: "24/7", label: "Availability" },
               ]}
-              tags={["Strategy", "E-commerce", "Analytics"]}
+              tags={["Strategy", "PWA", "UX Research", "Brand Identity"]}
               link={createPageUrl("XpuntoCero")}
               delay={0.2}
             />
