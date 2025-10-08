@@ -1,16 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function ProjectIntroCard({ 
-  image, 
-  title, 
+export default function ProjectIntroCard({
+  image,
+  title,
   children,
-  aspectRatio = "3:2"
-}: { 
+  aspectRatio = "3:2",
+  showGradient = true,
+}: {
   image: string;
   title: string;
   children: React.ReactNode;
   aspectRatio?: string;
+  showGradient?: boolean;
 }) {
   return (
     <motion.section
@@ -30,9 +32,10 @@ export default function ProjectIntroCard({
                 alt={title}
                 className="absolute inset-0 w-full h-full object-contain"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0e27]/40"></div>
+              {showGradient && (
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0e27]/40"></div>
+              )}
             </div>
-           
 
             {/* Right: Content */}
             <div className="p-8 md:p-12 flex flex-col justify-center">

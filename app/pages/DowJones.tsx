@@ -161,6 +161,7 @@ export default function DowJones() {
       <ProjectIntroCard
         image={getImagePath("images/projects/brand-ds.png")}
         title="Building a Unified System at Scale"
+        showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
           Dow Jones operates multiple B2B and B2C brands including The Wall

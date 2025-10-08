@@ -8,12 +8,12 @@ import ProjectIntroCard from "../components/work/ProjectIntroCard";
 
 export default function BackOffice() {
   // TODO: Technical scalability focused
-  
+
   return (
     <div className="min-h-screen">
       <div className="fixed top-24 left-6 z-40">
         <Link
-        href={createPageUrl("ProductWork")}
+          href={createPageUrl("ProductWork")}
           className="flex items-center gap-2 px-4 py-2 glass rounded-lg text-[#cbd5e1] hover:text-white transition-all"
         >
           <ArrowLeft size={20} />
@@ -38,20 +38,27 @@ export default function BackOffice() {
             Product Designer & Front-End Developer · 2019-2022
           </p>
           <p className="text-xl text-gray-300 mb-8">
-            Unified 15 client portals with shared CSS, reducing redundant work by 80%.
+            Unified 15 client portals with shared CSS, reducing redundant work
+            by 80%.
           </p>
         </div>
       </section>
 
-      <ProjectIntroCard 
+      <ProjectIntroCard
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
         title="Scaling Through Smart Architecture"
+        showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
-          Managing 15 separate client portals meant duplicating design and development work across every instance. Updates required changing 15 codebases, leading to inconsistency and wasted effort.
+          Managing 15 separate client portals meant duplicating design and
+          development work across every instance. Updates required changing 15
+          codebases, leading to inconsistency and wasted effort.
         </p>
         <p className="text-gray-300 leading-relaxed">
-          By creating a shared CSS framework and component library, I unified the architecture across all portals while preserving client-specific branding. This reduced redundant work by 80% and enabled scalable updates across the entire platform ecosystem.
+          By creating a shared CSS framework and component library, I unified
+          the architecture across all portals while preserving client-specific
+          branding. This reduced redundant work by 80% and enabled scalable
+          updates across the entire platform ecosystem.
         </p>
       </ProjectIntroCard>
 
@@ -60,7 +67,7 @@ export default function BackOffice() {
           <GlassCard>
             <div className="text-center py-8">
               <Link
-              href={createPageUrl("ProductWork")}
+                href={createPageUrl("ProductWork")}
                 className="px-8 py-4 bg-[#0066ff] rounded-xl text-white font-semibold hover:bg-[#0052cc] transition-all inline-block"
               >
                 View All Projects

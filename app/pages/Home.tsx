@@ -260,6 +260,23 @@ export default function Home() {
             />
 
             <ProjectCard
+              role="B2B SaaS Long-term"
+              title="SGPV Product Evolution"
+              company="SGPV"
+              timeframe="2020-2022"
+              description="Led product evolution for enterprise SaaS platform over 3 years."
+              image={getImagePath("images/projects/sgpv.png")}
+              metrics={[
+                { value: "3yrs", label: "Evolution" },
+                { value: "B2B", label: "Enterprise" },
+                { value: "100%", label: "Adoption" },
+              ]}
+              tags={["SaaS", "Product Strategy", "Enterprise"]}
+              link={createPageUrl("SGPVEvolution")}
+              delay={0.3}
+            />
+
+            <ProjectCard
               role="Growth & Business Impact"
               title="XpuntoCero Digital Transformation"
               company="XpuntoCero"
@@ -274,23 +291,6 @@ export default function Home() {
               tags={["Strategy", "PWA", "UX Research", "Brand Identity"]}
               link={createPageUrl("XpuntoCero")}
               delay={0.2}
-            />
-
-            <ProjectCard
-              role="B2B SaaS Long-term"
-              title="SGPV Product Evolution"
-              company="SGPV"
-              timeframe="2020-2022"
-              description="Led product evolution for enterprise SaaS platform over 3 years."
-              image="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=450&fit=crop"
-              metrics={[
-                { value: "3yrs", label: "Evolution" },
-                { value: "B2B", label: "Enterprise" },
-                { value: "100%", label: "Adoption" },
-              ]}
-              tags={["SaaS", "Product Strategy", "Enterprise"]}
-              link={createPageUrl("SGPVEvolution")}
-              delay={0.3}
             />
           </div>
         </div>

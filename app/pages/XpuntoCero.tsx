@@ -158,6 +158,7 @@ export default function XpuntoCero() {
       <ProjectIntroCard
         image={getImagePath("images/projects/XP0-1.png")}
         title="Transforming a Legacy SaaS Platform"
+        showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
           XpuntoCero, a B2B SaaS provider specializing in point-of-sale

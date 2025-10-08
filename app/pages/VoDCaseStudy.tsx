@@ -179,6 +179,7 @@ export default function VoDPlatform() {
       <ProjectIntroCard
         image={getImagePath("images/projects/Vod-1.png")}
         title="Evaluating & Redesigning a Multi-Device Streaming Experience"
+        showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
           A Dubai-based client commissioned me to review and redesign the
