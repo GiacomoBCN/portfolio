@@ -495,8 +495,8 @@ export default function XpuntoCero() {
                       <tr className="border-b border-gray-800">
                         <td className="py-4 pr-4">Structure</td>
                         <td className="py-4 pr-4">Tree testing (old menu)</td>
-                        <td className="py-4 pr-4">Validate IA & labels</td>
-                        <td className="py-4">Revised IA & nav schema</td>
+                        <td className="py-4 pr-4">Validate & labels</td>
+                        <td className="py-4">Revised & nav schema</td>
                       </tr>
                       <tr className="border-b border-gray-800">
                         <td className="py-4 pr-4">Validate</td>

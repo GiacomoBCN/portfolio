@@ -9,9 +9,9 @@ export function createPageUrl(name: string): string {
     DowJones: "/dowjones",
     XpuntoCero: "/xpuntocero",
     SGPVEvolution: "/sgpvevolution",
-    EcommerceManagement: "/ecommerce-management",
     BackOffice: "/back-office",
     TuPlanRedondo: "/tu-plan-redondo",
+    EcommerceManagement: "/ecommerce-management",
   };
   return map[name] ?? "/";
 }

@@ -64,21 +64,6 @@ export default function ProductWork() {
       slug: "XpuntoCero",
     },
     {
-      category: "PRODUCT MANAGEMENT · PORTFOLIO",
-      title: "E-Commerce Product Management",
-      role: "Project Manager & Product Designer",
-      year: "2019-2022",
-      description:
-        "Managed multiple e-commerce projects with 95% client satisfaction, 90% on-time delivery, and 20% boost in team productivity.",
-      metrics: [
-        { value: "95%", label: "Satisfaction" },
-        { value: "90%", label: "On-Time" },
-        { value: "20%", label: "Productivity" },
-      ],
-      tags: ["WordPress", "WooCommerce", "Agile", "Stakeholder Management"],
-      slug: "EcommerceManagement",
-    },
-    {
       category: "TECHNICAL LEADERSHIP · SCALABILITY",
       title: "Back Office Unification",
       role: "Product Designer & Front-End",
@@ -107,6 +92,21 @@ export default function ProductWork() {
       ],
       tags: ["PWA", "Bootstrap", "JavaScript", "Field Ops"],
       slug: "TuPlanRedondo",
+    },
+    {
+      category: "PRODUCT MANAGEMENT · PORTFOLIO",
+      title: "E-Commerce Product Management",
+      role: "Project Manager & Product Designer",
+      year: "2019-2022",
+      description:
+        "Managed multiple e-commerce projects with 95% client satisfaction, 90% on-time delivery, and 20% boost in team productivity.",
+      metrics: [
+        { value: "95%", label: "Satisfaction" },
+        { value: "90%", label: "On-Time" },
+        { value: "20%", label: "Productivity" },
+      ],
+      tags: ["WordPress", "WooCommerce", "Agile", "Stakeholder Management"],
+      slug: "EcommerceManagement",
     },
   ];
 
