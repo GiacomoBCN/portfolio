@@ -14,6 +14,8 @@ import {
   Code,
   Sparkles,
   Briefcase,
+  MonitorCog,
+  DraftingCompass,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -338,7 +340,7 @@ export default function Home() {
                 <GlassCard>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
-                      <Code size={24} className="text-[#0066ff]" />
+                      <DraftingCompass size={24} className="text-[#0066ff]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">
@@ -354,7 +356,7 @@ export default function Home() {
                 <GlassCard delay={0.1}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
-                      <Layers size={24} className="text-[#0066ff]" />
+                      <MonitorCog size={24} className="text-[#0066ff]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">
@@ -377,7 +379,8 @@ export default function Home() {
                         Front-End Development
                       </h3>
                       <p className="text-sm text-[#94a3b8]">
-                        React, Flutter, Dart, HTML5, CSS3, JavaScript
+                        React, Flutter, Dart, HTML5, CSS3, JavaScript,
+                        TypeScript, Tailwind
                       </p>
                     </div>
                   </div>
@@ -394,7 +397,7 @@ export default function Home() {
                       </h3>
                       <p className="text-sm text-[#94a3b8]">
                         ChatGPT, GitHub Copilot, Vertex AI, Midjourney, Cursor,
-                        Ai Agents
+                        AI Agents
                       </p>
                     </div>
                   </div>
