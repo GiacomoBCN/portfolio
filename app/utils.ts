@@ -4,7 +4,6 @@ export function createPageUrl(name: string): string {
     Home: "/",
     Teaching: "/teaching",
     VoDCaseStudy: "/vodcasestudy",
-    CaseStudyTemplate: "/case-study-template",
     ProductWork: "/product-work",
     DowJones: "/dowjones",
     XpuntoCero: "/xpuntocero",
