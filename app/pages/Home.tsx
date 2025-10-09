@@ -91,7 +91,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <a
-              href="#work"
+              href="/portfolio/#work"
               className="px-8 py-4 bg-[#0066ff] rounded-xl text-white font-semibold hover:bg-[#0052cc] transition-all duration-200 glow-blue hover:scale-105"
             >
               View Product Work →
@@ -688,7 +688,7 @@ export default function Home() {
                   design systems, and driving measurable business impact.
                 </p>
                 <a
-                  href="#work"
+                  href="/portfolio/#work"
                   className="inline-block px-8 py-4 bg-[#0066ff] rounded-xl text-white font-semibold hover:bg-[#0052cc] transition-all duration-200 glow-blue hover:scale-105"
                 >
                   Explore Product Work →
