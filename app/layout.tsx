@@ -4,7 +4,7 @@ import SiteShell from "@/app/SiteShell";
 
 export const metadata: Metadata = {
   title: "Giacomo Bianchi Portfolio",
-  description: "Check my mork ;)",
+  description: "Check my work ;)",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "16x16 32x32" },
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -36,9 +37,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="manifest" href="/site.webmanifest" />
-      </head>
       <body>
         <SiteShell>{children}</SiteShell>
       </body>
