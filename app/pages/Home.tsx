@@ -344,10 +344,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">
-                        Product Desing
+                        Product Design
                       </h3>
                       <p className="text-sm text-[#94a3b8]">
-                        Full ux/ui circle
+                        End-to-end UX/UI process
                       </p>
                     </div>
                   </div>
