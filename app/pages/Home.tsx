@@ -296,80 +296,120 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How I Work Section */}
+      {/* How I Work Section (updated layout with portrait) */}
       <section id="about" className="py-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0066ff]/5 to-transparent"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <SectionHeader
             title="How I Work"
-            subtitle="I don't just design—I prototype, code, and validate through technical fluency"
+            subtitle="Merging strategy, design, and technology through empathy and clarity"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <GlassCard>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
-                  <Code size={24} className="text-[#0066ff]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    Front-End Development
-                  </h3>
-                  <p className="text-sm text-[#94a3b8]">
-                    React, Flutter, Dart, HTML5, CSS3, JavaScript, Bootstrap
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Portrait */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 flex justify-center"
+            >
+              <div className="overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-2xl max-w-sm">
+                <Image
+                  src={getImagePath("images/profile/gb.ven_2.png")}
+                  alt="Giacomo Bianchi portrait"
+                  width={480}
+                  height={640}
+                  className="object-cover w-full h-auto grayscale"
+                />
               </div>
-            </GlassCard>
+            </motion.div>
 
-            <GlassCard delay={0.1}>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
-                  <Sparkles size={24} className="text-[#0066ff]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    AI-Augmented Workflow
-                  </h3>
-                  <p className="text-sm text-[#94a3b8]">
-                    ChatGPT, GitHub Copilot, Vertex AI, Midjourney
-                  </p>
-                </div>
-              </div>
-            </GlassCard>
+            {/* Cards + Description */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="lg:col-span-7 space-y-8"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <GlassCard>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
+                      <Code size={24} className="text-[#0066ff]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        Product Desing
+                      </h3>
+                      <p className="text-sm text-[#94a3b8]">
+                        Full ux/ui circle
+                      </p>
+                    </div>
+                  </div>
+                </GlassCard>
 
-            <GlassCard delay={0.2}>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
-                  <Layers size={24} className="text-[#0066ff]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    Design Systems
-                  </h3>
-                  <p className="text-sm text-[#94a3b8]">
-                    Figma, Design Tokens, Storybook, Git, CI/CD
-                  </p>
-                </div>
+                <GlassCard delay={0.1}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
+                      <Layers size={24} className="text-[#0066ff]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        Design Systems
+                      </h3>
+                      <p className="text-sm text-[#94a3b8]">
+                        Figma, Design Tokens, Storybook, Git, CI/CD
+                      </p>
+                    </div>
+                  </div>
+                </GlassCard>
+
+                <GlassCard>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
+                      <Code size={24} className="text-[#0066ff]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        Front-End Development
+                      </h3>
+                      <p className="text-sm text-[#94a3b8]">
+                        React, Flutter, Dart, HTML5, CSS3, JavaScript
+                      </p>
+                    </div>
+                  </div>
+                </GlassCard>
+
+                <GlassCard delay={0.1}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
+                      <Sparkles size={24} className="text-[#0066ff]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        AI-Augmented Workflow
+                      </h3>
+                      <p className="text-sm text-[#94a3b8]">
+                        ChatGPT, GitHub Copilot, Vertex AI, Midjourney, Cursor,
+                        Ai Agents
+                      </p>
+                    </div>
+                  </div>
+                </GlassCard>
               </div>
-            </GlassCard>
+
+              <p className="text-lg text-[#cbd5e1] leading-relaxed mt-10">
+                My technical background allows me to prototype rapidly,
+                participate in engineering discussions, and earn developer
+                respect. I use AI tools to validate ideas in hours, not
+                weeks—building working prototypes that teams can react to
+                instead of debating abstract specs.
+              </p>
+            </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <p className="text-lg text-[#cbd5e1] leading-relaxed">
-              My technical background allows me to prototype rapidly,
-              participate in engineering discussions, and earn developer
-              respect. I use AI tools to validate ideas in hours, not
-              weeks—building working prototypes that teams can react to instead
-              of debating abstract specs.
-            </p>
-          </motion.div>
         </div>
       </section>
 
