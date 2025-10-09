@@ -348,7 +348,7 @@ export default function VoDPlatform() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Through systematic heuristic evaluation, I identified critical
                   usability issues that were creating friction across all device
-                  types. The problems extended beyond simple design flaws—they
+                  types. The problems extended beyond simple design flaws-they
                   represented fundamental interaction model issues.
                 </p>
                 <ul className="space-y-2 text-gray-400">

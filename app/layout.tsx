@@ -3,9 +3,8 @@ import "./globals.css";
 import SiteShell from "@/app/SiteShell";
 
 export const metadata: Metadata = {
-  title:
-    "Italian by birth. Product leader by craft. Global thinker by vocation.",
-  description: "Product & Design Leader portfolio",
+  title: "Giacomo Bianchi Portfolio",
+  description: "Check my mork ;)",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "16x16 32x32" },

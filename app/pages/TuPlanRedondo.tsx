@@ -290,7 +290,7 @@ export default function TuPlanRedondo() {
             </p>
             <p className="text-gray-300 leading-relaxed">
               Additionally, the solution needed to work reliably in environments
-              with poor connectivity—restaurant back-of-house areas, parking
+              with poor connectivity-restaurant back-of-house areas, parking
               lots during outdoor evaluations, and remote locations with limited
               cellular coverage. Data capture failures due to network issues
               were unacceptable, as evaluators couldn't return to re-observe
@@ -466,7 +466,7 @@ export default function TuPlanRedondo() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Built as a PWA using HTML5, Bootstrap 4, CSS3, and JavaScript
                   with service workers for offline functionality. Users access
-                  the app through any browser—no installation required—but can
+                  the app through any browser-no installation required-but can
                   optionally "install" it for a native-like home screen
                   experience.
                 </p>

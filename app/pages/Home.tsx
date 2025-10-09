@@ -447,9 +447,9 @@ export default function Home() {
               <p className="text-lg text-[#cbd5e1] leading-relaxed mt-10">
                 My technical background allows me to prototype rapidly,
                 participate in engineering discussions, and earn developer
-                respect. I use AI tools to validate ideas in hours, not
-                weeks—building working prototypes that teams can react to
-                instead of debating abstract specs.
+                respect. I use AI tools to validate ideas in hours, not weeks -
+                building working prototypes that teams can react to instead of
+                debating abstract specs.
               </p>
             </motion.div>
           </div>

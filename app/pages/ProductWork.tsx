@@ -188,7 +188,7 @@ export default function ProductWork() {
 
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
             Over 8+ years, I've led digital product initiatives across B2B, B2C,
-            and enterprise environments — from design systems to SaaS
+            and enterprise environments - from design systems to SaaS
             transformations. Each project reflects hands-on leadership, clear
             strategy, and tangible results.
           </p>

@@ -174,10 +174,11 @@ export default function SGPVEvolution() {
         <p className="text-gray-300 leading-relaxed">
           SGPV is a field-operations platform serving merchandisers and sales
           representatives for 15 major FMCG (Fast-Moving Consumer Goods)
-          companies—including national and international brands operating across
-          Spain, Portugal, and Italy. These field workers visit retail locations
-          to audit shelf placement, negotiate product positioning, capture
-          promotional compliance data, and close deals for premium shelf space.
+          companies -including national and international brands operating
+          across Spain, Portugal, and Italy. These field workers visit retail
+          locations to audit shelf placement, negotiate product positioning,
+          capture promotional compliance data, and close deals for premium shelf
+          space.
         </p>
         <p className="text-gray-300 leading-relaxed">
           Over time, versions 5–6 evolved into many client-specific forks to
@@ -191,7 +192,7 @@ export default function SGPVEvolution() {
           restored velocity and removed the tablet-only constraint.
           <b />
           Phase 2 unified all clients on a single Flutter app and redesigned key
-          flows—like AI-powered image-based data capture—reducing task time and
+          flows-like AI-powered image-based data capture—reducing task time and
           improving satisfaction.
         </p>
       </ProjectIntroCard>

@@ -284,8 +284,8 @@ export default function DowJones() {
           </div>
           <div className="pl-0 md:pl-24 space-y-4">
             <p className="text-gray-300 leading-relaxed">
-              As Dow Jones expanded its portfolio of premium brands—including
-              The Wall Street Journal, Barron's, MarketWatch, and Factiva—each
+              As Dow Jones expanded its portfolio of premium brands-including
+              The Wall Street Journal, Barron's, MarketWatch, and Factiva-each
               property developed its own design systems and workflows. This
               autonomy enabled rapid brand-specific innovation but created
               friction as the organization matured.

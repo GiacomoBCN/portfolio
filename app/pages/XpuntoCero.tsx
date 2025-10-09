@@ -167,8 +167,8 @@ export default function XpuntoCero() {
           experience that no longer matched evolving market expectations.
         </p>
         <p className="text-gray-300 leading-relaxed">
-          I led end-to-end transformation—from user research and brand redesign
-          to front-end PWA implementation—creating a modern, accessible platform
+          I led end-to-end transformation-from user research and brand redesign
+          to front-end PWA implementation-creating a modern, accessible platform
           that restored credibility, improved performance, and clarified product
           storytelling across 8+ SaaS solutions.
         </p>
@@ -283,7 +283,7 @@ export default function XpuntoCero() {
               outdated brand was creating perception problems during enterprise
               sales cycles. Prospects viewed the company as less innovative than
               newer competitors, despite having superior functionality. The
-              mobile experience was particularly weak—slow load times, poor
+              mobile experience was particularly weak-slow load times, poor
               navigation, and dated visuals were driving potential customers
               away before they could experience the product value.
             </p>

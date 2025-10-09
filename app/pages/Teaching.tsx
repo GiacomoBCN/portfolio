@@ -212,8 +212,8 @@ export default function Teaching() {
                   </h4>
                   <p className="text-[#cbd5e1] text-sm leading-relaxed">
                     My teaching approach combines theory with real-world
-                    application. Students learn by doing — designing,
-                    collaborating, and reflecting — through hands-on experiences
+                    application. Students learn by doing designing,
+                    collaborating, and reflecting - through hands-on experiences
                     that connect academic concepts to professional practice.
                   </p>
                 </div>
@@ -363,7 +363,7 @@ export default function Teaching() {
               <p className="text-lg text-[#cbd5e1] leading-relaxed mb-6">
                 I see teaching as a dialogue between theory and practice. My
                 goal is to help students connect what they learn in class to the
-                complexity of real professional life — where outcomes are
+                complexity of real professional life - where outcomes are
                 uncertain, collaboration is essential, and critical thinking
                 makes the difference.
               </p>
@@ -424,12 +424,12 @@ export default function Teaching() {
                       performance, well-being, and collaboration. Through field
                       research in SMEs and collaborations with healthcare
                       organizations, I co-developed a scalable model for
-                      assessing work-related stress — integrating insights from
+                      assessing work-related stress - integrating insights from
                       human factors, behavioural systems, and labour law.
                     </p>
                     <p className="text-[#cbd5e1] text-sm leading-relaxed">
                       Over time, my focus evolved from occupational health and
-                      organizational psychology toward technology — exploring
+                      organizational psychology toward technology - exploring
                       how digital products are created, experienced, and
                       improved through user interaction. This progression
                       allowed me to apply evidence-based research methods to
@@ -446,7 +446,7 @@ export default function Teaching() {
                       industry-driven methodologies in UX/UI design and
                       cross-cultural management. I guide teams and students in
                       understanding how human behaviour, collaboration, and
-                      organizational design intersect — fostering scalable,
+                      organizational design intersect - fostering scalable,
                       people-centred frameworks that connect academic insight
                       with real-world impact.
                     </p>
