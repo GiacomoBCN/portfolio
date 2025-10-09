@@ -246,8 +246,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="text-center md:text-left">
               <p className="text-[#cbd5e1] text-sm">© 2025 Giacomo Bianchi.</p>
               <p className="text-[#64748b] text-xs mt-1">
-                Italian by birth. Product leader by craft. Global thinker by
-                vocation.
+                Italian by birth. Product leader by craft. Global by vocation.
               </p>
               <p className="text-[#64748b] text-xs mt-1">
                 Barcelona • Open to MENA, Europe & Remote
