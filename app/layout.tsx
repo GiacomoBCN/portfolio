@@ -27,7 +27,9 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
-  manifest: "/site.webmanifest",
+  manifest: process.env.NEXT_PUBLIC_BASE_PATH
+    ? `${process.env.NEXT_PUBLIC_BASE_PATH}/site.webmanifest`
+    : "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -37,6 +39,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="manifest"
+          href={
+            process.env.NEXT_PUBLIC_BASE_PATH
+              ? `${process.env.NEXT_PUBLIC_BASE_PATH}/site.webmanifest`
+              : "/site.webmanifest"
+          }
+        />
+      </head>
       <body>
         <SiteShell>{children}</SiteShell>
       </body>
