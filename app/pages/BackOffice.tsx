@@ -93,12 +93,6 @@ export default function OnlineBackOfficeCaseStudy() {
       label: "Clients Unified",
       description: "Consistent UX with themed customization",
     },
-    {
-      icon: Smartphone,
-      metric: "20%",
-      label: "Cost Savings",
-      description: "No tablets required thanks to mobile-first",
-    },
   ];
 
   const rolloutImprovements = [
@@ -160,13 +154,7 @@ export default function OnlineBackOfficeCaseStudy() {
             hardware costs by 20%.
           </p>
           <div className="flex flex-wrap gap-2">
-            {[
-              "Figma",
-              "Bootstrap 4",
-              "CSS3",
-              "Git Workflow",
-              "Responsive Web",
-            ].map((tag, i) => (
+            {["Bootstrap 4", "CSS3", "Git Workflow"].map((tag, i) => (
               <span
                 key={i}
                 className="px-4 py-2 glass rounded-full text-sm text-gray-300"
@@ -221,7 +209,6 @@ export default function OnlineBackOfficeCaseStudy() {
                 <li>• 99% core code reuse</li>
                 <li>• 80% faster cross‑client updates</li>
                 <li>• 15+ portals unified</li>
-                <li>• 20% hardware cost savings</li>
               </ul>
             </OverviewCard>
           </div>
@@ -234,7 +221,7 @@ export default function OnlineBackOfficeCaseStudy() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Program Outcomes
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((a, i) => (
               <GlassCard key={i}>
                 <div className="flex flex-col items-center text-center p-6">

@@ -126,7 +126,7 @@ export default function XpuntoCero() {
             XpuntoCero Digital Transformation
           </h1>
           <p className="text-lg text-gray-400 mb-4">
-            Product Designer & Front-End Developer
+            Product Design & Development Developer
           </p>
           <p className="text-xl text-gray-300 mb-8">
             Rebranded B2B SaaS company with a PWA redesign, increasing mobile
@@ -134,14 +134,14 @@ export default function XpuntoCero() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[
+              "Branding",
+              "Strategy",
+              "End-to-end UX/UI Process",
               "Figma",
+              "Front-End",
               "PWA",
               "WordPress",
               "Elementor",
-
-              "UX Research",
-              "Front-End",
-              "Brand Identity",
             ].map((tag, i) => (
               <span
                 key={i}
@@ -186,7 +186,7 @@ export default function XpuntoCero() {
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">
-                Product Designer & Front-End Developer
+                Product Design & Development Developer
               </p>
               <ul className="space-y-1 text-xs">
                 <li>• Desk & competitive research</li>

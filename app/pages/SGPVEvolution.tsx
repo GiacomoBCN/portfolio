@@ -128,7 +128,7 @@ export default function SGPVEvolution() {
             SGPV: Leading Multi-Year Product Evolution Across 15 FMCG Clients
           </h1>
           <p className="text-lg text-gray-400 mb-4">
-            Product Designer · UX Lead · Front-End Developer
+            Product Designer · Front-End Developer
           </p>
           <p className="text-xl text-gray-300 mb-8">
             A two-phase transformation spanning two years: first, a responsive
@@ -139,13 +139,18 @@ export default function SGPVEvolution() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[
-              "Figma",
+              "Product Strategy",
+              "End-to-end UX/UI Process",
               "Design System",
-              "UX Research",
+              "Figma",
+              "AI",
+              "Mobile",
+              "B2B",
+              "SaaS",
               "Flutter",
+              "Dart",
               "PhoneGap",
               "JavaScript",
-              "Dart",
               "Bootstrap",
               "Agile/SCRUM",
             ].map((tag) => (

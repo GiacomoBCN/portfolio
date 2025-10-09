@@ -122,7 +122,7 @@ export default function TuPlanRedondo() {
             TuPlanRedondo PWA for McDonald's Franchise
           </h1>
           <p className="text-lg text-gray-400 mb-4">
-            Product Designer & Front-End Developer
+            Product Design & Development Developer
           </p>
           <p className="text-xl text-gray-300 mb-8">
             Streamlined employee evaluation workflows with a Progressive Web
@@ -130,13 +130,14 @@ export default function TuPlanRedondo() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[
+              "End-to-end UX/UI Process",
               "Figma",
+              "Front-End Development",
               "PWA",
               "HTML5",
-              "Bootstrap 4",
+              "CSS3",
+              "Bootstrap",
               "JavaScript",
-              "UX Research",
-              "Front-End Development",
             ].map((tag, i) => (
               <span
                 key={i}
@@ -185,7 +186,7 @@ export default function TuPlanRedondo() {
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">
-                Product Designer & Front-End Developer
+                Product Design & Development Developer
               </p>
               <ul className="space-y-1 text-xs">
                 <li>• User research & usability testing</li>

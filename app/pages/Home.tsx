@@ -225,30 +225,37 @@ export default function Home() {
               role="Enterprise Leadership"
               title="Dow Jones Design System"
               company="Dow Jones"
-              timeframe="2022-2025"
-              description="Co-led enterprise design system serving 8 brands, aligning 60+ designers and generating 200K+ component references."
+              timeframe=""
+              description="Governance of a unified design system adopted across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%.."
               image={getImagePath("images/projects/DJ1.png")}
               metrics={[
-                { value: "60%", label: "Friction Reduced" },
+                { value: "60+", label: "Designers" },
                 { value: "200K+", label: "Component Refs" },
-                { value: "8", label: "Brands Unified" },
+                { value: "30%", label: "Efficiency" },
               ]}
               tags={[
-                "Design Systems",
                 "Leadership",
                 "AI-Enhanced",
-                "Figma",
+                "Product Strategy",
+                "Design Systems",
+                "SAFe Agile",
+                "WCAG 2.2",
+                "CI/CD",
                 "Storybook",
+                "Style Dictionary",
+                "Design Tokens",
+                "React",
+                "Figma",
               ]}
               link={createPageUrl("DowJones")}
               delay={0}
             />
 
             <ProjectCard
-              role="B2B Multi-platform"
+              role="B2C Multi-platform"
               title="VoD Platform Redesign"
               company="Confidential Client"
-              timeframe="2025"
+              timeframe=""
               description="Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays."
               image={getImagePath("images/projects/Vod.png")}
               metrics={[
@@ -256,7 +263,16 @@ export default function Home() {
                 { value: "WCAG AA", label: "Compliant" },
                 { value: "5", label: "Platforms" },
               ]}
-              tags={["Consultant", "UX Strategy", "Web", "Multy platform"]}
+              tags={[
+                "Consultant",
+                "Heuristic Evaluation",
+                "End-to-end UX/UI Process",
+                "Figma",
+                "Multi-platform Design",
+                "UX Strategy",
+                "WCAG 2.2 AA",
+                "TV/10-foot UI",
+              ]}
               link={createPageUrl("VoDCaseStudy")}
               delay={0.1}
             />
@@ -264,16 +280,31 @@ export default function Home() {
             <ProjectCard
               role="B2B SaaS Long-term"
               title="SGPV Product Evolution"
-              company="SGPV"
-              timeframe="2020-2022"
-              description="Led product evolution for enterprise SaaS platform over 3 years."
+              company="XpuntoCero -> SGPV"
+              timeframe=""
+              description="Multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients with AI-powered features that reduced task time by 25%."
               image={getImagePath("images/projects/sgpv.png")}
               metrics={[
-                { value: "3yrs", label: "Evolution" },
-                { value: "B2B", label: "Enterprise" },
-                { value: "100%", label: "Adoption" },
+                { value: "15", label: "Global Brands" },
+                { value: "25%", label: "Faster" },
+                { value: "30%", label: "Satisfation" },
               ]}
-              tags={["SaaS", "Product Strategy", "Enterprise"]}
+              tags={[
+                "Product Strategy",
+                "End-to-end UX/UI Process",
+                "Design System",
+                "Figma",
+                "AI",
+                "Mobile",
+                "B2B",
+                "SaaS",
+                "Flutter",
+                "Dart",
+                "PhoneGap",
+                "JavaScript",
+                "Bootstrap",
+                "Agile/SCRUM",
+              ]}
               link={createPageUrl("SGPVEvolution")}
               delay={0.3}
             />
@@ -282,15 +313,24 @@ export default function Home() {
               role="Growth & Business Impact"
               title="XpuntoCero Digital Transformation"
               company="XpuntoCero"
-              timeframe="2019-2022"
-              description="Drove digital transformation resulting in 30% operational efficiency improvements."
+              timeframe=""
+              description="Rebranded SaaS company with PWA redesign, increasing mobile traffic by 40%, leads by 15%, and customer satisfaction by 30%."
               image={getImagePath("images/projects/XP0.png")}
               metrics={[
-                { value: "30%", label: "Efficiency" },
-                { value: "500K", label: "Yearly Sales" },
-                { value: "24/7", label: "Availability" },
+                { value: "40%", label: "Mobile Trafic" },
+                { value: "15%", label: "More Leads" },
+                { value: "20%", label: "Faster Loads" },
               ]}
-              tags={["Strategy", "PWA", "UX Research", "Brand Identity"]}
+              tags={[
+                "Branding",
+                "Strategy",
+                "End-to-end UX/UI Process",
+                "Figma",
+                "Front-End",
+                "PWA",
+                "WordPress",
+                "Elementor",
+              ]}
               link={createPageUrl("XpuntoCero")}
               delay={0.2}
             />

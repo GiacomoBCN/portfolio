@@ -2,29 +2,29 @@ import React from "react";
 import GlassCard from "./GlassCard";
 import { ExternalLink } from "lucide-react";
 
-export default function ProjectCard({ 
-  role, 
-  title, 
-  company, 
-  timeframe, 
-  description, 
+export default function ProjectCard({
+  role,
+  title,
+  company,
+  timeframe,
+  description,
   metrics = [],
   tags = [],
   link,
   image,
-  delay = 0 
-}: { 
+  delay = 0,
+}: {
   role: string;
   title: string;
   company: string;
   timeframe: string;
   description: string;
-  metrics?: { value: string; label: string; }[];
+  metrics?: { value: string; label: string }[];
   tags?: string[];
   link?: string;
   image?: string;
   delay?: number;
-}){
+}) {
   return (
     <GlassCard hover={true} delay={delay}>
       <div className="flex flex-col h-full">
@@ -32,8 +32,8 @@ export default function ProjectCard({
         {image && (
           <div className="mb-6 -mx-6 -mt-6 overflow-hidden rounded-t-xl">
             <div className="relative aspect-video overflow-hidden group/image">
-              <img 
-                src={image} 
+              <img
+                src={image}
                 alt={title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover/image:scale-105"
               />
@@ -48,7 +48,8 @@ export default function ProjectCard({
           </span>
           <h3 className="text-2xl font-bold text-white mt-2 mb-1">{title}</h3>
           <p className="text-sm text-[#94a3b8]">
-            {company} • {timeframe}
+            {company}
+            {timeframe && ` • ${timeframe}`}
           </p>
         </div>
 
@@ -88,9 +89,9 @@ export default function ProjectCard({
             className="inline-flex items-center gap-2 text-[#0066ff] hover:text-[#00d4ff] transition-colors mt-auto group"
           >
             <span className="font-semibold">View Case Study</span>
-            <ExternalLink 
-              size={16} 
-              className="group-hover:translate-x-1 transition-transform" 
+            <ExternalLink
+              size={16}
+              className="group-hover:translate-x-1 transition-transform"
             />
           </a>
         )}

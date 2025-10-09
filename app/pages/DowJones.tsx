@@ -137,13 +137,18 @@ export default function DowJones() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[
-              "Figma",
-              "React",
-              "Design Tokens",
-              "Style Dictionary",
-              "Storybook",
+              "Leadership",
+              "AI-Enhanced",
+              "Product Strategy",
+              "Design Systems",
               "SAFe Agile",
               "WCAG 2.2",
+              "CI/CD",
+              "Storybook",
+              "Style Dictionary",
+              "Design Tokens",
+              "React",
+              "Figma",
             ].map((tag, i) => (
               <span
                 key={i}

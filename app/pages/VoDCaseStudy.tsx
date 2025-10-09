@@ -141,7 +141,7 @@ export default function VoDPlatform() {
           </p>
           <div className="mb-4">
             <span className="text-xs uppercase tracking-wider text-blue-400">
-              UX CONSULTING · MULTI-PLATFORM
+              PRODUCT CONSULTING · MULTI-PLATFORM
             </span>
           </div>
           <h1 className="text-5xl font-bold text-white mb-4">
@@ -157,12 +157,14 @@ export default function VoDPlatform() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[
-              "Figma",
-              "UX Strategy",
+              "Consultant",
               "Heuristic Evaluation",
-              "WCAG 2.1 AA",
-              "TV/10-foot UI",
+              "End-to-end UX/UI Process",
+              "Figma",
               "Multi-platform Design",
+              "UX Strategy",
+              "WCAG 2.2 AA",
+              "TV/10-foot UI",
             ].map((tag, i) => (
               <span
                 key={i}

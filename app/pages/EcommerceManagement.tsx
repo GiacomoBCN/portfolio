@@ -35,7 +35,7 @@ export default function EcommerceManagement() {
             E-Commerce Product Management
           </h1>
           <p className="text-lg text-gray-400 mb-4">
-            Project Manager & Product Designer · 2019-2022
+            Project Manager & Product Designer
           </p>
           <p className="text-xl text-gray-300 mb-8">
             Managed multiple e-commerce projects with 95% client satisfaction

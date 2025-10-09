@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import ProjectListingCard from "../components/work/ProjectListingCard";
 
@@ -7,7 +9,7 @@ export default function ProductWork() {
       category: "DESIGN SYSTEMS · ENTERPRISE",
       title: "Dow Jones Design System",
       role: "Lead Design Technologist",
-      year: "2022-2025",
+      year: "",
       description:
         "Governance of a unified design system adopted across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%.",
       metrics: [
@@ -15,14 +17,27 @@ export default function ProductWork() {
         { value: "200K+", label: "References" },
         { value: "30%", label: "Efficiency" },
       ],
-      tags: ["Figma", "React", "Design Tokens", "Storybook", "CI/CD"],
+      tags: [
+        "Leadership",
+        "AI-Enhanced",
+        "Product Strategy",
+        "Design Systems",
+        "SAFe Agile",
+        "WCAG 2.2",
+        "CI/CD",
+        "Storybook",
+        "Style Dictionary",
+        "Design Tokens",
+        "React",
+        "Figma",
+      ],
       slug: "DowJones",
     },
     {
-      category: "PRODUCT STRATEGY · B2B",
+      category: "B2C Multi-platform",
       title: "VoD Platform Redesign",
       role: "Product Consultant",
-      year: "2025",
+      year: "",
       description:
         "Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays.",
       metrics: [
@@ -30,44 +45,77 @@ export default function ProductWork() {
         { value: "WCAG AA", label: "Compliant" },
         { value: "5", label: "Platforms" },
       ],
-      tags: ["Figma", "UX Research", "Multi-platform", "Accessibility"],
+      tags: [
+        "Consultant",
+        "Heuristic Evaluation",
+        "End-to-end UX/UI Process",
+        "Figma",
+        "Multi-platform Design",
+        "UX Strategy",
+        "WCAG 2.2 AA",
+        "TV/10-foot UI",
+      ],
       slug: "VoDCaseStudy",
     },
     {
-      category: "PRODUCT STRATEGY · B2B SAAS",
+      category: "SAAS",
       title: "SGPV Product Evolution",
-      role: "Product Designer & Front-End",
-      year: "2019-2022",
+      role: "Product Design & Development",
+      year: "",
       description:
-        "Led multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients with AI-powered features, reducing task time by 25%.",
+        "Multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients with AI-powered features that reduced task time by 25%.",
       metrics: [
         { value: "15", label: "Clients" },
         { value: "25%", label: "Faster" },
         { value: "30%", label: "Satisfaction" },
       ],
-      tags: ["Flutter", "PhoneGap", "AI", "Mobile", "B2B"],
+      tags: [
+        "Product Strategy",
+        "End-to-end UX/UI Process",
+        "Design System",
+        "Figma",
+        "AI",
+        "Mobile",
+        "B2B",
+        "SaaS",
+        "Flutter",
+        "Dart",
+        "PhoneGap",
+        "JavaScript",
+        "Bootstrap",
+        "Agile/SCRUM",
+      ],
       slug: "SGPVEvolution",
     },
     {
       category: "GROWTH · BUSINESS IMPACT",
       title: "XpuntoCero Digital Transformation",
-      role: "Product Designer & Front-End",
-      year: "2019-2022",
+      role: "Product Design & Development",
+      year: "",
       description:
         "Rebranded SaaS company with PWA redesign, increasing mobile traffic by 40%, leads by 15%, and customer satisfaction by 30%.",
       metrics: [
-        { value: "40%", label: "Traffic" },
-        { value: "15%", label: "Leads" },
-        { value: "30%", label: "Satisfaction" },
+        { value: "40%", label: "Mobile Trafic" },
+        { value: "15%", label: "More Leads" },
+        { value: "20%", label: "Faster Loads" },
       ],
-      tags: ["PWA", "WordPress", "Branding", "Front-End"],
+      tags: [
+        "Branding",
+        "Strategy",
+        "End-to-end UX/UI Process",
+        "Figma",
+        "Front-End",
+        "PWA",
+        "WordPress",
+        "Elementor",
+      ],
       slug: "XpuntoCero",
     },
     {
       category: "TECHNICAL LEADERSHIP · SCALABILITY",
       title: "Back Office Unification",
-      role: "Product Designer & Front-End",
-      year: "2019-2022",
+      role: "Product Design & Development",
+      year: "",
       description:
         "Unified 15 client portals with shared CSS and assets, reducing redundant work and enabling scalable updates across all platforms.",
       metrics: [
@@ -75,14 +123,14 @@ export default function ProductWork() {
         { value: "99%", label: "Code Reuse" },
         { value: "80%", label: "Efficiency" },
       ],
-      tags: ["Bootstrap", "CSS", "Scalability", "Multi-tenant"],
+      tags: ["Bootstrap 4", "CSS3", "Git Workflow"],
       slug: "BackOffice",
     },
     {
       category: "B2B SAAS · FIELD OPERATIONS",
       title: "TuPlanRedondo PWA",
-      role: "Product Designer & Front-End",
-      year: "2020-2021",
+      role: "Product Design & Development",
+      year: "",
       description:
         "Streamlined evaluation user flows with a PWA for McDonald's franchise, saving 30% time and boosting satisfaction by 25%.",
       metrics: [
@@ -90,14 +138,23 @@ export default function ProductWork() {
         { value: "25%", label: "Satisfaction" },
         { value: "Real-time", label: "Data" },
       ],
-      tags: ["PWA", "Bootstrap", "JavaScript", "Field Ops"],
+      tags: [
+        "End-to-end UX/UI Process",
+        "Figma",
+        "Front-End Development",
+        "PWA",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "JavaScript",
+      ],
       slug: "TuPlanRedondo",
     },
     {
       category: "PRODUCT MANAGEMENT · PORTFOLIO",
       title: "E-Commerce Product Management",
-      role: "Project Manager & Product Designer",
-      year: "2019-2022",
+      role: "Project Managment & Product Design",
+      year: "",
       description:
         "Managed multiple e-commerce projects with 95% client satisfaction, 90% on-time delivery, and 20% boost in team productivity.",
       metrics: [
@@ -130,7 +187,7 @@ export default function ProductWork() {
           </p>
 
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Over 8+ years, I’ve led digital product initiatives across B2B, B2C,
+            Over 8+ years, I've led digital product initiatives across B2B, B2C,
             and enterprise environments — from design systems to SaaS
             transformations. Each project reflects hands-on leadership, clear
             strategy, and tangible results.
