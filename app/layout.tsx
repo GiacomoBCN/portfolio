@@ -37,6 +37,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body>
         <SiteShell>{children}</SiteShell>
       </body>

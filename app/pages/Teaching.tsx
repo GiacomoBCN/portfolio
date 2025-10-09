@@ -176,7 +176,7 @@ export default function Teaching() {
                   <div>
                     <div className="text-3xl font-bold text-[#00d4ff]">2</div>
                     <div className="text-sm text-[#94a3b8]">
-                      Master’s courses across official programs
+                      Master's courses across official programs
                     </div>
                   </div>
                 </div>

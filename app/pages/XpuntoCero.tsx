@@ -126,7 +126,7 @@ export default function XpuntoCero() {
             XpuntoCero Digital Transformation
           </h1>
           <p className="text-lg text-gray-400 mb-4">
-            Product Design & Development Developer
+            Product Designer & Front-End Developer
           </p>
           <p className="text-xl text-gray-300 mb-8">
             Rebranded B2B SaaS company with a PWA redesign, increasing mobile
@@ -186,7 +186,7 @@ export default function XpuntoCero() {
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">
-                Product Design & Development Developer
+                Product Designer & Front-End Developer
               </p>
               <ul className="space-y-1 text-xs">
                 <li>• Desk & competitive research</li>

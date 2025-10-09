@@ -122,7 +122,7 @@ export default function TuPlanRedondo() {
             TuPlanRedondo PWA for McDonald's Franchise
           </h1>
           <p className="text-lg text-gray-400 mb-4">
-            Product Design & Development Developer
+            Product Designer & Front-End Developer
           </p>
           <p className="text-xl text-gray-300 mb-8">
             Streamlined employee evaluation workflows with a Progressive Web
@@ -186,7 +186,7 @@ export default function TuPlanRedondo() {
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">
-                Product Design & Development Developer
+                Product Designer & Front-End Developer
               </p>
               <ul className="space-y-1 text-xs">
                 <li>• User research & usability testing</li>

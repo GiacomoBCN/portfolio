@@ -131,7 +131,7 @@ export default function SGPVEvolution() {
             Product Designer · Front-End Developer
           </p>
           <p className="text-xl text-gray-300 mb-8">
-            A two-phase transformation spanning two years: first, a responsive
+            A two-phase transformation spanning 18 months: first, a responsive
             redesign that eliminated tablet-only constraints and centralized
             assets across 15 clients; then, a strategic migration to Flutter
             that unified everything into a single product, boosted performance,
@@ -184,12 +184,7 @@ export default function SGPVEvolution() {
           accommodate different branding and workflow requirements, creating
           high maintenance costs and uneven user experiences. I led a two-year
           program to modernize and consolidate the product while protecting
-          business continuity across all 15 live implementations. Phase 1
-          delivered a responsive redesign and centralized assets that restored
-          velocity and removed the tablet-only constraint. Phase 2 unified all
-          clients on a single Flutter app and redesigned key flows—like
-          AI-powered image-based data capture—reducing task time and improving
-          satisfaction.
+          business continuity across all 15 live implementations.
         </p>
         <p className="text-gray-300 leading-relaxed">
           Phase 1 delivered a responsive redesign and centralized assets that
