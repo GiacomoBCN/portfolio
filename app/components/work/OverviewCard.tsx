@@ -17,7 +17,7 @@ export default function OverviewCard({
         </div>
         <h3 className="text-lg font-semibold text-white">{title}</h3>
       </div>
-      <div className="text-gray-300 text-sm leading-relaxed">
+      <div className="text-gray-300 text-base leading-relaxed">
         {children}
       </div>
     </div>

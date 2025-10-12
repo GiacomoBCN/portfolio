@@ -456,10 +456,9 @@ export default function Home() {
                         AI Agents.
                       </p>
                       <p className="text-sm text-[#94a3b8]">
-                        I use AI to accelerate every phase of product
-                        development - from research synthesis to functional
-                        prototypes. This speed lets teams make better decisions
-                        through rapid experimentation.
+                        I use AI throughout my design process. Following design
+                        thinking principles, I accelerate feedback loops and
+                        improve decision-making through rapid iteration.
                       </p>
                     </div>
                   </div>
