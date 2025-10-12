@@ -278,7 +278,7 @@ export default function SGPVEvolution() {
           <div className="pl-0 md:pl-24 space-y-6">
             <p className="text-gray-300 leading-relaxed">
               The app had been customized extensively for each FMCG
-              client—different branding, workflows, and feature sets—resulting
+              client-different branding, workflows, and feature sets—resulting
               in multiple code forks that were difficult to update and manage.
               Additionally, the app was built exclusively for tablet use,
               forcing clients to invest in tablets for their field workforce. As
@@ -596,14 +596,14 @@ export default function SGPVEvolution() {
                       shelf labels, product barcodes, or promotional displays.
                       The AI-powered image recognition system automatically
                       extracts product identifiers, prices, placement positions,
-                      and quantities—eliminating manual typing entirely.
+                      and quantities - eliminating manual typing entirely.
                     </p>
                     <ul className="space-y-2 text-gray-400">
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">→</span>
                         <span>
                           <strong>One-tap capture:</strong> Photograph instead
-                          of type—reducing data entry time by 25%
+                          of type - reducing data entry time by 25%
                         </span>
                       </li>
                       <li className="flex items-start gap-2">

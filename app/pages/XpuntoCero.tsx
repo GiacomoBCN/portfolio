@@ -560,7 +560,7 @@ export default function XpuntoCero() {
                   Visual Communication Strategy
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  I designed visuals to communicate before text—using color,
+                  I designed visuals to communicate before text-using color,
                   typography, and imagery to tell the brand story intuitively.
                   Each visual element was grounded in user research insights to
                   ensure resonance with the B2B audience.
@@ -600,7 +600,7 @@ export default function XpuntoCero() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   A unified visual language strengthens brand recognition and
                   builds trust. I ensured consistency across web, marketing
-                  materials, and product interfaces—reinforcing the brand's
+                  materials, and product interfaces-reinforcing the brand's
                   presence at every user interaction.
                 </p>
                 <ul className="space-y-2 text-gray-400">

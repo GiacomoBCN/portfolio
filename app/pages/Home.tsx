@@ -99,13 +99,13 @@ export default function Home() {
               href="#work"
               className="px-8 py-4 bg-[#0066ff] rounded-xl text-white font-semibold hover:bg-[#0052cc] transition-all duration-200 glow-blue hover:scale-105"
             >
-              View Product Work →
+              View Product Work
             </a>
             <Link
               href={createPageUrl("Teaching")}
               className="px-8 py-4 glass rounded-xl text-white font-semibold hover:bg-[#0066ff] hover:border-[#0066ff] transition-all duration-200 hover:scale-105"
             >
-              View Teaching Portfolio →
+              View Teaching Portfolio
             </Link>
           </motion.div>
 
@@ -374,7 +374,7 @@ export default function Home() {
               className="lg:col-span-7 space-y-8"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <GlassCard>
+                <GlassCard hover={false}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
                       <DraftingCompass size={24} className="text-[#0066ff]" />
@@ -395,7 +395,7 @@ export default function Home() {
                   </div>
                 </GlassCard>
 
-                <GlassCard delay={0.1}>
+                <GlassCard hover={false} delay={0.1}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
                       <SquareDashedKanban
@@ -420,7 +420,7 @@ export default function Home() {
                   </div>
                 </GlassCard>
 
-                <GlassCard>
+                <GlassCard hover={false}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
                       <Code size={24} className="text-[#0066ff]" />
@@ -442,7 +442,7 @@ export default function Home() {
                   </div>
                 </GlassCard>
 
-                <GlassCard delay={0.1}>
+                <GlassCard hover={false} delay={0.1}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
                       <Sparkles size={24} className="text-[#0066ff]" />
@@ -457,7 +457,7 @@ export default function Home() {
                       </p>
                       <p className="text-sm text-[#94a3b8]">
                         I use AI to accelerate every phase of product
-                        development— from research synthesis to functional
+                        development - from research synthesis to functional
                         prototypes. This speed lets teams make better decisions
                         through rapid experimentation.
                       </p>
@@ -468,7 +468,7 @@ export default function Home() {
 
               <p className="text-lg text-[#cbd5e1] leading-relaxed mt-10">
                 My technical background allows me to bridge design and
-                engineering— prototyping rapidly and participating in
+                engineering - prototyping rapidly and participating in
                 architecture discussions. I use AI tools to validate ideas in
                 hours instead of weeks, building working prototypes that teams
                 can react to instead of debating abstract specs.
@@ -484,7 +484,7 @@ export default function Home() {
           <SectionHeader title="What Colleagues Say" />
 
           <div className="space-y-12">
-            <GlassCard>
+            <GlassCard hover={false}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
                   <ExpandableText>
@@ -523,7 +523,7 @@ export default function Home() {
               </div>
             </GlassCard>
 
-            <GlassCard delay={0.1}>
+            <GlassCard hover={false} delay={0.1}>
               <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
                 <div className="flex-1">
                   <ExpandableText>
@@ -561,7 +561,7 @@ export default function Home() {
               </div>
             </GlassCard>
 
-            <GlassCard delay={0.2}>
+            <GlassCard hover={false} delay={0.2}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
                   <ExpandableText>
@@ -577,18 +577,18 @@ export default function Home() {
                       Having taught Inclusive Leadership, I can confidently say
                       that Giacomo embodies its principles. He fosters diverse
                       perspectives, builds trust, and creates space where all
-                      voices are heard. He doesn’t just lead—he empowers,
+                      voices are heard. He doesn't just lead - he empowers,
                       ensuring that learning and collaboration thrive.
                       <br />
-                      His communication skills stand out—clear, engaging, and
+                      His communication skills stand out -clear, engaging, and
                       adaptable. Whether leading discussions, mentoring
                       students, or working with colleagues, he knows how to
                       connect with people, spark thoughtful conversations, and
                       bring key insights to life. And when it comes to
-                      collaboration, Giacomo strengthens every team he’s part
+                      collaboration, Giacomo strengthens every team he's part
                       of. <br />
                       His leadership reflects the core values of global
-                      citizenship—inclusiveness, cultural competence,
+                      citizenship-inclusiveness, cultural competence,
                       adaptability, and a genuine commitment to making a
                       positive impact. I would highly recommend him for any role
                       that values strong leadership, strategic management, and
@@ -617,7 +617,7 @@ export default function Home() {
               </div>
             </GlassCard>
 
-            <GlassCard delay={0.1}>
+            <GlassCard hover={false} delay={0.1}>
               <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
                 <div className="flex-1">
                   <ExpandableText>
@@ -650,7 +650,7 @@ export default function Home() {
               </div>
             </GlassCard>
 
-            <GlassCard delay={0.2}>
+            <GlassCard hover={false} delay={0.2}>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-1">
                   <ExpandableText>
@@ -709,12 +709,12 @@ export default function Home() {
                   Explore my work leading cross-functional teams, building
                   design systems, and driving measurable business impact.
                 </p>
-                <a
-                  href="#work"
+                <Link
+                  href={createPageUrl("ProductWork")}
                   className="inline-block px-8 py-4 bg-[#0066ff] rounded-xl text-white font-semibold hover:bg-[#0052cc] transition-all duration-200 glow-blue hover:scale-105"
                 >
-                  Explore Product Work →
-                </a>
+                  Explore Product Work
+                </Link>
               </div>
             </div>
 
@@ -741,7 +741,7 @@ export default function Home() {
                   className="inline-block px-8 py-4 glass rounded-xl text-white font-semibold border-2 border-[#00d4ff] hover:bg-[#00d4ff] transition-all duration-200 hover:scale-105"
                   style={{ boxShadow: "0 0 20px rgba(0, 212, 255, 0.2)" }}
                 >
-                  View Teaching Portfolio →
+                  View Teaching Portfolio{" "}
                 </Link>
               </div>
             </div>

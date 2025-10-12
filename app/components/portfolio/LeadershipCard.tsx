@@ -13,7 +13,7 @@ export default function LeadershipCard({
   delay?: number;
 }) {
   return (
-    <GlassCard delay={delay}>
+    <GlassCard hover={false} delay={delay}>
       <div className="flex flex-col h-full">
         <div className="w-14 h-14 glass rounded-full flex items-center justify-center mb-4 glow-blue mx-auto">
           <Icon size={28} className="text-[#0066ff]" />

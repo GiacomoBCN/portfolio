@@ -54,7 +54,7 @@ export default function BeforeAfterImpactCard({
 
   return (
     <GlassCard
-      hover={true}
+      hover={false}
       delay={delay}
       onViewportEnter={() => setIsVisible(true)}
     >
