@@ -131,9 +131,8 @@ export default function DowJones() {
           </h1>
           <p className="text-lg text-gray-400 mb-4">Lead Design Technologist</p>
           <p className="text-xl text-gray-300 mb-8">
-            Governance of a unified design system adopted across B2B and B2C
-            brands, boosting team productivity by 30% and reducing component
-            complexity by 20%.
+            Co-led design system adoption across B2B and B2C brands, boosting
+            team productivity by 30% and reducing component complexity by 20%.
           </p>
           <div className="flex flex-wrap gap-2">
             {[

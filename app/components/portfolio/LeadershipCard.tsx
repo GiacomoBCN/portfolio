@@ -15,10 +15,10 @@ export default function LeadershipCard({
   return (
     <GlassCard delay={delay}>
       <div className="flex flex-col h-full">
-        <div className="w-14 h-14 glass rounded-full flex items-center justify-center mb-4 glow-blue">
+        <div className="w-14 h-14 glass rounded-full flex items-center justify-center mb-4 glow-blue mx-auto">
           <Icon size={28} className="text-[#0066ff]" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-6">{title}</h3>
+        <h3 className="text-2xl font-bold text-[#0066ff] mb-6 text-center">{title}</h3>
         <ul className="space-y-3 flex-1">
           {points.map((point, index) => (
             <li key={index} className="flex items-start gap-3 text-[#cbd5e1]">

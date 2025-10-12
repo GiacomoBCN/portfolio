@@ -151,9 +151,9 @@ export default function VoDPlatform() {
             Product Consultant · Confidential Client (Dubai)
           </p>
           <p className="text-xl text-gray-300 mb-8">
-            Redesigned cross-device VOD experience, cutting interaction steps by
-            40% and achieving WCAG AA accessibility compliance across TV,
-            mobile, and in-car displays.
+            Redesigned cross-device VOD experience with 40% fewer interaction
+            steps (calculated via click-path analysis) and WCAG AA compliance
+            across TV, mobile, and in-car displays.
           </p>
           <div className="flex flex-wrap gap-2">
             {[

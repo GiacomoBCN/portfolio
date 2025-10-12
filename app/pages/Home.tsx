@@ -25,7 +25,7 @@ import LeadershipCard from "../components/portfolio/LeadershipCard";
 import ProjectCard from "../components/portfolio/ProjectCard";
 import GlassCard from "../components/portfolio/GlassCard";
 import ExpandableText from "../components/ExpandableText";
-
+import BeforeAfterImpactCard from "../components/portfolio/BeforeAfterImpactCard";
 export default function Home() {
   return (
     <div className="overflow-hidden">
@@ -80,8 +80,12 @@ export default function Home() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-[#cbd5e1] mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            I lead cross-functional teams to build products that balance user
-            needs with business impact.
+            I align designers and engineers to ship scalable systems. I reduce
+            friction in complex interfaces, unify fragmented codebases, and
+            establish governance that makes design systems work in production.{" "}
+            <br />
+            I've taught 1000+ students across UX/UI and cross-cultural
+            management.
           </motion.p>
 
           <motion.div
@@ -125,38 +129,36 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             title="Driving Measurable Impact"
-            subtitle="Leading through data, delivering results"
+            subtitle="From From leading design systems at Dow Jones to teaching at EAE. 
+            I focus on systems that scale and teams that succeed."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <MetricCard
-              icon={Layers}
-              headline="60+"
-              metrics={[
-                "Designers aligned across 8 brands",
-                "200K+ component references",
-                "Co-led enterprise design system",
-              ]}
+            <BeforeAfterImpactCard
+              icon={MonitorCog}
+              headline="60 +"
+              subHeadline="DOW JONES - 8 BRANDS ALIGNED" // <- New sub-headline
+              before="8 brands with separate design and engineering teams. Each team had different processes, priorities, and platforms."
+              after="Co-owned roadmap and led adoption across 60+ designers, 120+ stakeholders. Spearheaded token-first architecture. Reduced component complexity 20%."
+              impact="200K+ components in production. 30% productivity increase through improved workflows. WCAG 2.2 compliant."
               delay={0}
             />
-            <MetricCard
+            <BeforeAfterImpactCard
               icon={TrendingUp}
-              headline="60%"
-              metrics={[
-                "Friction reduction (VoD platform)",
-                "40% mobile traffic increase",
-                "30% efficiency improvement",
-              ]}
+              headline="40 %"
+              subHeadline="INTERACTION FRICTION"
+              before="VoD platform required 10+ button presses to switch profiles. 3-axis navigation confused users."
+              after="Heuristic evaluation identified friction. Redesigned to 4 presses. Clear 2-axis structure."
+              impact="60% faster profile switching. WCAG AA accessible. Scaled across TV, mobile, tablet, car."
               delay={0.1}
             />
-            <MetricCard
+            <BeforeAfterImpactCard
               icon={GraduationCap}
-              headline="1000+"
-              metrics={[
-                "Students mentored over 7 years",
-                "19 project teams annually",
-                "2 master's programs taught",
-              ]}
+              headline="1000 +"
+              subHeadline="STUDENTS MENTORED" // <- New sub-headline
+              before="Theory-heavy lectures with limited real-world application."
+              after="Project-driven learning across design and management disciplines."
+              impact="7 years teaching at EAE Business School. 2 master's programs. 19 project teams annually."
               delay={0.2}
             />
           </div>
@@ -176,11 +178,9 @@ export default function Home() {
               icon={Users}
               title="Through People"
               points={[
-                "Mentored designers and managed contractors",
-                "Aligned 120+ cross-functional stakeholders",
-                "Built collaborative culture through critique",
-                "Taught 1000+ students (7 years university level)",
-                "Promoted design excellence through mentorship",
+                "Facilitated cross-brand collaboration and design critiques at Dow Jones",
+                "Bridged design-engineering gap through 1:1 key role relationships and problem-solving meetings",
+                "Taught 1000+ students across 2 official master's programs at EAE Business School",
               ]}
               delay={0}
             />
@@ -188,11 +188,9 @@ export default function Home() {
               icon={Package}
               title="Through Product"
               points={[
-                "Co-led design system roadmap and prioritization",
-                "Managed feature backlog for B2B platforms",
-                "Defined success metrics and tracked KPIs",
-                "Drove decisions based on research and data",
-                "Balanced user value with business constraints",
+                "Co-owned design system roadmap and sprint planning",
+                "Led SGPV product evolution over 18 months (PhoneGap → Flutter + AI) serving 15 FMCG clients",
+                "Balanced user value with technical constraints across B2B and B2C platforms",
               ]}
               delay={0.1}
             />
@@ -200,11 +198,9 @@ export default function Home() {
               icon={Zap}
               title="Through Strategy"
               points={[
-                "Made trade-off decisions across competing needs",
-                "Facilitated alignment across 8 brands",
-                "Translated complexity into actionable roadmaps",
-                "Embedded accessibility into governance",
-                "Connected design to business outcomes",
+                "Improved UAT/QA workflows - 30% team productivity increase",
+                "Proposed removing VoD welcome screen despite stakeholder attachment - prioritized user value over internal preference",
+                "Managed feature backlog and prioritization for B2B platforms - balanced user value with technical constraints",
               ]}
               delay={0.2}
             />
@@ -226,7 +222,7 @@ export default function Home() {
               title="Dow Jones Design System"
               company="Dow Jones"
               timeframe=""
-              description="Governance of a unified design system adopted across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%.."
+              description="Co-led design system adoption across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%."
               image={getImagePath("images/projects/DJ1.png")}
               metrics={[
                 { value: "60+", label: "Designers" },
@@ -256,7 +252,7 @@ export default function Home() {
               title="VoD Platform Redesign"
               company="Confidential Client"
               timeframe=""
-              description="Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays."
+              description="Redesigned cross-device VOD experience with 40% fewer interaction steps (calculated via click-path analysis) and WCAG AA compliance across TV, mobile, and in-car displays."
               image={getImagePath("images/projects/Vod.png")}
               metrics={[
                 { value: "40%", label: "Less Friction" },
@@ -282,12 +278,12 @@ export default function Home() {
               title="SGPV Product Evolution"
               company="XpuntoCero -> SGPV"
               timeframe=""
-              description="Multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients with AI-powered features that reduced task time by 25%."
+              description="Multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients. Redesigned user flows and AI-powered features reduced task time by 25%."
               image={getImagePath("images/projects/sgpv.png")}
               metrics={[
                 { value: "15", label: "Global Brands" },
                 { value: "25%", label: "Faster" },
-                { value: "30%", label: "Satisfation" },
+                { value: "30%", label: "Satisfaction ↑" },
               ]}
               tags={[
                 "Product Strategy",
@@ -319,7 +315,7 @@ export default function Home() {
               metrics={[
                 { value: "40%", label: "Mobile Trafic" },
                 { value: "15%", label: "More Leads" },
-                { value: "20%", label: "Faster Loads" },
+                { value: "12%", label: "Higher Conversion" },
               ]}
               tags={[
                 "Branding",

@@ -11,7 +11,7 @@ export default function ProductWork() {
       role: "Lead Design Technologist",
       year: "",
       description:
-        "Governance of a unified design system adopted across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%.",
+        "Co-led design system adoption across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%.",
       metrics: [
         { value: "60+", label: "Designers" },
         { value: "200K+", label: "References" },
@@ -39,7 +39,7 @@ export default function ProductWork() {
       role: "Product Consultant",
       year: "",
       description:
-        "Redesigned cross-device VOD experience, cutting interaction steps by 40% and achieving WCAG AA compliance across TV, mobile, and in-car displays.",
+        "Redesigned cross-device VOD experience with 40% fewer interaction steps (calculated via click-path analysis) and WCAG AA compliance across TV, mobile, and in-car displays.",
       metrics: [
         { value: "40%", label: "Steps Reduced" },
         { value: "WCAG AA", label: "Compliant" },
@@ -63,11 +63,11 @@ export default function ProductWork() {
       role: "Product Design & Development",
       year: "",
       description:
-        "Multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients with AI-powered features that reduced task time by 25%.",
+        "Multi-year product evolution from PhoneGap to Flutter, serving 15 B2B clients. Redesigned user flows and AI-powered features reduced task time by 25%.",
       metrics: [
         { value: "15", label: "Clients" },
         { value: "25%", label: "Faster" },
-        { value: "30%", label: "Satisfaction" },
+        { value: "30%", label: "Satisfaction ↑" },
       ],
       tags: [
         "Product Strategy",
@@ -97,7 +97,7 @@ export default function ProductWork() {
       metrics: [
         { value: "40%", label: "Mobile Trafic" },
         { value: "15%", label: "More Leads" },
-        { value: "20%", label: "Faster Loads" },
+        { value: "12%", label: "Higher Conversion" },
       ],
       tags: [
         "Branding",
