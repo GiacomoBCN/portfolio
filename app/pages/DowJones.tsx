@@ -127,13 +127,15 @@ export default function DowJones() {
           </p>
           <div className="mb-4">
             <span className="text-xs uppercase tracking-wider text-blue-400">
-              DESIGN SYSTEMS · ENTERPRISE
+              DESIGN SYSTEMS · PRODUCT OWNERSHIP · ENTERPRISE
             </span>
           </div>
           <h1 className="text-5xl font-bold text-white mb-4">
             Dow Jones Design System
           </h1>
-          <p className="text-lg text-gray-400 mb-4">Lead Design Technologist</p>
+          <p className="text-lg text-gray-400 mb-4">
+            Lead Design Technologist | Design System Product Owner
+          </p>
           <p className="text-xl text-gray-300 mb-8">
             I co-led design system adoption across 8 brands at Dow Jones, from
             The Wall Street Journal to Factiva (B2C & B2B). We unified teams,
@@ -183,10 +185,10 @@ export default function DowJones() {
           unique identity.
         </p>
         <p className="text-gray-300 leading-relaxed">
-          As Lead Design Technologist, I co-owned the product roadmap with
-          design and engineering leadership. The challenge was establishing
-          governance that 8 autonomous brands would embrace, not as a
-          constraint, but as an accelerator.
+          As Lead Design Technologist and Product Owner for the design system, I
+          co-owned the product roadmap with design and engineering leadership.
+          The challenge was establishing governance that 8 autonomous brands
+          would embrace, not as a constraint, but as an accelerator.
         </p>
 
         <p className="text-gray-300 leading-relaxed">

@@ -6,9 +6,9 @@ import ProjectListingCard from "../components/work/ProjectListingCard";
 export default function ProductWork() {
   const projects = [
     {
-      category: "DESIGN SYSTEMS · ENTERPRISE",
+      category: "DESIGN SYSTEMS · PRODUCT OWNERSHIP · ENTERPRISE",
       title: "Dow Jones Design System",
-      role: "Lead Design Technologist",
+      role: "Lead Design Technologist | Design System Product Owner",
       year: "",
       description:
         "Co-led design system adoption across B2B and B2C brands, boosting team productivity by 30% and reducing component complexity by 20%.",

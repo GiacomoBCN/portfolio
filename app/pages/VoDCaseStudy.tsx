@@ -200,7 +200,7 @@ export default function VoDPlatform() {
       {/* Overview */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <OverviewCard icon={AlertCircle} title="The Challenge">
               Complex 3-axis navigation causing user friction. Poor legibility
               with light text over artwork. Weak focus indicators for TV
@@ -224,11 +224,6 @@ export default function VoDPlatform() {
                 <li>• Unified design language across devices</li>
                 <li>• 60% faster profile switching</li>
               </ul>
-            </OverviewCard>
-
-            <OverviewCard icon={Calendar} title="Timeline">
-              6 months evaluation & redesign · Multi-device design system ·
-              Scaled across TV, mobile, tablet, in-car
             </OverviewCard>
           </div>
         </div>
