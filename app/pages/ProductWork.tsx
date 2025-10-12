@@ -97,7 +97,7 @@ export default function ProductWork() {
       metrics: [
         { value: "40%", label: "Mobile Trafic" },
         { value: "15%", label: "More Leads" },
-        { value: "12%", label: "Higher Conversion" },
+        { value: "2 x", label: "Demo Requests" },
       ],
       tags: [
         "Branding",

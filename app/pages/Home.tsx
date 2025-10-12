@@ -16,6 +16,7 @@ import {
   Briefcase,
   MonitorCog,
   DraftingCompass,
+  SquareDashedKanban,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -102,7 +103,7 @@ export default function Home() {
             </a>
             <Link
               href={createPageUrl("Teaching")}
-              className="px-8 py-4 glass rounded-xl text-white font-semibold hover:bg-[#0066ff] hover:border-[#0066ff] transition-all duration-200"
+              className="px-8 py-4 glass rounded-xl text-white font-semibold hover:bg-[#0066ff] hover:border-[#0066ff] transition-all duration-200 hover:scale-105"
             >
               View Teaching Portfolio →
             </Link>
@@ -315,7 +316,7 @@ export default function Home() {
               metrics={[
                 { value: "40%", label: "Mobile Trafic" },
                 { value: "15%", label: "More Leads" },
-                { value: "12%", label: "Higher Conversion" },
+                { value: "2 X", label: "Demo Requests" },
               ]}
               tags={[
                 "Branding",
@@ -382,8 +383,13 @@ export default function Home() {
                       <h3 className="text-xl font-bold text-white mb-2">
                         Product Design
                       </h3>
+                      <p className="text-sm font-semibold text-[#cbd5e1] mb-2">
+                        Research → Strategy → Design → Testing → Delivery.
+                      </p>
                       <p className="text-sm text-[#94a3b8]">
-                        End-to-end UX/UI process
+                        I run heuristic evaluations, user interviews, and
+                        usability tests to validate decisions before engineering
+                        builds.
                       </p>
                     </div>
                   </div>
@@ -392,14 +398,23 @@ export default function Home() {
                 <GlassCard delay={0.1}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 glass rounded-full flex items-center justify-center flex-shrink-0 glow-blue">
-                      <MonitorCog size={24} className="text-[#0066ff]" />
+                      <SquareDashedKanban
+                        size={24}
+                        className="text-[#0066ff]"
+                      />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">
-                        Design Systems
+                        Product Strategy
                       </h3>
+                      <p className="text-sm font-semibold text-[#cbd5e1] mb-2">
+                        Roadmaps, Prioritization, Stakeholder Alignment.
+                      </p>
                       <p className="text-sm text-[#94a3b8]">
-                        Figma, Design Tokens, Storybook, Git, CI/CD
+                        I co-own product roadmaps and prioritize features based
+                        on user research, business goals, and technical
+                        constraints. I've led strategic decisions across design
+                        systems, mobile apps, and B2B platforms.
                       </p>
                     </div>
                   </div>
@@ -414,9 +429,14 @@ export default function Home() {
                       <h3 className="text-xl font-bold text-white mb-2">
                         Front-End Development
                       </h3>
-                      <p className="text-sm text-[#94a3b8]">
+                      <p className="text-sm font-semibold text-[#cbd5e1] mb-2">
                         React, Flutter, Dart, HTML5, CSS3, JavaScript,
-                        TypeScript, Tailwind
+                        TypeScript, Tailwind.
+                      </p>
+                      <p className="text-sm text-[#94a3b8]">
+                        I code functional prototypes to bridge design and
+                        engineering. This shared language helps me validate
+                        feasibility early and align teams on technical approach.
                       </p>
                     </div>
                   </div>
@@ -431,9 +451,15 @@ export default function Home() {
                       <h3 className="text-xl font-bold text-white mb-2">
                         AI-Augmented Workflow
                       </h3>
-                      <p className="text-sm text-[#94a3b8]">
+                      <p className="text-sm font-semibold text-[#cbd5e1] mb-2">
                         ChatGPT, GitHub Copilot, Vertex AI, Midjourney, Cursor,
-                        AI Agents
+                        AI Agents.
+                      </p>
+                      <p className="text-sm text-[#94a3b8]">
+                        I use AI to accelerate every phase of product
+                        development— from research synthesis to functional
+                        prototypes. This speed lets teams make better decisions
+                        through rapid experimentation.
                       </p>
                     </div>
                   </div>
@@ -441,11 +467,11 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-[#cbd5e1] leading-relaxed mt-10">
-                My technical background allows me to prototype rapidly,
-                participate in engineering discussions, and earn developer
-                respect. I use AI tools to validate ideas in hours, not weeks -
-                building working prototypes that teams can react to instead of
-                debating abstract specs.
+                My technical background allows me to bridge design and
+                engineering— prototyping rapidly and participating in
+                architecture discussions. I use AI tools to validate ideas in
+                hours instead of weeks, building working prototypes that teams
+                can react to instead of debating abstract specs.
               </p>
             </motion.div>
           </div>
@@ -672,7 +698,7 @@ export default function Home() {
             <div className="glass p-12 relative group hover:bg-[rgba(0,102,255,0.1)] transition-all duration-300 border-r border-[rgba(255,255,255,0.08)]">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0066ff]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col items-center text-center">
                 <div className="w-16 h-16 glass rounded-full flex items-center justify-center mb-6 glow-blue">
                   <Briefcase size={32} className="text-[#0066ff]" />
                 </div>
@@ -696,7 +722,7 @@ export default function Home() {
             <div className="glass p-12 relative group hover:bg-[rgba(0,212,255,0.1)] transition-all duration-300">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#00d4ff]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col items-center text-center">
                 <div
                   className="w-16 h-16 glass rounded-full flex items-center justify-center mb-6"
                   style={{ boxShadow: "0 0 20px rgba(0, 212, 255, 0.3)" }}
@@ -712,7 +738,7 @@ export default function Home() {
                 </p>
                 <Link
                   href={createPageUrl("Teaching")}
-                  className="inline-block px-8 py-4 glass rounded-xl text-white font-semibold border-2 border-[#00d4ff] hover:bg-[#00d4ff] transition-all duration-200"
+                  className="inline-block px-8 py-4 glass rounded-xl text-white font-semibold border-2 border-[#00d4ff] hover:bg-[#00d4ff] transition-all duration-200 hover:scale-105"
                   style={{ boxShadow: "0 0 20px rgba(0, 212, 255, 0.2)" }}
                 >
                   View Teaching Portfolio →
