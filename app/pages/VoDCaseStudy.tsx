@@ -169,11 +169,11 @@ export default function VoDPlatform() {
 
   const evaluationImages = [
     {
-      src: getImagePath("images/projects/Vod-OldHome.png"),
+      src: getImagePath("images/projects/Vod-Old_Home_nav.png"),
       alt: "Original VoD platform interface showing navigation complexity",
     },
     {
-      src: getImagePath("images/projects/Vod-OldWelcom.png"),
+      src: getImagePath("images/projects/Vod-Old_Welcom.png"),
       alt: "Original VoD platform welcome screen interface",
     },
   ];
@@ -457,12 +457,12 @@ export default function VoDPlatform() {
               bulletPoints={heuristicData.bulletPoints}
               images={[
                 {
-                  src: getImagePath("images/projects/VoD-OldHome.png"),
+                  src: getImagePath("images/projects/Vod-Old_Home_nav.png"),
                   alt: "Original VoD platform interface showing navigation complexity",
                 },
                 {
                   src: getImagePath(
-                    "images/projects/Vod_Redesing_Nav_iconografy_reason.png"
+                    "images/projects/Vod_Redesing_Nav_Graf_Reason.png"
                   ),
                   alt: "Original VoD platform welcome screen interface",
                 },
@@ -479,13 +479,11 @@ export default function VoDPlatform() {
               bulletPoints={accessibilityData.bulletPoints}
               images={[
                 {
-                  src: getImagePath("images/projects/Vod-OldWelcom.png"),
+                  src: getImagePath("images/projects/Vod-Old_Welcom.png"),
                   alt: "Original VoD Welcom page",
                 },
                 {
-                  src: getImagePath(
-                    "images/projects/Vod-Old_ex_a11y_iusse.png"
-                  ),
+                  src: getImagePath("images/projects/Vod-Old_ex_a11y.png"),
                   alt: "Original VoD platform A11y example contrat iusse",
                 },
               ]}
@@ -655,7 +653,8 @@ export default function VoDPlatform() {
               Navigation System Deep Dive
             </h3>
             <p className="text-gray-400">
-              A detailed comparison of the old 3-axis vs new 2-axis navigation system
+              A detailed comparison of the old 3-axis vs new 2-axis navigation
+              system
             </p>
           </div>
 
