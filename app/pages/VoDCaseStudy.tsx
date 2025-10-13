@@ -413,7 +413,7 @@ export default function VoDPlatform() {
             <GlassCard>
               <div className="p-6">
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  A MENA-based client was building a VOD platform to compete
+                  A MENA based client was building a VOD platform to compete
                   with Netflix and Disney+ in the region. The prototype had a
                   lot of features, but users got lost in a three-layer
                   navigation system (icon belt, tab row, carousels). Light text

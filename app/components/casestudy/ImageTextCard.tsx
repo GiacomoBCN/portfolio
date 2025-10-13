@@ -1,6 +1,5 @@
 import React from "react";
 import GlassCard from "../portfolio/GlassCard";
-import { getImagePath } from "@/utils/image";
 
 interface ImageTextCardProps {
   title: string;
@@ -30,11 +29,8 @@ export default function ImageTextCard({
   onOpenGallery,
   additionalText,
 }: ImageTextCardProps) {
-  // Transform images to include the full path
-  const imagesWithPath = images.map((image) => ({
-    src: getImagePath(image.src),
-    alt: image.alt,
-  }));
+  // Images already have getImagePath() applied in parent component
+  const imagesWithPath = images;
 
   const imageSection = (
     <div className="md:w-1/3 flex-shrink-0 flex flex-col">
