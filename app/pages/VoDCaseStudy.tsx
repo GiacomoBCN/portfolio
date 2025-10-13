@@ -169,7 +169,7 @@ export default function VoDPlatform() {
 
   const evaluationImages = [
     {
-      src: getImagePath("images/projects/Vod-OldHome.png"),
+      src: getImagePath("images/projects/VoD-OldHome.png"),
       alt: "Original VoD platform interface showing navigation complexity",
     },
     {
@@ -457,7 +457,7 @@ export default function VoDPlatform() {
               bulletPoints={heuristicData.bulletPoints}
               images={[
                 {
-                  src: getImagePath("images/projects/Vod-OldHome.png"),
+                  src: getImagePath("images/projects/VoD-OldHome.png"),
                   alt: "Original VoD platform interface showing navigation complexity",
                 },
                 {
