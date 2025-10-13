@@ -471,7 +471,7 @@ export default function VoDPlatform() {
               images={[
                 {
                   src: "images/projects/Vod-OldWelcom.png",
-                  alt: "Original VoD platform interface showing navigation complexity",
+                  alt: "Original VoD Welcom page",
                 },
                 {
                   src: "images/projects/Vod-Old_ex_a11y_iusse.png",
