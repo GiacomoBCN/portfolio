@@ -806,7 +806,9 @@ export default function VoDPlatform() {
               {/* Structure Card */}
               <GlassCard>
                 <div className="p-5">
-                  <h3 className="text-white font-semibold text-lg mb-4">Structure</h3>
+                  <h3 className="text-white font-semibold text-lg mb-4">
+                    Structure
+                  </h3>
 
                   <div className="space-y-4">
                     <div>
@@ -814,9 +816,18 @@ export default function VoDPlatform() {
                         🟥 OLD (3-Axis)
                       </div>
                       <div className="text-gray-300 text-sm space-y-2">
-                        <p>1️⃣ <strong>Top icon belt</strong> — horizontal row (Home, Games, Learning, Shop…)</p>
-                        <p>2️⃣ <strong>Second horizontal tab row</strong> — (Live TV, VOD, Catch-up, TV Guide)</p>
-                        <p>3️⃣ <strong>Content rows</strong> — horizontal carousels of shows/movies</p>
+                        <p>
+                          1️⃣ <strong>Top icon belt</strong> — horizontal row
+                          (Home, Games, Learning, Shop…)
+                        </p>
+                        <p>
+                          2️⃣ <strong>Second horizontal tab row</strong> — (Live
+                          TV, VOD, Catch-up, TV Guide)
+                        </p>
+                        <p>
+                          3️⃣ <strong>Content rows</strong> — horizontal
+                          carousels of shows/movies
+                        </p>
                       </div>
                     </div>
 
@@ -825,8 +836,14 @@ export default function VoDPlatform() {
                         🟦 NEW (2-Axis)
                       </div>
                       <div className="text-gray-300 text-sm space-y-2">
-                        <p>1️⃣ <strong>Vertical rail (left)</strong> — primary sections (Watch, Play, Learn, Shop…)</p>
-                        <p>2️⃣ <strong>Top horizontal tabs</strong> — filter within the section (Live TV, VOD, Catch-up…)</p>
+                        <p>
+                          1️⃣ <strong>Vertical rail (left)</strong> — primary
+                          sections (Watch, Play, Learn, Shop…)
+                        </p>
+                        <p>
+                          2️⃣ <strong>Top horizontal tabs</strong> — filter
+                          within the section (Live TV, VOD, Catch-up…)
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -836,7 +853,9 @@ export default function VoDPlatform() {
               {/* Movement Card */}
               <GlassCard>
                 <div className="p-5">
-                  <h3 className="text-white font-semibold text-lg mb-4">Movement</h3>
+                  <h3 className="text-white font-semibold text-lg mb-4">
+                    Movement
+                  </h3>
 
                   <div className="space-y-4">
                     <div>
@@ -846,7 +865,10 @@ export default function VoDPlatform() {
                       <div className="text-gray-300 text-sm space-y-2">
                         <p>⬆️⬇️ jump between stacked rows</p>
                         <p>⬅️➡️ move within each row</p>
-                        <p className="text-gray-400 italic">Zig-zag pattern due to two horizontal layers: Up → right → down → right → up → left…</p>
+                        <p className="text-gray-400 italic">
+                          Zig-zag pattern due to two horizontal layers: Up →
+                          right → down → right → up → left…
+                        </p>
                       </div>
                     </div>
 
@@ -857,7 +879,9 @@ export default function VoDPlatform() {
                       <div className="text-gray-300 text-sm space-y-2">
                         <p>⬆️⬇️ move between main sections (vertical rail)</p>
                         <p>⬅️➡️ browse tabs or content horizontally</p>
-                        <p className="text-gray-400">Planar, predictable; no zig-zag.</p>
+                        <p className="text-gray-400">
+                          Planar, predictable; no zig-zag.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -867,7 +891,9 @@ export default function VoDPlatform() {
               {/* Focus & Legibility Card */}
               <GlassCard>
                 <div className="p-5">
-                  <h3 className="text-white font-semibold text-lg mb-4">Focus & Legibility</h3>
+                  <h3 className="text-white font-semibold text-lg mb-4">
+                    Focus & Legibility
+                  </h3>
 
                   <div className="space-y-4">
                     <div>
@@ -885,7 +911,9 @@ export default function VoDPlatform() {
                         🟦 NEW (2-Axis)
                       </div>
                       <div className="text-gray-300 text-sm space-y-2">
-                        <p>Persistent focus halo (+5% scale, Orbit Blue outline).</p>
+                        <p>
+                          Persistent focus halo (+5% scale, Orbit Blue outline).
+                        </p>
                         <p>Text on 80% dark scrim → WCAG AA.</p>
                       </div>
                     </div>
@@ -896,7 +924,9 @@ export default function VoDPlatform() {
               {/* Utility & Feedback Card */}
               <GlassCard>
                 <div className="p-5">
-                  <h3 className="text-white font-semibold text-lg mb-4">Utility & Feedback</h3>
+                  <h3 className="text-white font-semibold text-lg mb-4">
+                    Utility & Feedback
+                  </h3>
 
                   <div className="space-y-4">
                     <div>
@@ -913,8 +943,13 @@ export default function VoDPlatform() {
                         🟦 NEW (2-Axis)
                       </div>
                       <div className="text-gray-300 text-sm space-y-2">
-                        <p>Right-aligned utility cluster (Search, Grid, AI, Avatar).</p>
-                        <p>Gentle bounce/scale + soft click feedback (specified).</p>
+                        <p>
+                          Right-aligned utility cluster (Search, Grid, AI,
+                          Avatar).
+                        </p>
+                        <p>
+                          Gentle bounce/scale + soft click feedback (specified).
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -924,7 +959,9 @@ export default function VoDPlatform() {
               {/* Outcome Card */}
               <GlassCard>
                 <div className="p-5">
-                  <h3 className="text-white font-semibold text-lg mb-4">Outcome</h3>
+                  <h3 className="text-white font-semibold text-lg mb-4">
+                    Outcome
+                  </h3>
 
                   <div className="space-y-4">
                     <div>
@@ -941,7 +978,10 @@ export default function VoDPlatform() {
                         🟦 NEW (2-Axis)
                       </div>
                       <div className="text-gray-300 text-sm">
-                        <p>~40% fewer interaction steps; clearer "where vs what" mental model.</p>
+                        <p>
+                          ~40% fewer interaction steps; clearer "where vs what"
+                          mental model.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1082,7 +1122,7 @@ export default function VoDPlatform() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Constraints
+                    Constraints & Trade-offs
                   </h3>
 
                   <ul className="space-y-2 text-gray-300 text-sm">
@@ -1113,7 +1153,7 @@ export default function VoDPlatform() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Learnings
+                    Key Learnings
                   </h3>
                   <ul className="space-y-3 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">
