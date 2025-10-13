@@ -972,7 +972,9 @@ export default function VoDPlatform() {
                   I mapped click-paths before and after the redesign to measure
                   the improvement in common TV remote tasks.
                 </p>
-                <div className="overflow-x-auto">
+
+                {/* Desktop Table View - hidden on mobile */}
+                <div className="hidden lg:block overflow-x-auto">
                   <table className="w-full text-left">
                     <thead>
                       <tr className="border-b border-gray-700">
@@ -1005,6 +1007,49 @@ export default function VoDPlatform() {
                       ))}
                     </tbody>
                   </table>
+                </div>
+
+                {/* Mobile Card View - visible only on mobile */}
+                <div className="lg:hidden space-y-4">
+                  {interactionImprovements.map((item, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/[0.05] border border-white/10 rounded-lg p-4"
+                    >
+                      <h3 className="text-white font-semibold text-base mb-4">
+                        {item.task}
+                      </h3>
+
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                          <div className="text-white/60 text-xs font-semibold uppercase tracking-wide">
+                            Original Prototype
+                          </div>
+                          <div className="text-gray-300 text-sm font-semibold">
+                            {item.before}
+                          </div>
+                        </div>
+
+                        <div className="flex justify-between items-center">
+                          <div className="text-white/60 text-xs font-semibold uppercase tracking-wide">
+                            Redesigned Flow
+                          </div>
+                          <div className="text-gray-300 text-sm font-semibold">
+                            {item.after}
+                          </div>
+                        </div>
+
+                        <div className="flex justify-between items-center pt-2 border-t border-white/10">
+                          <div className="text-white/60 text-xs font-semibold uppercase tracking-wide">
+                            Improvement
+                          </div>
+                          <div className="text-green-400 text-base font-bold">
+                            {item.improvement}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </GlassCard>
