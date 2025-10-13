@@ -104,9 +104,6 @@ export default function OnlineBackOfficeCaseStudy() {
       after: "Git merge → scripted deploy",
       improvement: "Hours → Minutes",
     },
-    {
-      /* in tech way was Git merge → Jenkins / FTP deploy */
-    },
   ];
 
   return (
@@ -500,7 +497,7 @@ export default function OnlineBackOfficeCaseStudy() {
             </div>
           </div>
           <div className="pl-0 md:pl-24">
-            <GlassCard>
+            <GlassCard className="hidden lg:block">
               <div className="p-6">
                 <p className="text-gray-300 leading-relaxed mb-6">
                   Centralization turned multi‑client maintenance into a
@@ -541,6 +538,51 @@ export default function OnlineBackOfficeCaseStudy() {
                     </tbody>
                   </table>
                 </div>
+              </div>
+            </GlassCard>
+
+            {/* Mobile Card View - visible only on mobile (adopted from VoDCaseStudy.tsx) */}
+            <GlassCard>
+              <div className="lg:hidden space-y-4">
+                {rolloutImprovements.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/[0.05] border border-white/10 rounded-lg p-4"
+                  >
+                    <h3 className="text-white font-semibold text-base mb-4">
+                      {item.task}
+                    </h3>
+
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide">
+                          Before
+                        </div>
+                        <div className="text-gray-300 text-sm font-semibold">
+                          {item.before}
+                        </div>
+                      </div>
+
+                      <div className="flex justify-between items-center">
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide">
+                          After
+                        </div>
+                        <div className="text-gray-300 text-sm font-semibold">
+                          {item.after}
+                        </div>
+                      </div>
+
+                      <div className="flex justify-between items-center pt-2 border-t border-white/10">
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide">
+                          Improvement
+                        </div>
+                        <div className="text-green-400 text-base font-bold">
+                          {item.improvement}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </GlassCard>
           </div>
