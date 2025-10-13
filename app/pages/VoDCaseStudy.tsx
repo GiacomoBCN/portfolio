@@ -169,11 +169,11 @@ export default function VoDPlatform() {
 
   const evaluationImages = [
     {
-      src: "images/projects/Vod-OldHome.png",
+      src: getImagePath("images/projects/Vod-OldHome.png"),
       alt: "Original VoD platform interface showing navigation complexity",
     },
     {
-      src: "images/projects/Vod-OldWelcom.png",
+      src: getImagePath("images/projects/Vod-OldWelcom.png"),
       alt: "Original VoD platform welcome screen interface",
     },
   ];
@@ -457,11 +457,11 @@ export default function VoDPlatform() {
               bulletPoints={heuristicData.bulletPoints}
               images={[
                 {
-                  src: "images/projects/Vod-OldHome.png",
+                  src: getImagePath("images/projects/Vod-OldHome.png"),
                   alt: "Original VoD platform interface showing navigation complexity",
                 },
                 {
-                  src: "images/projects/Vod_Redesing_Nav_iconografy_reason.png",
+                  src: getImagePath("images/projects/Vod_Redesing_Nav_iconografy_reason.png"),
                   alt: "Original VoD platform welcome screen interface",
                 },
               ]}
@@ -477,11 +477,11 @@ export default function VoDPlatform() {
               bulletPoints={accessibilityData.bulletPoints}
               images={[
                 {
-                  src: "images/projects/Vod-OldWelcom.png",
+                  src: getImagePath("images/projects/Vod-OldWelcom.png"),
                   alt: "Original VoD Welcom page",
                 },
                 {
-                  src: "images/projects/Vod-Old_ex_a11y_iusse.png",
+                  src: getImagePath("images/projects/Vod-Old_ex_a11y_iusse.png"),
                   alt: "Original VoD platform A11y example contrat iusse",
                 },
               ]}
@@ -685,7 +685,7 @@ export default function VoDPlatform() {
               <div className="flex flex-col items-center">
                 <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-700 shadow-lg">
                   <img
-                    src="/images/projects/Vod_old_navigation.png"
+                    src={getImagePath("images/projects/Vod_old_navigation.png")}
                     alt="Old Navigation (3-Axis)"
                     className="w-full h-full object-cover"
                   />
@@ -698,7 +698,7 @@ export default function VoDPlatform() {
               <div className="flex flex-col items-center">
                 <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-700 shadow-lg">
                   <img
-                    src="/images/projects/Vod_New_navigarion.png"
+                    src={getImagePath("images/projects/Vod_New_navigarion.png")}
                     alt="New Navigation (2-Axis)"
                     className="w-full h-full object-cover"
                   />
