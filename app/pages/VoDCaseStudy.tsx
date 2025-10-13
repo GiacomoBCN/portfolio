@@ -461,7 +461,9 @@ export default function VoDPlatform() {
                   alt: "Original VoD platform interface showing navigation complexity",
                 },
                 {
-                  src: getImagePath("images/projects/Vod_Redesing_Nav_iconografy_reason.png"),
+                  src: getImagePath(
+                    "images/projects/Vod_Redesing_Nav_iconografy_reason.png"
+                  ),
                   alt: "Original VoD platform welcome screen interface",
                 },
               ]}
@@ -481,7 +483,9 @@ export default function VoDPlatform() {
                   alt: "Original VoD Welcom page",
                 },
                 {
-                  src: getImagePath("images/projects/Vod-Old_ex_a11y_iusse.png"),
+                  src: getImagePath(
+                    "images/projects/Vod-Old_ex_a11y_iusse.png"
+                  ),
                   alt: "Original VoD platform A11y example contrat iusse",
                 },
               ]}
