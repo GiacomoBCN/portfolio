@@ -888,12 +888,8 @@ export default function VoDPlatform() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Constraints & Trade-offs
+                    Constraints
                   </h3>
-                  <p className="text-gray-300 text-sm mb-3">
-                    Mid-fidelity Figma mockups and design recommendations across
-                    all target devices.
-                  </p>
 
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">
@@ -923,7 +919,7 @@ export default function VoDPlatform() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Key Learnings
+                    Learnings
                   </h3>
                   <ul className="space-y-3 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">

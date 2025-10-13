@@ -5,7 +5,9 @@ export function getImagePath(path: string): string {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || process.env.__NEXT_ROUTER_BASEPATH || '';
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
 
-  if (basePath) {
+  // For static exports, don't add basePath to public folder assets
+  // The basePath is only for routing, not for static assets
+  if (basePath && !path.startsWith('/images/')) {
     return `${basePath}${cleanPath}`;
   }
 
