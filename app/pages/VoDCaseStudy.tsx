@@ -458,13 +458,13 @@ export default function VoDPlatform() {
               images={[
                 {
                   src: getImagePath("images/projects/Vod-Old_Home_nav.png"),
-                  alt: "Original VoD platform interface showing navigation complexity",
+                  alt: "Original VoD platform home screen showing the cluttered three-axis navigation layout",
                 },
                 {
                   src: getImagePath(
                     "images/projects/Vod_Redesing_Nav_Graf_Reason.png"
                   ),
-                  alt: "Original VoD platform welcome screen interface",
+                  alt: "Diagram showing how redesigning VoD navigation improved usability and user experience through simplicity and accessibility.",
                 },
               ]}
               imagePosition="left"
@@ -480,11 +480,11 @@ export default function VoDPlatform() {
               images={[
                 {
                   src: getImagePath("images/projects/Vod-Old_Welcom.png"),
-                  alt: "Original VoD Welcom page",
+                  alt: "Original VoD welcome screen requiring multiple clicks before accessing content",
                 },
                 {
                   src: getImagePath("images/projects/Vod-Old_ex_a11y.png"),
-                  alt: "Original VoD platform A11y example contrat iusse",
+                  alt: "Example of accessibility issues in the original VoD interface, showing low contrast and poor legibility",
                 },
               ]}
               imagePosition="right"
@@ -527,7 +527,7 @@ export default function VoDPlatform() {
             </div>
           </div>
 
-          <div className="pl-0 md:pl-24 grid grid-cols-2 gap-6">
+          <div className="pl-0 md:pl-24 grid grid-cols-1 md:grid-cols-2 gap-6">
             <GlassCard>
               <div className="p-3">
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -691,7 +691,8 @@ export default function VoDPlatform() {
 
           {/* 🧭 Comparison Table */}
           <div className="pl-0 md:pl-24">
-            <GlassCard>
+            {/* Desktop Table View - hidden on mobile */}
+            <GlassCard className="hidden lg:block">
               <div className="p-6 overflow-x-auto">
                 <table className="w-full text-left align-top">
                   <thead>
@@ -791,7 +792,7 @@ export default function VoDPlatform() {
                         Higher cognitive load; extra remote clicks.
                       </td>
                       <td className="py-4 pr-4">
-                        ~40% fewer interaction steps; clearer “where vs what”
+                        ~40% fewer interaction steps; clearer "where vs what"
                         mental model.
                       </td>
                     </tr>
@@ -799,6 +800,154 @@ export default function VoDPlatform() {
                 </table>
               </div>
             </GlassCard>
+
+            {/* Mobile Card View - visible only on mobile */}
+            <div className="lg:hidden space-y-6">
+              {/* Structure Card */}
+              <GlassCard>
+                <div className="p-5">
+                  <h3 className="text-white font-semibold text-lg mb-4">Structure</h3>
+
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-red-400 text-xs font-semibold uppercase tracking-wide mb-2 flex items-center gap-2">
+                        🟥 OLD (3-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>1️⃣ <strong>Top icon belt</strong> — horizontal row (Home, Games, Learning, Shop…)</p>
+                        <p>2️⃣ <strong>Second horizontal tab row</strong> — (Live TV, VOD, Catch-up, TV Guide)</p>
+                        <p>3️⃣ <strong>Content rows</strong> — horizontal carousels of shows/movies</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-4">
+                      <div className="text-blue-400 text-xs font-semibold uppercase tracking-wide mb-2 flex items-center gap-2">
+                        🟦 NEW (2-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>1️⃣ <strong>Vertical rail (left)</strong> — primary sections (Watch, Play, Learn, Shop…)</p>
+                        <p>2️⃣ <strong>Top horizontal tabs</strong> — filter within the section (Live TV, VOD, Catch-up…)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
+
+              {/* Movement Card */}
+              <GlassCard>
+                <div className="p-5">
+                  <h3 className="text-white font-semibold text-lg mb-4">Movement</h3>
+
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-red-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟥 OLD (3-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>⬆️⬇️ jump between stacked rows</p>
+                        <p>⬅️➡️ move within each row</p>
+                        <p className="text-gray-400 italic">Zig-zag pattern due to two horizontal layers: Up → right → down → right → up → left…</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-4">
+                      <div className="text-blue-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟦 NEW (2-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>⬆️⬇️ move between main sections (vertical rail)</p>
+                        <p>⬅️➡️ browse tabs or content horizontally</p>
+                        <p className="text-gray-400">Planar, predictable; no zig-zag.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
+
+              {/* Focus & Legibility Card */}
+              <GlassCard>
+                <div className="p-5">
+                  <h3 className="text-white font-semibold text-lg mb-4">Focus & Legibility</h3>
+
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-red-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟥 OLD (3-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>Weak focus; easy to lose track across layers.</p>
+                        <p>Light text over artwork → poor contrast.</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-4">
+                      <div className="text-blue-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟦 NEW (2-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>Persistent focus halo (+5% scale, Orbit Blue outline).</p>
+                        <p>Text on 80% dark scrim → WCAG AA.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
+
+              {/* Utility & Feedback Card */}
+              <GlassCard>
+                <div className="p-5">
+                  <h3 className="text-white font-semibold text-lg mb-4">Utility & Feedback</h3>
+
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-red-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟥 OLD (3-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        <p>Scattered top-right icons; no micro-interactions.</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-4">
+                      <div className="text-blue-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟦 NEW (2-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>Right-aligned utility cluster (Search, Grid, AI, Avatar).</p>
+                        <p>Gentle bounce/scale + soft click feedback (specified).</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
+
+              {/* Outcome Card */}
+              <GlassCard>
+                <div className="p-5">
+                  <h3 className="text-white font-semibold text-lg mb-4">Outcome</h3>
+
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-red-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟥 OLD (3-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        <p>Higher cognitive load; extra remote clicks.</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-4">
+                      <div className="text-blue-400 text-xs font-semibold uppercase tracking-wide mb-2">
+                        🟦 NEW (2-Axis)
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        <p>~40% fewer interaction steps; clearer "where vs what" mental model.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
+            </div>
           </div>
         </div>
       </section>
