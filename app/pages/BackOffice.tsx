@@ -140,8 +140,7 @@ export default function OnlineBackOfficeCaseStudy() {
           <p className="text-xl text-gray-300 mb-8">
             Unified 15 client portals into a scalable system using a single CSS
             and shared assets. Achieved 99% code reuse, 80% efficiency
-            improvement in rollouts, and enabled smartphone‑first usage that cut
-            hardware costs by 20%.
+            improvement in rollouts.
           </p>
           <div className="flex flex-wrap gap-2">
             {["Bootstrap 4", "CSS3", "Git Workflow"].map((tag, i) => (
@@ -292,11 +291,9 @@ export default function OnlineBackOfficeCaseStudy() {
             <GlassCard>
               <div className="p-6 space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  XpuntoCero operates several back-office portals linked to the
-                  SGPV field platform used by merchandisers and sales reps for
-                  15 FMCG clients across Spain, Portugal, and Italy. These
-                  dashboards visualize field data such as sales, promotions, and
-                  store audits.
+                  These dashboards visualize field data such as sales,
+                  promotions, and store audits. These dashboards visualize field
+                  data such as sales, promotions, and store audits.
                 </p>
 
                 <p className="text-gray-300 leading-relaxed">
