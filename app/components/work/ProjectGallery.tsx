@@ -12,11 +12,12 @@ interface ProjectGalleryProps {
   title?: string;
 }
 
-export default function ProjectGallery({ 
-  images, 
-  title = "Project Gallery" 
+export default function ProjectGallery({
+  images,
+  title = "Project Gallery"
 }: ProjectGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
   const nextImage = () => {
     if (selectedIndex !== null && selectedIndex < images.length - 1) {
@@ -30,6 +31,18 @@ export default function ProjectGallery({
     }
   };
 
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <section className="py-16 px-6">
@@ -37,12 +50,30 @@ export default function ProjectGallery({
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             {title}
           </h2>
-          <div className="relative">
-            <div className="flex justify-center gap-4 overflow-x-auto pb-4">
+          <div className="relative group px-12">
+            {/* Left Arrow */}
+            <button
+              onClick={scrollLeft}
+              className="absolute -left-2 top-1/2 -translate-y-1/2 z-10 p-3 bg-black/50 text-white rounded-full hover:bg-black/70 transition-all opacity-0 group-hover:opacity-100"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            {/* Gallery Container */}
+            <div
+              ref={scrollContainerRef}
+              className="flex justify-start gap-4 overflow-x-auto pb-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <style jsx>{`
+                div::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>
               {images.map((image, index) => (
-                <div 
+                <div
                   key={index}
-                  className="flex-shrink-0 w-80 h-48 bg-white backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+                  className="flex-shrink-0 w-80 h-48 bg-white backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform relative group"
                   onClick={() => setSelectedIndex(index)}
                 >
                   <img
@@ -50,9 +81,20 @@ export default function ProjectGallery({
                     alt={image.alt}
                     className="w-full h-full object-contain"
                   />
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="text-white text-sm font-medium">Click to enlarge</span>
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={scrollRight}
+              className="absolute -right-2 top-1/2 -translate-y-1/2 z-10 p-3 bg-black/50 text-white rounded-full hover:bg-black/70 transition-all opacity-0 group-hover:opacity-100"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
       </section>
@@ -60,81 +102,55 @@ export default function ProjectGallery({
       {/* Gallery Modal */}
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedIndex(null)}
         >
-          <div className="relative max-w-[95vw] max-h-[95vh] w-full">
-            {/* Main Image */}
-            <div className="flex items-center justify-center mb-4">
-              <img
-                src={images[selectedIndex].src}
-                alt={images[selectedIndex].alt}
-                className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
+          <button
+            onClick={() => setSelectedIndex(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+          >
+            <X size={32} />
+          </button>
 
-            {/* Thumbnail Navigation */}
-            <div className="flex items-center justify-center gap-2">
-              {/* Previous Button */}
+          {images.length > 1 && (
+            <>
               <button
-                className="p-2 bg-white/20 text-white rounded-full hover:bg-white/30 transition-colors disabled:opacity-50"
                 onClick={(e) => {
                   e.stopPropagation();
                   prevImage();
                 }}
-                disabled={selectedIndex === 0}
+                className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={32} />
               </button>
 
-              {/* Thumbnails */}
-              <div className="flex gap-2 overflow-x-auto max-w-[60vw] px-4">
-                {images.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden cursor-pointer transition-all ${
-                      index === selectedIndex 
-                        ? 'ring-2 ring-white scale-110' 
-                        : 'opacity-60 hover:opacity-100'
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedIndex(index);
-                    }}
-                  >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Next Button */}
               <button
-                className="p-2 bg-white/20 text-white rounded-full hover:bg-white/30 transition-colors disabled:opacity-50"
                 onClick={(e) => {
                   e.stopPropagation();
                   nextImage();
                 }}
-                disabled={selectedIndex === images.length - 1}
+                className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={32} />
               </button>
-            </div>
 
-            {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 w-12 h-12 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedIndex(null);
-              }}
-            >
-              <X size={24} />
-            </button>
+              <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+                {selectedIndex + 1} / {images.length}
+              </div>
+            </>
+          )}
+
+          <div className="flex flex-col items-center max-w-full max-h-full" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={images[selectedIndex].src}
+              alt="Enlarged view"
+              className="max-w-full max-h-[85vh] object-contain"
+            />
+            {images.length > 0 && images[selectedIndex] && (
+              <p className="text-white text-center mt-4 px-8 py-3 bg-black/70 rounded-lg max-w-3xl">
+                {images[selectedIndex].alt}
+              </p>
+            )}
           </div>
         </div>
       )}
