@@ -396,6 +396,7 @@ export default function VoDPlatform() {
       />
 
       {/* Section 1: Business Context */}
+
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-start gap-6 mb-8">
@@ -408,23 +409,29 @@ export default function VoDPlatform() {
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-4">
-            <p className="text-gray-300 leading-relaxed">
-              A MENA-based client was building a VOD platform to compete with
-              Netflix and Disney+ in the region. The prototype had a lot of
-              features, but users got lost in a three-layer navigation system
-              (icon belt, tab row, carousels). Light text over images created
-              poor contrast. Focus indicators were too weak for TV viewing from
-              3 meters away. And the "Who's watching?" welcome screen blocked
-              users from accessing content.
-            </p>
+          <div className="pl-0 md:pl-24">
+            <GlassCard>
+              <div className="p-6">
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  A MENA-based client was building a VOD platform to compete
+                  with Netflix and Disney+ in the region. The prototype had a
+                  lot of features, but users got lost in a three-layer
+                  navigation system (icon belt, tab row, carousels). Light text
+                  over images created poor contrast. Focus indicators were too
+                  weak for TV viewing from 3 meters away. And the "Who's
+                  watching?" welcome screen blocked users from accessing
+                  content.
+                </p>
 
-            <p className="text-gray-300 leading-relaxed">
-              The MENA streaming market was getting crowded with global players.
-              Users expected Netflix-level usability, but localized for regional
-              preferences. The platform needed to work across TV, mobile,
-              tablet, and in-car displays without feeling fragmented.
-            </p>
+                <p className="text-gray-300 leading-relaxed">
+                  The MENA streaming market was getting crowded with global
+                  players. Users expected Netflix-level usability, but localized
+                  for regional preferences. The platform needed to work across
+                  TV, mobile, tablet, and in-car displays without feeling
+                  fragmented.
+                </p>
+              </div>
+            </GlassCard>
           </div>
         </div>
       </section>
