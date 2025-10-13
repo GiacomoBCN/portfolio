@@ -212,7 +212,7 @@ export default function DowJones() {
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">Lead Design Technologist</p>
-              <ul className="space-y-1 text-xs">
+              <ul className="space-y-1">
                 <li>• Product roadmap co-ownership</li>
                 <li>• Design system governance</li>
                 <li>• Component architecture</li>

@@ -211,7 +211,7 @@ export default function SGPVEvolution() {
               <p className="font-semibold mb-2">
                 Product Designer · UX Lead · Front-End Developer
               </p>
-              <ul className="space-y-1 text-xs">
+              <ul className="space-y-1">
                 <li>• Research ops, interviews, usability tests</li>
                 <li>• Responsive patterns & centralized styling</li>
                 <li>• Front-end refactors (PhoneGap → Flutter)</li>

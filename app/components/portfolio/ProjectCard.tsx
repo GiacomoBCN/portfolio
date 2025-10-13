@@ -81,9 +81,8 @@ export default function ProjectCard({
           </div>
         )}
       </div>
-
-      {/* Tags - Fixed height with overflow control */}
-      <div className="h-[120px] overflow-hidden">
+      {/* Tags - Responsive height with better mobile handling */}
+      <div className="min-h-[80px] sm:min-h-[100px] md:min-h-[120px]">
         {tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {tags.map((tag, index) => (

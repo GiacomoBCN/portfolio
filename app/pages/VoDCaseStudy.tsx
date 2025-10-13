@@ -319,7 +319,7 @@ export default function VoDPlatform() {
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">Product Design Consultant</p>
-              <ul className="space-y-1 text-xs">
+              <ul className="space-y-1">
                 <li>• Heuristic evaluation & accessibility audit</li>
                 <li>
                   • Cross-platform design strategy (TV, mobile, tablet, car)

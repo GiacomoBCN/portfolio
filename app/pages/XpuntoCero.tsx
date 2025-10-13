@@ -188,7 +188,7 @@ export default function XpuntoCero() {
               <p className="font-semibold mb-2">
                 Product Designer & Front-End Developer
               </p>
-              <ul className="space-y-1 text-xs">
+              <ul className="space-y-1">
                 <li>• Desk & competitive research</li>
                 <li>• User interviews, personas, IA & wireframes</li>
                 <li>• Brand system, icon library, isometric visuals</li>

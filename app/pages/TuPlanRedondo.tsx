@@ -188,7 +188,7 @@ export default function TuPlanRedondo() {
               <p className="font-semibold mb-2">
                 Product Designer & Front-End Developer
               </p>
-              <ul className="space-y-1 text-xs">
+              <ul className="space-y-1">
                 <li>• User research & usability testing</li>
                 <li>• UI/UX design & prototyping</li>
                 <li>• PWA front-end development</li>

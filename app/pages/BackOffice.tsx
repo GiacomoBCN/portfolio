@@ -61,17 +61,6 @@ export default function OnlineBackOfficeCaseStudy() {
         "Git-driven releases: update once in core, propagate to 15+ client portals via branches. Rollbacks and hotfixes became trivial.",
       impact: "Minutes to roll out changes (vs days)",
     },
-    {
-      point: "Mobile Strategy",
-      options: [
-        "Tablet-only",
-        "Responsive but tablet-first",
-        "Responsive mobile-first",
-      ],
-      rationale:
-        "Reworked layout grid and components to be fully functional on smartphones. This unlocked field usage without extra hardware.",
-      impact: "20% hardware cost reduction",
-    },
   ];
 
   const achievements = [
@@ -79,19 +68,20 @@ export default function OnlineBackOfficeCaseStudy() {
       icon: Layers,
       metric: "99%",
       label: "Code Reuse",
-      description: "Single core shared across all portals",
+      description: "Single shared core powering all client portals",
     },
     {
       icon: Zap,
       metric: "80%",
       label: "Efficiency Gain",
-      description: "Faster testing & deployment via shared CSS/icons",
+      description:
+        "Faster testing and deployment through unified CSS and icons",
     },
     {
       icon: CheckCircle,
       metric: "15+",
       label: "Clients Unified",
-      description: "Consistent UX with themed customization",
+      description: "Consistent UX and branding across the full client base",
     },
   ];
 
@@ -111,8 +101,11 @@ export default function OnlineBackOfficeCaseStudy() {
     {
       task: "Release a hotfix",
       before: "Per-client packaging",
-      after: "Git branch → merge → deploy",
+      after: "Git merge → scripted deploy",
       improvement: "Hours → Minutes",
+    },
+    {
+      /* in tech way was Git merge → Jenkins / FTP deploy */
     },
   ];
 
@@ -173,11 +166,14 @@ export default function OnlineBackOfficeCaseStudy() {
         showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
-          Over the years, each customer's back‑office portal had drifted with
-          bespoke tweaks and duplicated assets. Updates were slow and
-          inconsistent, and maintaining parity across clients was becoming
-          unsustainable. My mandate: keep each client's branding, but collapse
-          maintenance into a single, scalable system.
+          XpuntoCero’s back-office portals are the dashboards connected to the
+          SGPV field platform, used by merchandisers and sales reps for 15 FMCG
+          clients across Spain, Portugal, and Italy. <br />
+          They visualize field data, manage promotions, and track retail
+          execution. Over time, each portal evolved separately with custom
+          branding and one-off requests. Updates became slow, inconsistent, and
+          difficult to align with the SGPV app. My goal was to preserve each
+          client’s identity while creating a single scalable system.
         </p>
         <p className="text-gray-300 leading-relaxed">
           I redesigned the UI kit, consolidated CSS, and set up a Git‑based
@@ -191,24 +187,44 @@ export default function OnlineBackOfficeCaseStudy() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <OverviewCard icon={AlertCircle} title="The Challenge">
-              Fragmented forks, duplicated assets, and manual per‑client
-              releases made scaling and QA expensive and slow.
+              Inconsistent client forks, duplicated assets, and manual updates
+              across 15+ portals made maintenance slow, costly, and prone to
+              errors. Each portal required separate fixes, leading to diverging
+              interfaces and unsustainable QA cycles.
             </OverviewCard>
-
             <OverviewCard icon={User} title="My Role">
-              <p className="font-semibold mb-2">Product Designer & Front‑End</p>
-              <ul className="space-y-1 text-xs">
-                <li>• CSS architecture & component refactor</li>
-                <li>• Iconography & shared assets system</li>
-                <li>• Release process via Git branches</li>
+              <p className="font-semibold mb-2">
+                Product Designer & Platform Strategist
+              </p>
+              <ul className="space-y-1 ">
+                <li>
+                  • Diagnosed fragmented client forks and unsustainable update
+                  cycles.
+                </li>
+                <li>
+                  • Led the back-office unification, built one shared core
+                  applied across 15+ client portals.
+                </li>
+                <li>
+                  • Reverse-engineered legacy CSS to identify patterns and
+                  enable bulk front-end updates.
+                </li>
+                <li>
+                  • Created the Git-based release model to propagate
+                  improvements from a single source.
+                </li>
+                <li>
+                  • Established the roadmap and process that made the unified
+                  approach maintainable at scale.
+                </li>
               </ul>
             </OverviewCard>
 
             <OverviewCard icon={TrendingUp} title="Impact">
               <ul className="space-y-1">
-                <li>• 99% core code reuse</li>
-                <li>• 80% faster cross‑client updates</li>
-                <li>• 15+ portals unified</li>
+                <li>• 99% core code reuse across all client portals</li>
+                <li>• 80% faster rollout of visual and UI updates</li>
+                <li>• Consistent UX and brand alignment for 15+ clients</li>
               </ul>
             </OverviewCard>
           </div>
@@ -274,18 +290,59 @@ export default function OnlineBackOfficeCaseStudy() {
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-4">
-            <p className="text-gray-300 leading-relaxed">
-              XpuntoCero provides back‑office portals for FMCG and out‑of‑home
-              clients. Years of customization created inconsistencies and slowed
-              delivery. Clients wanted frequent updates without losing their
-              branding.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              The goal was a unified approach that preserved client identity
-              while enabling centralized changes and predictable releases across
-              the entire estate.
-            </p>
+
+          <div className="pl-0 md:pl-24">
+            <GlassCard>
+              <div className="p-6 space-y-4">
+                <p className="text-gray-300 leading-relaxed">
+                  XpuntoCero operates several back-office portals linked to the
+                  SGPV field platform used by merchandisers and sales reps for
+                  15 FMCG clients across Spain, Portugal, and Italy. These
+                  dashboards visualize field data such as sales, promotions, and
+                  store audits.
+                </p>
+
+                <p className="text-gray-300 leading-relaxed">
+                  Over time, client portals drifted apart with custom branding,
+                  duplicated assets, and manual updates. This fragmentation
+                  slowed releases and caused inconsistencies with the SGPV
+                  mobile app.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  The goal was to create one shared core that keeps each
+                  client’s identity while centralizing maintenance and
+                  accelerating updates.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                  <div className="text-gray-400 text-sm">
+                    <div className="font-semibold text-blue-400 mb-1">
+                      Challenges
+                    </div>
+                    <ul className="space-y-1">
+                      <li>• Duplicated assets and inconsistent portals </li>
+                      <li>
+                        • Manual updates breaking alignment with SGPV app data
+                      </li>
+                      <li>
+                        • High QA and maintenance costs across 15+ clients
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    <div className="font-semibold text-blue-400 mb-1">
+                      Goals
+                    </div>
+                    <ul className="space-y-1">
+                      <li>• Shared core with CSS-based theming </li>
+                      <li>• Git-powered centralized release workflow </li>
+                      <li>
+                        • Faster iteration aligned with SGPV product cycles
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </GlassCard>
           </div>
         </div>
       </section>
@@ -303,28 +360,48 @@ export default function OnlineBackOfficeCaseStudy() {
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-6">
+
+          <div className="pl-0 md:pl-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <GlassCard>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  The Problem
-                </h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li>
-                    • Inconsistent UI across portals due to heavy per‑client
-                    customization
-                  </li>
-                  <li>• Increased development time and QA overhead</li>
-                  <li>• Updates could not be applied uniformly</li>
-                </ul>
+                {/* Styled header */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-full bg-red-500/15 flex items-center justify-center">
+                    <AlertCircle className="w-5 h-5 text-red-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">
+                    The Problem
+                  </h3>
+                </div>
+
+                {/* Your original list */}
+
+                <p className="text-gray-300 leading-relaxed">
+                  • Inconsistent UI across portals due to heavy per-client
+                  customization
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  • Increased development time and QA overhead
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  • Updates could not be applied uniformly
+                </p>
               </div>
             </GlassCard>
 
             <GlassCard>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Hypothesis
-                </h3>
+                {/* Styled header */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-full bg-green-500/15 flex items-center justify-center">
+                    <Wrench className="w-5 h-5 text-green-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">
+                    Hypothesis
+                  </h3>
+                </div>
+
+                {/* Your original paragraph */}
                 <p className="text-gray-300 leading-relaxed">
                   By concentrating changes in a single CSS file and a shared
                   image/icon folder, we can roll out UI updates to all portals
@@ -369,16 +446,23 @@ export default function OnlineBackOfficeCaseStudy() {
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-6">
+          <div className="pl-0 md:pl-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <GlassCard>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Single CSS + Shared Assets
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Re‑architected the styles into one maintainable CSS with
-                  variables and mixins. Introduced a shared icon/image library;
-                  per‑client themes only override tokens and logos.
+                  Consolidated all client styles into one maintainable CSS
+                  architecture with variables and mixins.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Reverse-engineered legacy files to find reusable patterns and
+                  moved icons and images into a shared library.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Each client’s theme now overrides only color tokens and logos,
+                  keeping 90% of the codebase identical.
                 </p>
               </div>
             </GlassCard>
@@ -388,21 +472,13 @@ export default function OnlineBackOfficeCaseStudy() {
                   Git‑Based Propagation
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Changes are made in the core, merged through branches, and
-                  deployed to all client portals. Hotfixes and rollbacks are
-                  safe and auditable.
+                  Updates are committed to the shared core, merged through
+                  dedicated client branches, and deployed to all portals using
+                  Git-based scripts.
                 </p>
-              </div>
-            </GlassCard>
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Mobile‑First Responsiveness
-                </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  The UI now works perfectly on smartphones, removing the need
-                  for dedicated tablets in the field and improving adoption
-                  across roles.
+                  This workflow replaced manual uploads, reduced release errors,
+                  and made rollbacks fully traceable and fast to execute.
                 </p>
               </div>
             </GlassCard>
@@ -515,7 +591,7 @@ export default function OnlineBackOfficeCaseStudy() {
             <GlassCard>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                  Phase 1 Results
+                  Results
                 </h3>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li>
@@ -523,16 +599,12 @@ export default function OnlineBackOfficeCaseStudy() {
                     across 15+ clients with centralized updates.
                   </li>
                   <li>
-                    → <strong>Cost Savings:</strong> Smartphone‑ready experience
-                    removed the need for tablets (≈20% hardware savings).
-                  </li>
-                  <li>
                     → <strong>Development Efficiency:</strong> Focusing on core
-                    CSS + icons enabled ~80% faster updates across portals.
+                    CSS + icons enabled 80% faster updates across portals.
                   </li>
                   <li>
                     → <strong>Development Speed:</strong> Centralized design and
-                    development enabled future updates to be implemented ~25%
+                    development enabled future updates to be implemented 25%
                     faster.
                   </li>
                 </ul>
