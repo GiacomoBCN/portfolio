@@ -1,15 +1,14 @@
-// Helper to get the correct image path with basePath prefix
+// Helper to get the correct image path for static exports
 export function getImagePath(path: string): string {
-  // For static export, Next.js basePath is handled via assetPrefix in next.config
-  // We need to manually add it for image paths since Next.js only handles this for _next assets
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || process.env.__NEXT_ROUTER_BASEPATH || '';
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
 
-  // For static exports, don't add basePath to public folder assets
-  // The basePath is only for routing, not for static assets
-  if (basePath && !path.startsWith('/images/')) {
+  // For static exports, we need to handle basePath differently
+  if (process.env.NODE_ENV === 'production' && basePath) {
+    // In production with basePath, images should be served from the basePath
     return `${basePath}${cleanPath}`;
   }
 
+  // In development or without basePath, use clean paths
   return cleanPath;
 }
