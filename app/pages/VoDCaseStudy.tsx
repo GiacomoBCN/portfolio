@@ -289,7 +289,7 @@ export default function VoDPlatform() {
 
       {/* Intro Card */}
       <ProjectIntroCard
-        image={getImagePath("images/projects/Vod-1.png")}
+        image={getImagePath("images/projects/Vod-01.png")}
         title="Evaluating & Redesigning a Multi-Device Streaming Experience"
         showGradient={false}
       >
@@ -652,6 +652,165 @@ export default function VoDPlatform() {
                     <span>Consistent visual language across all devices</span>
                   </li>
                 </ul>
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Comparison (Old vs New) */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-start gap-6 mb-8">
+            <div className="text-6xl font-bold text-blue-400 opacity-20">
+              04
+            </div>
+            <div className="flex-1 pt-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Navigation: Old vs New (Table)
+              </h2>
+            </div>
+          </div>
+
+          {/* 📸 Side-by-side images */}
+          <div className="pl-0 md:pl-24 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div className="flex flex-col items-center">
+                <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-700 shadow-lg">
+                  <img
+                    src="/images/projects/Vod_old_navigation.png"
+                    alt="Old Navigation (3-Axis)"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-gray-400 text-sm mt-2">
+                  🟥 Old Navigation (3-Axis)
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-700 shadow-lg">
+                  <img
+                    src="/images/projects/Vod_New_navigarion.png"
+                    alt="New Navigation (2-Axis)"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-gray-400 text-sm mt-2">
+                  🟦 New Navigation (2-Axis)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 🧭 Comparison Table */}
+          <div className="pl-0 md:pl-24">
+            <GlassCard>
+              <div className="p-6 overflow-x-auto">
+                <table className="w-full text-left align-top">
+                  <thead>
+                    <tr className="border-b border-gray-700">
+                      <th className="pb-4 pr-4 text-blue-400 font-semibold w-[18%]">
+                        Category
+                      </th>
+                      <th className="pb-4 pr-4 text-blue-400 font-semibold w-[41%]">
+                        🟥 OLD NAVIGATION (3-Axis)
+                      </th>
+                      <th className="pb-4 pr-4 text-blue-400 font-semibold w-[41%]">
+                        🟦 NEW NAVIGATION (2-Axis)
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody className="text-gray-300">
+                    <tr className="border-b border-gray-800">
+                      <td className="py-4 pr-4 font-semibold">Structure</td>
+                      <td className="py-4 pr-4">
+                        1️⃣ <strong>Top icon belt</strong> — horizontal row
+                        (Home, Games, Learning, Shop…)
+                        <br />
+                        2️⃣ <strong>Second horizontal tab row</strong> — (Live
+                        TV, VOD, Catch-up, TV Guide)
+                        <br />
+                        3️⃣ <strong>Content rows</strong> — horizontal carousels
+                        of shows/movies
+                      </td>
+                      <td className="py-4 pr-4">
+                        1️⃣ <strong>Vertical rail (left)</strong> — primary
+                        sections (Watch, Play, Learn, Shop…)
+                        <br />
+                        2️⃣ <strong>Top horizontal tabs</strong> — filter within
+                        the section (Live TV, VOD, Catch-up…)
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-gray-800">
+                      <td className="py-4 pr-4 font-semibold">Movement</td>
+                      <td className="py-4 pr-4">
+                        ⬆️⬇️ jump between stacked rows
+                        <br />
+                        ⬅️➡️ move within each row
+                        <br />
+                        <span className="text-gray-400">
+                          Zig-zag pattern due to two horizontal layers:
+                          <br />
+                          <em>Up → right → down → right → up → left…</em>
+                        </span>
+                      </td>
+                      <td className="py-4 pr-4">
+                        ⬆️⬇️ move between main sections (vertical rail)
+                        <br />
+                        ⬅️➡️ browse tabs or content horizontally
+                        <br />
+                        <span className="text-gray-400">
+                          Planar, predictable; no zig-zag.
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-gray-800">
+                      <td className="py-4 pr-4 font-semibold">
+                        Focus & Legibility
+                      </td>
+                      <td className="py-4 pr-4">
+                        Weak focus; easy to lose track across layers.
+                        <br />
+                        Light text over artwork → poor contrast.
+                      </td>
+                      <td className="py-4 pr-4">
+                        Persistent focus halo (+5% scale, Orbit Blue outline).
+                        <br />
+                        Text on 80% dark scrim → WCAG AA.
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-gray-800">
+                      <td className="py-4 pr-4 font-semibold">
+                        Utility & Feedback
+                      </td>
+                      <td className="py-4 pr-4">
+                        Scattered top-right icons; no micro-interactions.
+                      </td>
+                      <td className="py-4 pr-4">
+                        Right-aligned utility cluster (Search, Grid, AI,
+                        Avatar).
+                        <br />
+                        Gentle bounce/scale + soft click feedback (specified).
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td className="py-4 pr-4 font-semibold">Outcome</td>
+                      <td className="py-4 pr-4">
+                        Higher cognitive load; extra remote clicks.
+                      </td>
+                      <td className="py-4 pr-4">
+                        ~40% fewer interaction steps; clearer “where vs what”
+                        mental model.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </GlassCard>
           </div>
