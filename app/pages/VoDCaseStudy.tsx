@@ -294,7 +294,7 @@ export default function VoDPlatform() {
         showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
-          A MENA-based client commissioned me to review and redesign the initial
+          A MENA based client commissioned me to review and redesign the initial
           prototype of their VOD Platform. The platform needed to serve content
           across multiple contexts: traditional TV viewing, mobile on-the-go,
           tablet browsing, and in-car entertainment systems.
@@ -820,10 +820,8 @@ export default function VoDPlatform() {
             <GlassCard>
               <div className="p-6">
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  By mapping click-paths before and after the redesign, I
-                  quantified the interaction cost reduction for common user
-                  journeys on TV (remote control). The results show significant
-                  friction removal across all tasks.
+                  I mapped click-paths before and after the redesign to measure
+                  the improvement in common TV remote tasks.
                 </p>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left">
