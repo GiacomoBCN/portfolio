@@ -81,7 +81,7 @@ export default function VoDPlatform() {
         "Single axis with deep menus",
       ],
       rationale:
-        "The vertical rail handles primary navigation (Watch, Play, Learn, Shop). The horizontal tabs handle filtering within each section (Live TV, VOD, Catch-up). This gives users a clear structure: vertical for 'where,' horizontal for 'what.' It works across devices because the logic is the same - TV remotes use D-pad arrows, touchscreens tap or swipe.",
+        "Vertical rail for primary sections, horizontal tabs for filtering within each section. This 2-axis model reduced remote clicks by 40% and works across TV, mobile, tablet, and car with the same logic.",
       impact: "40% reduction in interaction steps",
     },
     {
@@ -92,7 +92,7 @@ export default function VoDPlatform() {
         "Direct to Continue Watching",
       ],
       rationale:
-        "I removed the 'Who's watching?' screen. Users land on Continue Watching instead. Why? Profile switching happens 10x less often than browsing, so we moved it to the top-right utility bar. It's always accessible but doesn't block the main flow.",
+        "Profile switching happens 10x less than browsing, so I moved it to the utility bar and removed the welcome gate. Users now land directly on Continue Watching",
       impact: "60% faster profile access",
     },
     {
@@ -114,7 +114,7 @@ export default function VoDPlatform() {
         "Adaptive box-first grid",
       ],
       rationale:
-        "The box-first grid adapts to each context (TV, mobile, tablet, car) while keeping the design consistent. The structure is the same, but the implementation respects each platform's interaction model. TV uses D-pad navigation, mobile uses touch, tablet supports both.",
+        "The component grid maintains visual consistency across all platforms while respecting each device's interaction model (D-pad for TV, touch for mobile/car, hybrid for tablet).",
       impact: "Unified design language",
     },
   ];
@@ -169,7 +169,7 @@ export default function VoDPlatform() {
 
   const evaluationImages = [
     {
-      src: getImagePath("images/projects/VoD-OldHome.png"),
+      src: getImagePath("images/projects/Vod-OldHome.png"),
       alt: "Original VoD platform interface showing navigation complexity",
     },
     {
@@ -528,19 +528,14 @@ export default function VoDPlatform() {
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-6">
+
+          <div className="pl-0 md:pl-24 grid grid-cols-2 gap-6">
             <GlassCard>
-              <div className="p-6">
+              <div className="p-3">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   2-Axis Navigation System
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I introduced a vertical rail for primary navigation (Watch,
-                  Play, Learn, Shop, WiFi, My Home) combined with a horizontal
-                  tab bar for filtering (Live TV, VOD, Catch-up, TV Guide). This
-                  structure eliminated the zig-zag patterns from the old 3-axis
-                  system.
-                </p>
+
                 <ul className="space-y-2 text-gray-400">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
@@ -571,12 +566,7 @@ export default function VoDPlatform() {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Removed Welcome Screen Friction
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I removed the "Who's watching?" welcome screen. Users now land
-                  on Continue Watching instead of hitting a profile gate.
-                  Profile switching moved to the top-right utility bar where
-                  it's always accessible but doesn't block the main flow.
-                </p>
+
                 <ul className="space-y-2 text-gray-400">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
@@ -590,9 +580,7 @@ export default function VoDPlatform() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Continue Watching becomes the landing experience
-                    </span>
+                    <span>Continue Watching is now the landing page</span>
                   </li>
                 </ul>
               </div>
@@ -603,11 +591,7 @@ export default function VoDPlatform() {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   WCAG AA Compliance
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I implemented accessibility improvements to meet WCAG 2.1 AA
-                  standards across all platforms. These changes improved the
-                  experience for all users, not just those with disabilities.
-                </p>
+
                 <ul className="space-y-2 text-gray-400">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
@@ -616,8 +600,7 @@ export default function VoDPlatform() {
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
                     <span>
-                      Bold, persistent focus states with 3:1+ contrast against
-                      backgrounds
+                      Bold focus states with 3:1+ contrast against backgrounds
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -641,12 +624,7 @@ export default function VoDPlatform() {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Box-First Component Grid
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I developed a component grid that adapts to each context (TV,
-                  mobile, tablet, car) while keeping the design consistent. The
-                  structure is the same, but the implementation respects each
-                  platform's interaction model.
-                </p>
+
                 <ul className="space-y-2 text-gray-400">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
@@ -669,18 +647,16 @@ export default function VoDPlatform() {
         </div>
       </section>
 
-      {/* Navigation Comparison (Old vs New) */}
+      {/* Navigation System Deep Dive */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-start gap-6 mb-8">
-            <div className="text-6xl font-bold text-blue-400 opacity-20">
-              04
-            </div>
-            <div className="flex-1 pt-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Navigation: Old vs New (Table)
-              </h2>
-            </div>
+          <div className="pl-0 md:pl-24 mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Navigation System Deep Dive
+            </h3>
+            <p className="text-gray-400">
+              A detailed comparison of the old 3-axis vs new 2-axis navigation system
+            </p>
           </div>
 
           {/* 📸 Side-by-side images */}
@@ -906,26 +882,43 @@ export default function VoDPlatform() {
           <div className="pl-0 md:pl-24 space-y-6">
             <p className="text-gray-300 leading-relaxed">
               This was a consulting engagement focused on evaluation and design
-              recommendations. I delivered mid-fidelity Figma mockups showing
-              the redesigned experience across key device contexts. The client's
-              internal team used these concepts to guide their implementation.
+              recommendations. I delivered mid-fidelity Figma mockups across TV,
+              mobile, tablet, and in-car contexts, plus click-path analysis
+              documentation.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    What I Delivered
+                    Constraints & Trade-offs
                   </h3>
                   <p className="text-gray-300 text-sm mb-3">
                     Mid-fidelity Figma mockups and design recommendations across
                     all target devices.
                   </p>
-                  <ul className="space-y-1 text-gray-400 text-sm">
-                    <li>• Redesigned TV interface with 2-axis navigation</li>
-                    <li>• Mobile/tablet adaptive layouts</li>
-                    <li>• In-car display concepts</li>
-                    <li>• Click-path analysis documentation</li>
+
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>WCAG AA vs AAA:</strong> Chose AA to balance
+                        accessibility with design flexibility for TV viewing.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>2-axis vs 1-axis navigation:</strong> Kept
+                        horizontal tabs because removing them would require
+                        deeper menus and increase click-paths.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>Profile switching location:</strong> Validated
+                        top-right placement by showing Netflix and Disney+ use
+                        the same pattern.
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </GlassCard>
@@ -933,113 +926,55 @@ export default function VoDPlatform() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Accessibility Guidelines
+                    Key Learnings
                   </h3>
-                  <p className="text-gray-300 text-sm mb-3">
-                    WCAG AA compliance recommendations with specific contrast
-                    ratios, focus states, and interaction patterns.
-                  </p>
-                  <ul className="space-y-1 text-gray-400 text-sm">
-                    <li>• Contrast ratio specifications (4.5:1+)</li>
-                    <li>• Focus indicator guidelines (3:1+)</li>
-                    <li>• Color-blind safe palette recommendations</li>
-                    <li>• Touch target sizing rules (44x44px minimum)</li>
+                  <ul className="space-y-3 text-gray-300 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>TV design requires different thinking:</strong>{" "}
+                        Focus indicators must be bold, text high-contrast, and
+                        navigation needs clear vertical/horizontal axes.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>
+                          Accessibility improvements benefit everyone:
+                        </strong>{" "}
+                        Better contrast helped users in bright rooms, stronger
+                        focus states improved TV viewing.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>Remove friction before adding features:</strong>{" "}
+                        The biggest win came from deleting the welcome screen,
+                        not adding functionality.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>
+                        <strong>Quantify interaction costs:</strong> Mapping
+                        click-paths (9 taps → 6 taps = -33%) gave stakeholders
+                        concrete proof.
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </GlassCard>
             </div>
+          </div>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                  Constraints & Trade-offs
-                </h3>
-                <p className="text-gray-300 text-sm mb-3">
-                  This was a consulting engagement, not a full implementation. I
-                  delivered design concepts and recommendations - the client's
-                  internal team handled development. Some key trade-offs:
-                </p>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>WCAG AA vs AAA:</strong> Chose AA to balance
-                      accessibility with design flexibility. AAA would have
-                      over-constrained the visual design without meaningful
-                      benefits for the primary TV use case.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>2-axis vs 1-axis navigation:</strong> Kept some
-                      complexity (horizontal tabs) because removing it would
-                      have required deeper menu structures, which would increase
-                      click-paths even more.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>Profile switching location:</strong> Some
-                      stakeholders worried users wouldn't find the profile
-                      switcher in the top-right utility bar. I validated the
-                      decision by showing that Netflix, Disney+, and other major
-                      platforms use the same pattern.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
-
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                  Key Learnings
-                </h3>
-                <ul className="space-y-3 text-gray-300 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>TV design requires different thinking:</strong>{" "}
-                      What works on mobile doesn't translate to 10-foot
-                      experiences. Focus indicators must be bold, text must be
-                      high-contrast, and navigation requires clear
-                      vertical/horizontal axes.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>
-                        Accessibility improvements benefit everyone:
-                      </strong>{" "}
-                      Better contrast helped users in bright rooms. Stronger
-                      focus states improved TV viewing. Clear hierarchy reduced
-                      cognitive load universally.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>Remove friction before adding features:</strong>{" "}
-                      The biggest win came from removing the welcome screen, not
-                      adding functionality. Sometimes the best design decision
-                      is deletion.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1 flex-shrink-0">→</span>
-                    <span>
-                      <strong>Quantify interaction costs:</strong> Mapping
-                      click-paths (e.g., "9 taps → 6 taps = –33%") gave
-                      stakeholders concrete proof. Data-driven storytelling wins
-                      buy-in.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
+          {/* IMAGE 5: Multi-platform, multi-brand scale */}
+          <div className="mt-8 rounded-lg overflow-hidden">
+            <img
+              src={getImagePath("images/projects/Vod-NewGamePage.png")}
+              alt="Resesign Game page"
+              className="w-full"
+            />
+            <p className="text-sm text-gray-400 mt-3 text-center">
+              Resesign game page
+            </p>
           </div>
         </div>
       </section>

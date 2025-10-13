@@ -724,18 +724,17 @@ export default function DowJones() {
                 </p>
               </div>
             </GlassCard>
-
-            {/* IMAGE 5: Multi-platform, multi-brand scale */}
-            <div className="mt-8 rounded-lg overflow-hidden">
-              <img
-                src={getImagePath("images/projects/brand-ds.png")}
-                alt="Design system deployed across WSJ, Barron's, Factiva, and MarketWatch on multiple devices"
-                className="w-full"
-              />
-              <p className="text-sm text-gray-400 mt-3 text-center">
-                The system in production across B2B & B2C brands and 3 platforms
-              </p>
-            </div>
+          </div>
+          {/* IMAGE 5: Multi-platform, multi-brand scale */}
+          <div className="mt-8 rounded-lg overflow-hidden">
+            <img
+              src={getImagePath("images/projects/brand-ds.png")}
+              alt="Design system deployed across WSJ, Barron's, Factiva, and MarketWatch on multiple devices"
+              className="w-full"
+            />
+            <p className="text-sm text-gray-400 mt-3 text-center">
+              The system in production across B2B & B2C brands and 3 platforms
+            </p>
           </div>
         </div>
       </section>
