@@ -36,7 +36,7 @@ export default function OnlineBackOfficeCaseStudy() {
         "Single shared core + client themes",
       ],
       rationale:
-        "Created a single shared core (HTML structure + components) styled via one CSS and a shared asset folder. Client-specific tokens/themes override variables without touching core markup.",
+        "Created a single shared core style CSS and a shared asset folder. Client-specific tokens/themes override variables without touching core markup.",
       impact: "99% code reuse across portals",
     },
     {
@@ -138,9 +138,10 @@ export default function OnlineBackOfficeCaseStudy() {
             Product Designer & Front‑End Developer · XpuntoCero (Barcelona)
           </p>
           <p className="text-xl text-gray-300 mb-8">
-            Unified 15 client portals into a scalable system using a single CSS
-            and shared assets. Achieved 99% code reuse, 80% efficiency
-            improvement in rollouts.
+            Unified 15 client portals into a single scalable system through
+            shared assets and one CSS foundation. This redesign achieved 99%
+            code reuse and an 80% faster rollout process, enabling consistent
+            branding and easier maintenance across all clients.
           </p>
           <div className="flex flex-wrap gap-2">
             {["Bootstrap 4", "CSS3", "Git Workflow"].map((tag, i) => (
@@ -158,23 +159,29 @@ export default function OnlineBackOfficeCaseStudy() {
       {/* Intro Card */}
       <ProjectIntroCard
         image={getImagePath("images/projects/OnlineBackOffice-1.png")}
-        title="From Client Forks to a Unified, Scalable Platform"
+        title="From Client Forks to a Unified Back Office System"
         showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
-          XpuntoCero’s back-office portals are the dashboards connected to the
-          SGPV field platform, used by merchandisers and sales reps for 15 FMCG
-          clients across Spain, Portugal, and Italy. <br />
+          XpuntoCero’s Back Office portals serve as dashboards for the SGPV
+          field app, used by merchandisers and sales reps for 15 FMCG clients
+          across Spain, Portugal, and Italy. <br />
           They visualize field data, manage promotions, and track retail
           execution. Over time, each portal evolved separately with custom
           branding and one-off requests. Updates became slow, inconsistent, and
-          difficult to align with the SGPV app. My goal was to preserve each
-          client’s identity while creating a single scalable system.
+          difficult to align with the SGPV app.
         </p>
         <p className="text-gray-300 leading-relaxed">
-          I redesigned the UI kit, consolidated CSS, and set up a Git‑based
-          release model so improvements ship once and land everywhere. The
-          result preserved customization while eliminating redundant work.
+          My goal was to preserve each client’s identity while building a
+          single, scalable foundation that simplified maintenance and
+          accelerated delivery.
+        </p>
+        <p className="text-gray-300 leading-relaxed">
+          I redesigned the UI kit, consolidated CSS, and introduced a Git-based
+          release workflow, ensuring improvements shipped once and reached all
+          client portals instantly. The result kept the freedom of customization
+          while removing redundant work and bringing long-term consistency to
+          the system.
         </p>
       </ProjectIntroCard>
 

@@ -15,6 +15,7 @@ import {
   Zap,
   Camera,
   Sparkles,
+  GitBranch,
 } from "lucide-react";
 import OverviewCard from "../components/work/OverviewCard";
 import DecisionTable from "../components/work/DecisionTable";
@@ -63,39 +64,42 @@ export default function SGPVEvolution() {
   const achievements = [
     {
       icon: Smartphone,
-      metric: "15",
-      label: "FMCG Clients",
-      description: "Unified app with per-client branding",
-    },
-    {
-      icon: Target,
       metric: "−20%",
       label: "Hardware Cost",
-      description: "Mobile-first eliminated tablet dependency",
+      description: "Mobile-first eliminated tablet dependency [Phase01]",
     },
     {
       icon: Layers,
       metric: "+80%",
       label: "Dev Efficiency",
-      description: "Centralized styling streamlined releases",
+      description: "Centralized styling streamlined releases [Phase01]",
     },
+    {
+      icon: Target,
+      metric: "15",
+      label: "FMCG Clients",
+      description:
+        "Unified app with per-client branding and consistent UX [Phase01]",
+    },
+
     {
       icon: Zap,
       metric: "−25%",
       label: "Task Time",
-      description: "AI image recognition optimized workflows",
+      description: "AI image recognition & optimized workflows [Phase02]",
     },
     {
       icon: CheckCircle,
       metric: "+30%",
       label: "Satisfaction",
-      description: "Performance + usability improvements",
+      description: "Performance + usability improvements [Phase02]",
     },
     {
       icon: Users,
-      metric: "10",
-      label: "User Interviews",
-      description: "Plus contextual inquiry & usability tests",
+      metric: "25 +",
+      label: "Research Sessions",
+      description:
+        "Interviews, contextual inquiry, and usability testing across client teams [Phase02]",
     },
   ];
 
@@ -111,7 +115,6 @@ export default function SGPVEvolution() {
           <span className="hidden md:inline">Back to Projects</span>
         </Link>
       </div>
-
       {/* Hero */}
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent" />
@@ -125,7 +128,7 @@ export default function SGPVEvolution() {
             </span>
           </div>
           <h1 className="text-5xl font-bold text-white mb-4">
-            SGPV: Leading Multi-Year Product Evolution Across 15 FMCG Clients
+            SGPV: Multi-Year UX & Product Evolution for 15 FMCG Client
           </h1>
           <p className="text-lg text-gray-400 mb-4">
             Product Designer · Front-End Developer
@@ -164,7 +167,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* Intro Card */}
       <ProjectIntroCard
         image={getImagePath("images/projects/sgpv-evo.png")}
@@ -172,71 +174,70 @@ export default function SGPVEvolution() {
         showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
-          SGPV is a field-operations platform serving merchandisers and sales
-          representatives for 15 major FMCG (Fast-Moving Consumer Goods)
-          companies -including national and international brands operating
-          across Spain, Portugal, and Italy. These field workers visit retail
-          locations to audit shelf placement, negotiate product positioning,
-          capture promotional compliance data, and close deals for premium shelf
-          space.
+          SGPV is a field operations app used by merchandisers and sales
+          representatives from 15 leading FMCG companies, including national and
+          international brands across Spain, Portugal, and Italy. These field
+          teams visit retail locations to audit shelf placement, negotiate
+          product visibility, track promotional compliance, and secure better
+          in-store positioning.
         </p>
         <p className="text-gray-300 leading-relaxed">
-          Over time, versions 5–6 evolved into many client-specific forks to
-          accommodate different branding and workflow requirements, creating
-          high maintenance costs and uneven user experiences. I led a two-year
-          program to modernize and consolidate the product while protecting
-          business continuity across all 15 live implementations.
+          Over time, versions 5 and 6 had split into multiple client-specific
+          forks to meet unique branding and workflow needs. This fragmentation
+          increased maintenance costs and created inconsistent user experiences.
+          I led a 18 months effort to modernize and consolidate SGPV while
+          maintaining uninterrupted service for all 15 active clients.
         </p>
         <p className="text-gray-300 leading-relaxed">
-          Phase 1 delivered a responsive redesign and centralized assets that
-          restored velocity and removed the tablet-only constraint.
-          <b />
-          Phase 2 unified all clients on a single Flutter app and redesigned key
-          flows-like AI-powered image-based data capture—reducing task time and
-          improving satisfaction.
+          Phase 1 introduced a responsive redesign and centralized assets,
+          restoring delivery speed and removing the tablet-only limitation.
+          <br />
+          Phase 2 unified all clients under a single Flutter app and redesigned
+          critical workflows such as AI-based photo data capture, which reduced
+          task time and improved user satisfaction.
         </p>
       </ProjectIntroCard>
-
       {/* Overview - 3 COLUMNS */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <OverviewCard icon={AlertCircle} title="The Challenge">
-              Fragmented client forks, tablet-only hardware requirement, and
-              legacy hybrid stack drove up costs and slowed delivery across 15
-              FMCG implementations serving field merchandisers.
+              <p>
+                15 FMCG clients, each with its own branded SGPV version.
+                Fragmented code, inconsistent UX, and tablet-only usage slowed
+                delivery and increased costs.
+              </p>
             </OverviewCard>
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">
                 Product Designer · UX Lead · Front-End Developer
               </p>
-              <ul className="space-y-1">
-                <li>• Research ops, interviews, usability tests</li>
-                <li>• Responsive patterns & centralized styling</li>
-                <li>• Front-end refactors (PhoneGap → Flutter)</li>
-                <li>• Design system & AI workflow design</li>
-                <li>• Stakeholder enablement & rollout</li>
-              </ul>
+              <p>Led research, UX strategy, and product consolidation.</p>
+              <p>
+                Defined responsive patterns, unified assets, and collaborated on
+                the Flutter rebuild to enable a single scalable app.
+              </p>
             </OverviewCard>
 
-            <OverviewCard icon={TrendingUp} title="Impact Snapshot">
+            <OverviewCard icon={GitBranch} title="Scope">
               <ul className="space-y-1">
-                <li>• −20% hardware cost (mobile-first)</li>
-                <li>• +80% development efficiency</li>
-                <li>• −25% task time via AI recognition</li>
-                <li>• +30% user satisfaction (Flutter)</li>
+                <li>• 15 FMCG clients across Spain, Portugal, and Italy</li>
+                <li>• Multi-phase product evolution (PhoneGap → Flutter)</li>
+                <li>• Research, usability testing, and rollout alignment</li>
+                <li>
+                  • Unified UI kit, AI-assisted workflows, and faster releases
+                </li>
               </ul>
             </OverviewCard>
           </div>
         </div>
       </section>
-
       {/* Metrics Showcase */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
-            Project Impact
+            Project Impact Snapshot
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
@@ -260,7 +261,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* PHASE 1 */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -335,7 +335,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* Phase 1 Gallery */}
       <ProjectGallery
         title="Phase 1: Responsive Patterns & Centralized Assets"
@@ -354,7 +353,7 @@ export default function SGPVEvolution() {
           },
         ]}
       />
-
+      ImageTextCard
       {/* PHASE 2 - Research */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -546,7 +545,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* AI Feature Explanation - NEW SECTION */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -646,7 +644,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* Phase 2 Gallery */}
       <ProjectGallery
         title="Phase 2: Flutter Migration & AI-Powered Workflows"
@@ -665,7 +662,6 @@ export default function SGPVEvolution() {
           },
         ]}
       />
-
       {/* Key Decisions */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -684,7 +680,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* Business Impact - CONSOLIDATED */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -817,7 +812,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* Key Learnings - EXPANDED */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -938,7 +932,6 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
