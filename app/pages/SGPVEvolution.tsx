@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { createPageUrl } from "@/utils";
 import {
@@ -8,7 +9,6 @@ import {
   User,
   TrendingUp,
   Smartphone,
-  CheckCircle,
   Layers,
   Users,
   Target,
@@ -16,15 +16,64 @@ import {
   Camera,
   Sparkles,
   GitBranch,
+  CheckCircle,
+  X,
 } from "lucide-react";
 import OverviewCard from "../components/work/OverviewCard";
 import DecisionTable from "../components/work/DecisionTable";
 import GlassCard from "../components/portfolio/GlassCard";
 import ProjectIntroCard from "../components/work/ProjectIntroCard";
 import ProjectGallery from "../components/work/ProjectGallery";
+import ImageTextCard from "../components/casestudy/ImageTextCard";
 import { getImagePath } from "@/utils/image";
 
 export default function SGPVEvolution() {
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [galleryImages, setGalleryImages] = useState<
+    { src: string; alt: string }[]
+  >([]);
+
+  const openImageModal = (src: string) => {
+    setModalImageSrc(src);
+    setIsImageModalOpen(true);
+  };
+
+  const openGallery = (
+    images: { src: string; alt: string }[],
+    startIndex: number = 0
+  ) => {
+    setGalleryImages(images);
+    setCurrentImageIndex(startIndex);
+    setModalImageSrc(images[startIndex].src);
+    setIsImageModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
+    setModalImageSrc("");
+    setGalleryImages([]);
+    setCurrentImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (galleryImages.length > 0) {
+      const nextIndex = (currentImageIndex + 1) % galleryImages.length;
+      setCurrentImageIndex(nextIndex);
+      setModalImageSrc(galleryImages[nextIndex].src);
+    }
+  };
+
+  const previousImage = () => {
+    if (galleryImages.length > 0) {
+      const prevIndex =
+        (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      setCurrentImageIndex(prevIndex);
+      setModalImageSrc(galleryImages[prevIndex].src);
+    }
+  };
+
   const keyDecisions = [
     {
       point: "Platform Strategy",
@@ -270,66 +319,91 @@ export default function SGPVEvolution() {
             </div>
             <div className="flex-1 pt-2">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Phase 1 (v5→v6): Responsive Redesign & Asset Centralization
+                Phase 1 (v5→v6): Responsive Redesign
               </h2>
             </div>
           </div>
 
           <div className="pl-0 md:pl-24 space-y-6">
-            <p className="text-gray-300 leading-relaxed">
-              The app had been customized extensively for each FMCG
-              client-different branding, workflows, and feature sets—resulting
-              in multiple code forks that were difficult to update and manage.
-              Additionally, the app was built exclusively for tablet use,
-              forcing clients to invest in tablets for their field workforce. As
-              smartphone adoption grew among merchandisers, the lack of mobile
-              responsiveness became a critical issue.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              Phase 1 focused on making the app fully responsive and scalable
-              across tablets and smartphones while centralizing the styling and
-              icon systems. By refactoring the core CSS and creating a universal
-              asset library, we enabled rapid deployment of updates across all
-              15 clients without duplicating effort. This phase ran for
-              approximately 6 months.
-            </p>
+            <GlassCard>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  Context
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed">
+                  SGPV began as a cross-platform B2B field app for tablets. Over
+                  time, client-specific customizations created many divergent
+                  versions that were hard to update and maintain. As smartphone
+                  adoption grew among field merchandisers, the tablet-only
+                  constraint became costly and inconvenient for clients.
+                  Approach
+                </p>
+              </div>
+            </GlassCard>
+
+            {/* Heuristic Review Card - Images on LEFT */}
+            <ImageTextCard
+              title="Approach"
+              description="I led the responsive redesign of the app, making it fully usable on both tablets and smartphones. We centralized the CSS, icon system, and shared assets so that updates and fixes could be deployed once and applied across all client builds. This effort unified fifteen client versions without interrupting ongoing operations, laying the technical and visual foundation for future releases."
+              bulletPoints={[]}
+              images={[
+                {
+                  src: getImagePath("images/projects/SGPV_V6_Old_New.png"),
+                  alt: "Legacy tablet app redesigned into responsive v6 for mobile and tablet.",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
+
+            <ImageTextCard
+              title="Results"
+              description=""
+              bulletPoints={[
+                {
+                  label: "-20 % hardware cost",
+                  text: "Clients no longer needed tablets for field teams.",
+                },
+                {
+                  label: "+80% development efficiency",
+                  text: "Centralized styling enabled instant rollouts across all clients.",
+                },
+                {
+                  label: "+15% user satisfaction",
+                  text: "The responsive interface improved clarity and reduced friction in daily use",
+                },
+                {
+                  label: "25% faster future updates",
+                  text: '"Simplified front-end structure accelerated deployment.',
+                },
+              ]}
+              images={[
+                {
+                  src: getImagePath("images/projects/SGPV_V6_New_Diag.png"),
+                  alt: "Diagram summarizing Phase 1 impact: centralized styling enabled scalability, 20 % lower hardware cost, 80 % higher deployment efficiency, and 15 % higher user satisfaction.",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
 
             <GlassCard>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  Key Improvements
+                  Reflection
                 </h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Mobile-first design:</strong> Eliminated tablet
-                      dependency, enabling field workers to use their own
-                      smartphones
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Centralized asset library:</strong> Universal CSS
-                      and icon sets replaced per-client customizations
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Theming system:</strong> Configuration-based
-                      branding replaced code forks, reducing regression risk
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Streamlined deployment:</strong> Changes tested
-                      once could be deployed to all clients rapidly
-                    </span>
-                  </li>
-                </ul>
+
+                <p className="text-gray-300 leading-relaxed">
+                  SGPV began as a cross-platform B2B field app for tablets. Over
+                  time, client-specific customizations created many divergent
+                  versions that were hard to update and maintain. As smartphone
+                  adoption grew among field merchandisers, the tablet-only
+                  constraint became costly and inconvenient for clients.
+                  Approach
+                </p>
               </div>
             </GlassCard>
           </div>
@@ -337,19 +411,19 @@ export default function SGPVEvolution() {
       </section>
       {/* Phase 1 Gallery */}
       <ProjectGallery
-        title="Phase 1: Responsive Patterns & Centralized Assets"
+        title="P1: Saved 15 Apps · From Legacy to Responsive Design"
         images={[
           {
-            src: getImagePath("images/projects/sgpv-1.png"),
-            alt: "Responsive design patterns for mobile and tablet",
+            src: getImagePath("images/projects/SGPV_V6_New_01.png"),
+            alt: "Updated visit flow and simplified mobile UI in v6.",
           },
           {
-            src: getImagePath("images/projects/sgpv-2.png"),
-            alt: "Centralized CSS and icon system",
+            src: getImagePath("images/projects/SGPV_V6_New_02.png"),
+            alt: "Responsive document library, route map, and dashboard screens.",
           },
           {
-            src: getImagePath("images/projects/sgpv-3.png"),
-            alt: "Cross-client theming implementation",
+            src: getImagePath("images/projects/SGPV_V6_New_03.png"),
+            alt: "Route and product management screens with improved hierarchy.",
           },
         ]}
       />
@@ -963,6 +1037,64 @@ export default function SGPVEvolution() {
           </GlassCard>
         </div>
       </section>
+      {/* Image Gallery Modal */}
+      {isImageModalOpen && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeImageModal}
+        >
+          <button
+            onClick={closeImageModal}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+          >
+            <X size={32} />
+          </button>
+
+          {galleryImages.length > 1 && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  previousImage();
+                }}
+                className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3"
+              >
+                <ArrowLeft size={32} />
+              </button>
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextImage();
+                }}
+                className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3"
+              >
+                <ArrowLeft size={32} className="rotate-180" />
+              </button>
+
+              <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+                {currentImageIndex + 1} / {galleryImages.length}
+              </div>
+            </>
+          )}
+
+          <div
+            className="flex flex-col items-center max-w-full max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={modalImageSrc}
+              alt="Enlarged view"
+              className="max-w-full max-h-[85vh] object-contain"
+            />
+            {galleryImages.length > 0 && galleryImages[currentImageIndex] && (
+              <p className="text-white text-center mt-4 px-8 py-3 bg-black/70 rounded-lg max-w-3xl">
+                {galleryImages[currentImageIndex].alt}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
