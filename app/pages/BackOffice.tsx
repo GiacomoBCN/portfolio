@@ -120,31 +120,50 @@ export default function OnlineBackOfficeCaseStudy() {
       </div>
 
       {/* Hero */}
+      {/* Hero */}
       <section className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent" />
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="text-sm text-gray-400 mb-6">
-            Home &gt; Product Work &gt; Online Back Office
+            Home &gt; Product Work &gt; Back Office Unification
           </p>
+
           <div className="mb-4">
             <span className="text-xs uppercase tracking-wider text-blue-400">
-              PRODUCT DESIGN · FRONT-END · SCALABILITY
+              PLATFORM ARCHITECTURE · FRONT-END SCALABILITY
             </span>
           </div>
+
           <h1 className="text-5xl font-bold text-white mb-4">
-            Online Back Office Unification
+            Back Office Unification
           </h1>
+
           <p className="text-lg text-gray-400 mb-4">
-            Product Designer & Front‑End Developer · XpuntoCero (Barcelona)
+            Product Designer &amp; Platform Strategist
           </p>
+
           <p className="text-xl text-gray-300 mb-8">
-            Unified 15 client portals into a single scalable system through
-            shared assets and one CSS foundation. This redesign achieved 99%
-            code reuse and an 80% faster rollout process, enabling consistent
-            branding and easier maintenance across all clients.
+            Consolidated 15 fragmented client portals into a unified back-office
+            platform. <br />
+            Built a shared CSS architecture, centralized assets, and Git-based
+            rollout model achieving{" "}
+            <span className="text-white font-semibold">99%</span> code reuse,
+            <span className="text-white font-semibold"> 80%</span> faster
+            deployments, and consistent UX across
+            <span className="text-white font-semibold"> 15+</span> FMCG clients.
           </p>
+
           <div className="flex flex-wrap gap-2">
-            {["Bootstrap 4", "CSS3", "Git Workflow"].map((tag, i) => (
+            {[
+              "Scalable Architecture",
+              "Front-End Design",
+              "CSS Tokens",
+              "Git Workflow",
+              "Bootstrap",
+              "B2B SaaS",
+              "Design Systems",
+              "Process Governance",
+            ].map((tag, i) => (
               <span
                 key={i}
                 className="px-4 py-2 glass rounded-full text-sm text-gray-300"

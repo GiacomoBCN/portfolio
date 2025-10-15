@@ -172,45 +172,49 @@ export default function SGPVEvolution() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent" />
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="text-sm text-gray-400 mb-6">
-            Home &gt; Product Work &gt; SGPV: Multi-Year Product Evolution
+            Home &gt; Product Work &gt; SGPV Product Evolution
           </p>
+
           <div className="mb-4">
             <span className="text-xs uppercase tracking-wider text-blue-400">
-              MULTI-CLIENT · MODERNIZATION · UX LEADERSHIP
+              MULTI-CLIENT PLATFORM · UX &amp; PRODUCT EVOLUTION
             </span>
           </div>
+
           <h1 className="text-5xl font-bold text-white mb-4">
-            SGPV: Multi-Year UX & Product Evolution for 15 FMCG Client
+            SGPV Product Evolution
           </h1>
+
           <p className="text-lg text-gray-400 mb-4">
-            Product Designer · Front-End Developer
+            Product Designer &amp; UX Lead
           </p>
+
           <p className="text-xl text-gray-300 mb-8">
-            A two-phase transformation spanning 18 months: first, a responsive
-            redesign that eliminated tablet-only constraints and centralized
-            assets across 15 clients; then, a strategic migration to Flutter
-            that unified everything into a single product, boosted performance,
-            and introduced AI-assisted data capture.
+            Led the modernization of a multi-client field app used by 15 FMCG
+            brands. Unified fragmented versions into a single responsive
+            platform and later migrated to Flutter, introducing AI-based data
+            capture.
+            <br /> The evolution cut hardware costs by{" "}
+            <span className="text-white font-semibold">20%</span>, improved
+            deployment efficiency by{" "}
+            <span className="text-white font-semibold">80%</span>, and raised
+            user satisfaction by{" "}
+            <span className="text-white font-semibold">30%</span>.
           </p>
+
           <div className="flex flex-wrap gap-2">
             {[
               "Product Strategy",
-              "End-to-end UX/UI Process",
-              "Design System",
+              "UX Research",
+              "Responsive Design",
+              "AI-Driven Workflows",
               "Figma",
-              "AI",
-              "Mobile",
-              "B2B",
-              "SaaS",
               "Flutter",
-              "Dart",
-              "PhoneGap",
-              "JavaScript",
-              "Bootstrap",
-              "Agile/SCRUM",
-            ].map((tag) => (
+              "B2B SaaS",
+              "Agile / SCRUM",
+            ].map((tag, i) => (
               <span
-                key={tag}
+                key={i}
                 className="px-4 py-2 glass rounded-full text-sm text-gray-300"
               >
                 {tag}
@@ -219,6 +223,7 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
+
       {/* Intro Card */}
       <ProjectIntroCard
         image={getImagePath("images/projects/sgpv-evo.png")}
@@ -585,109 +590,201 @@ export default function SGPVEvolution() {
                 {/* Mobile Card View - visible only on mobile */}
                 <div className="lg:hidden space-y-4">
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
-                    <h4 className="text-white font-semibold text-base mb-4">Discover</h4>
+                    <h4 className="text-white font-semibold text-base mb-4">
+                      Discover
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
-                        <div className="text-gray-300 text-sm">Desk research, competitive analysis</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Methods
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Desk research, competitive analysis
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
-                        <div className="text-gray-300 text-sm">Identify technical risks, market baselines, and modernization opportunities</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Purpose
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Identify technical risks, market baselines, and
+                          modernization opportunities
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
-                        <div className="text-blue-400 text-sm">Landscape scan, risk assessment, success metrics</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Key Outputs
+                        </div>
+                        <div className="text-blue-400 text-sm">
+                          Landscape scan, risk assessment, success metrics
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
-                    <h4 className="text-white font-semibold text-base mb-4">Define</h4>
+                    <h4 className="text-white font-semibold text-base mb-4">
+                      Define
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
-                        <div className="text-gray-300 text-sm">1 contextual inquiry, 10 user interviews</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Methods
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          1 contextual inquiry, 10 user interviews
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
-                        <div className="text-gray-300 text-sm">Understand field workflows across client types and identify friction points</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Purpose
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Understand field workflows across client types and
+                          identify friction points
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
-                        <div className="text-blue-400 text-sm">Personas, empathy maps, journey maps, problem statements</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Key Outputs
+                        </div>
+                        <div className="text-blue-400 text-sm">
+                          Personas, empathy maps, journey maps, problem
+                          statements
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
-                    <h4 className="text-white font-semibold text-base mb-4">Design</h4>
+                    <h4 className="text-white font-semibold text-base mb-4">
+                      Design
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
-                        <div className="text-gray-300 text-sm">Wireframes, low mockups, modern UI patterns</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Methods
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Wireframes, low mockups, modern UI patterns
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
-                        <div className="text-gray-300 text-sm">Simplify critical paths and prepare flows for AI-powered features</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Purpose
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Simplify critical paths and prepare flows for
+                          AI-powered features
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
-                        <div className="text-blue-400 text-sm">Interaction models, clickable prototypes</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Key Outputs
+                        </div>
+                        <div className="text-blue-400 text-sm">
+                          Interaction models, clickable prototypes
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
-                    <h4 className="text-white font-semibold text-base mb-4">Systemize</h4>
+                    <h4 className="text-white font-semibold text-base mb-4">
+                      Systemize
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
-                        <div className="text-gray-300 text-sm">Figma design system (components, tokens, specs)</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Methods
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Figma design system (components, tokens, specs)
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
-                        <div className="text-gray-300 text-sm">Ensure visual and functional consistency across unified app</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Purpose
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Ensure visual and functional consistency across
+                          unified app
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
-                        <div className="text-blue-400 text-sm">Component library, design tokens, usage guidelines</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Key Outputs
+                        </div>
+                        <div className="text-blue-400 text-sm">
+                          Component library, design tokens, usage guidelines
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
-                    <h4 className="text-white font-semibold text-base mb-4">Validate</h4>
+                    <h4 className="text-white font-semibold text-base mb-4">
+                      Validate
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
-                        <div className="text-gray-300 text-sm">10 usability tests</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Methods
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          10 usability tests
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
-                        <div className="text-gray-300 text-sm">Verify task time reductions and error rate improvements</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Purpose
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Verify task time reductions and error rate
+                          improvements
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
-                        <div className="text-blue-400 text-sm">Task completion benchmarks, issue log, refinements</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Key Outputs
+                        </div>
+                        <div className="text-blue-400 text-sm">
+                          Task completion benchmarks, issue log, refinements
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
-                    <h4 className="text-white font-semibold text-base mb-4">Deliver</h4>
+                    <h4 className="text-white font-semibold text-base mb-4">
+                      Deliver
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
-                        <div className="text-gray-300 text-sm">Flutter development, rollout coordination</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Methods
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Flutter development, rollout coordination
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
-                        <div className="text-gray-300 text-sm">Ship performant unified app and manage staged client migration</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Purpose
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          Ship performant unified app and manage staged client
+                          migration
+                        </div>
                       </div>
                       <div>
-                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
-                        <div className="text-blue-400 text-sm">Production Flutter app, training materials, rollout plan</div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">
+                          Key Outputs
+                        </div>
+                        <div className="text-blue-400 text-sm">
+                          Production Flutter app, training materials, rollout
+                          plan
+                        </div>
                       </div>
                     </div>
                   </div>
