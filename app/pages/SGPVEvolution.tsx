@@ -79,34 +79,37 @@ export default function SGPVEvolution() {
       point: "Platform Strategy",
       options: ["Keep per-client forks", "Native rewrites", "Unify on Flutter"],
       rationale:
-        "Flutter delivered native performance with a single codebase for 15 customized FMCG clients. Native rewrites would multiply cost; legacy hybrid limited OS support and UX potential.",
-      impact:
-        "Reduced latency, faster release cadence, scalable component model",
+        "We evaluated React Native, Ionic, and Flutter. React Native had the larger ecosystem, but Flutter's coherent widget model, fast rendering, and shorter learning curve fit our design system goals and team capacity. One shared codebase would serve all 15 clients with native-level performance.",
+      impact: "Unified codebase, lower latency, faster delivery",
     },
     {
       point: "Customization Governance",
-      options: ["Maintain forks", "Hardcoded flags", "Theming + config"],
+      options: ["Maintain forks", "Hardcoded flags", "Theming and config"],
       rationale:
-        "Moved from separate codebases to unified configuration and theming system. This cut maintenance burden and regression risk while preserving client-specific branding and workflows.",
-      impact: "80% efficiency gain, safer rollouts across all clients",
+        "We replaced per-client forks with a configuration and theming system. Branding and workflows stayed flexible while updates remained centralized.",
+      impact: "80% deployment efficiency, fewer regressions",
     },
     {
       point: "Migration Rollout Strategy",
-      options: ["Big-bang launch", "Pilot-only", "Pilots → Staged cohorts"],
+      options: [
+        "Free migration for all",
+        "Individual opt-in pilots",
+        "Paid staged adoption",
+      ],
       rationale:
-        "Started with 3 pilot clients to validate migration, gather telemetry, and refine training materials. Then staged cohort deployments to protect business continuity across all 15 implementations.",
-      impact: "Zero critical incidents during migration",
+        "Each client ran its own instance, so migration required a new commercial agreement. We started with early adopters who funded the move, used their feedback to refine training and rollout, then scaled to others.",
+      impact: "Self-financed path, validated ROI, repeatable rollout",
     },
     {
-      point: "UX Investment Approach",
+      point: "UX Research Approach",
       options: [
         "Heuristics only",
         "One-off user testing",
-        "Continuous research ops",
+        "Continuous research operations",
       ],
       rationale:
-        "Interviews, contextual inquiry, and iterative usability tests shaped information architecture, responsive patterns, and the AI-powered image recognition flow that transformed field workflows.",
-      impact: "25% task time reduction, 30% satisfaction increase",
+        "We combined contextual inquiry, interviews, and iterative usability tests to shape information architecture, responsive patterns, and the AI photo-capture workflow.",
+      impact: "25% task time reduction, 30% higher satisfaction",
     },
   ];
 
@@ -145,7 +148,7 @@ export default function SGPVEvolution() {
     },
     {
       icon: Users,
-      metric: "25 +",
+      metric: "25+",
       label: "Research Sessions",
       description:
         "Interviews, contextual inquiry, and usability testing across client teams [Phase02]",
@@ -427,7 +430,7 @@ export default function SGPVEvolution() {
           },
         ]}
       />
-      ImageTextCard
+
       {/* PHASE 2 - Research */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -443,16 +446,28 @@ export default function SGPVEvolution() {
           </div>
 
           <div className="pl-0 md:pl-24 space-y-6">
-            <p className="text-gray-300 leading-relaxed">
-              Despite the Phase 1 improvements, the hybrid PhoneGap technology
-              continued to face performance challenges—particularly with photo
-              management on iOS and sluggish responsiveness compared to native
-              apps. After extensive evaluation, we selected Flutter to migrate
-              to a true cross-platform native solution that would unify all 15
-              clients into a single codebase while enabling major UX
-              enhancements. This phase ran for approximately one year, including
-              research, development, and staged rollout.
-            </p>
+            <ImageTextCard
+              title="Technology Research"
+              description={`After Phase 1, we still faced performance bottlenecks on iOS and structural limits in the PhoneGap framework.
+
+                          I led a comparative study of React Native, Ionic, and Flutter to identify a cross-platform solution that could deliver native performance from a single codebase.
+
+                          Although React Native had the larger ecosystem, Flutter's coherent widget architecture, faster rendering engine, and shorter learning curve provided a more scalable foundation for our needs.
+
+                          I mapped all major SGPV v6 components to Flutter's widget library and built prototypes to test parity and performance.
+
+                          This validation proved that Flutter could reduce build complexity and accelerate releases across all client implementations.`}
+              bulletPoints={[]}
+              images={[
+                {
+                  src: getImagePath("images/projects/SGPV_Research_01.png"),
+                  alt: "lorem",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
 
             <GlassCard>
               <div className="p-6">
@@ -465,7 +480,8 @@ export default function SGPVEvolution() {
                   validate design decisions before development.
                 </p>
 
-                <div className="overflow-x-auto">
+                {/* Desktop Table View - hidden on mobile */}
+                <div className="hidden lg:block overflow-x-auto">
                   <table className="w-full text-left">
                     <thead>
                       <tr className="border-b border-gray-700">
@@ -490,7 +506,7 @@ export default function SGPVEvolution() {
                           Desk research, competitive analysis
                         </td>
                         <td className="py-4 pr-4">
-                          Map technical risks, market baselines, and
+                          Identify technical risks, market baselines, and
                           modernization opportunities
                         </td>
                         <td className="py-4">
@@ -514,7 +530,7 @@ export default function SGPVEvolution() {
                       <tr className="border-b border-gray-800">
                         <td className="py-4 pr-4">Design</td>
                         <td className="py-4 pr-4">
-                          Wireframes, mockups, modern UI patterns
+                          Wireframes, low mockups, modern UI patterns
                         </td>
                         <td className="py-4 pr-4">
                           Simplify critical paths and prepare flows for
@@ -551,7 +567,7 @@ export default function SGPVEvolution() {
                       <tr className="border-b border-gray-800">
                         <td className="py-4 pr-4">Deliver</td>
                         <td className="py-4 pr-4">
-                          Flutter development, icon/visual assets, rollout
+                          Flutter development, rollout coordination
                         </td>
                         <td className="py-4 pr-4">
                           Ship performant unified app and manage staged client
@@ -565,60 +581,123 @@ export default function SGPVEvolution() {
                     </tbody>
                   </table>
                 </div>
+
+                {/* Mobile Card View - visible only on mobile */}
+                <div className="lg:hidden space-y-4">
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h4 className="text-white font-semibold text-base mb-4">Discover</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
+                        <div className="text-gray-300 text-sm">Desk research, competitive analysis</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
+                        <div className="text-gray-300 text-sm">Identify technical risks, market baselines, and modernization opportunities</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
+                        <div className="text-blue-400 text-sm">Landscape scan, risk assessment, success metrics</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h4 className="text-white font-semibold text-base mb-4">Define</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
+                        <div className="text-gray-300 text-sm">1 contextual inquiry, 10 user interviews</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
+                        <div className="text-gray-300 text-sm">Understand field workflows across client types and identify friction points</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
+                        <div className="text-blue-400 text-sm">Personas, empathy maps, journey maps, problem statements</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h4 className="text-white font-semibold text-base mb-4">Design</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
+                        <div className="text-gray-300 text-sm">Wireframes, low mockups, modern UI patterns</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
+                        <div className="text-gray-300 text-sm">Simplify critical paths and prepare flows for AI-powered features</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
+                        <div className="text-blue-400 text-sm">Interaction models, clickable prototypes</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h4 className="text-white font-semibold text-base mb-4">Systemize</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
+                        <div className="text-gray-300 text-sm">Figma design system (components, tokens, specs)</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
+                        <div className="text-gray-300 text-sm">Ensure visual and functional consistency across unified app</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
+                        <div className="text-blue-400 text-sm">Component library, design tokens, usage guidelines</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h4 className="text-white font-semibold text-base mb-4">Validate</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
+                        <div className="text-gray-300 text-sm">10 usability tests</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
+                        <div className="text-gray-300 text-sm">Verify task time reductions and error rate improvements</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
+                        <div className="text-blue-400 text-sm">Task completion benchmarks, issue log, refinements</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h4 className="text-white font-semibold text-base mb-4">Deliver</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Methods</div>
+                        <div className="text-gray-300 text-sm">Flutter development, rollout coordination</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Purpose</div>
+                        <div className="text-gray-300 text-sm">Ship performant unified app and manage staged client migration</div>
+                      </div>
+                      <div>
+                        <div className="text-white/60 text-xs font-semibold uppercase tracking-wide mb-1">Key Outputs</div>
+                        <div className="text-blue-400 text-sm">Production Flutter app, training materials, rollout plan</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </GlassCard>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <GlassCard>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Design System
-                  </h3>
-                  <p className="text-gray-300 text-sm">
-                    Built comprehensive Figma system to ensure visual and
-                    functional consistency across all modules and client
-                    implementations.
-                  </p>
-                </div>
-              </GlassCard>
-              <GlassCard>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    UI Modernization
-                  </h3>
-                  <p className="text-gray-300 text-sm">
-                    Wireframes and mockups focused on clarity, modern
-                    interaction patterns, and faster task completion for field
-                    workers.
-                  </p>
-                </div>
-              </GlassCard>
-              <GlassCard>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Visual Identity
-                  </h3>
-                  <p className="text-gray-300 text-sm">
-                    Delivered updated icons, product imagery, and refined visual
-                    identity for the unified v7 experience.
-                  </p>
-                </div>
-              </GlassCard>
-              <GlassCard>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Front-End Development
-                  </h3>
-                  <p className="text-gray-300 text-sm">
-                    Led Flutter migration from hybrid PhoneGap platform,
-                    optimizing for native performance and responsiveness.
-                  </p>
-                </div>
-              </GlassCard>
-            </div>
           </div>
         </div>
       </section>
+
       {/* AI Feature Explanation - NEW SECTION */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -632,110 +711,86 @@ export default function SGPVEvolution() {
               </h2>
             </div>
           </div>
+          <div className="pl-0 md:pl-24 space-y-6">
+            <ImageTextCard
+              title="Transforming Field Data Collection"
+              description={`Before migration, merchandisers visiting retail stores had to manually type product codes, shelf data, and promotion details. 
+              It was a repetitive, error-prone process that slowed each store visit and reduced data reliability. A single audit could involve dozens of entries, making productivity and consistency difficult to sustain.`}
+              bulletPoints={[]}
+              images={[
+                {
+                  src: getImagePath(
+                    "images/projects/sgpv_7_AI_flow_to colect_data.png"
+                  ),
+                  alt: "Flow diagram showing the redesigned AI-powered data capture process in SGPV v7. Users take photos of shelves or products instead of typing. The system extracts data automatically through image recognition, simplifying the field workflow.",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
 
-          <div className="pl-0 md:pl-24">
-            <GlassCard>
-              <div className="p-6">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    <Camera className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-3">
-                      Transforming Field Data Collection
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      Previously, field merchandisers visiting retail locations
-                      had to manually enter product codes, shelf placement data,
-                      and inventory counts by typing—a slow, tedious, and
-                      error-prone process. A single store visit could require
-                      dozens of manual entries, consuming valuable time and
-                      introducing data quality issues.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-6 h-6 text-green-400" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-white mb-3">
-                      The AI Solution
-                    </h4>
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      I designed a new workflow where users simply photograph
-                      shelf labels, product barcodes, or promotional displays.
-                      The AI-powered image recognition system automatically
-                      extracts product identifiers, prices, placement positions,
-                      and quantities - eliminating manual typing entirely.
-                    </p>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">→</span>
-                        <span>
-                          <strong>One-tap capture:</strong> Photograph instead
-                          of type - reducing data entry time by 25%
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">→</span>
-                        <span>
-                          <strong>Error reduction:</strong> Automated extraction
-                          eliminated transcription mistakes
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">→</span>
-                        <span>
-                          <strong>Instant validation:</strong> Real-time
-                          feedback confirmed successful capture before leaving
-                          the location
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">→</span>
-                        <span>
-                          <strong>Offline capability:</strong> Photos processed
-                          locally, synced when connection restored
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="mt-6 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                  <p className="text-sm text-gray-300">
-                    <strong className="text-blue-400">Impact:</strong> This
-                    feature became the most-used capability in v7, with
-                    merchandisers reporting it "transformed" their daily
-                    workflows. Task completion time dropped 25%, and user
-                    satisfaction increased 30% post-migration.
-                  </p>
-                </div>
-              </div>
-            </GlassCard>
+            <ImageTextCard
+              title="The AI Solution"
+              description={`I designed a new workflow enabling one-tap capture through image recognition. Users simply photograph shelf labels, barcodes, or displays; the AI automatically identifies products, prices, quantities, and placement details — removing the need for manual entry.`}
+              bulletPoints={[
+                {
+                  label: "One-tap capture",
+                  text: "Reduced data entry time by 25% through photo-based input",
+                },
+                {
+                  label: "Error reduction",
+                  text: "Automated extraction eliminated transcription mistakes",
+                },
+                {
+                  label: "Instant validation",
+                  text: "Real-time feedback confirmed successful data capture before leaving the store",
+                },
+                {
+                  label: "Offline reliability",
+                  text: '"Images processed locally and synced once online',
+                },
+              ]}
+              images={[
+                {
+                  src: getImagePath(
+                    "images/projects/sgpv_7_AI_Diagram_benefit.png"
+                  ),
+                  alt: "Diagram showing the impact of migrating to Flutter and adding AI image recognition in SGPV v7. Highlights include performance boost, task time reduced by 25%, and user satisfaction increased by 30%.",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
           </div>
         </div>
       </section>
       {/* Phase 2 Gallery */}
       <ProjectGallery
-        title="Phase 2: Flutter Migration & AI-Powered Workflows"
+        title="P2: From Hybrid to AI-Driven Workflows"
         images={[
           {
-            src: getImagePath("images/projects/sgpv7-1.png"),
-            alt: "Flutter home screen and navigation",
+            src: getImagePath("images/projects/sgpv_7_01_mobile.png"),
+            alt: "3D render of SGPV v7 mobile app screens highlighting redesigned interface and improved visual identity.",
           },
           {
-            src: getImagePath("images/projects/sgpv7-2.png"),
-            alt: "Unified design patterns and performance optimizations",
+            src: getImagePath("images/projects/sgpv_7_02_mobile.png"),
+            alt: "Sequence of mobile screens showing login, confirmation, and performance dashboard in SGPV v7.",
           },
           {
-            src: getImagePath("images/projects/sgpv7-3.png"),
-            alt: "AI image recognition workflow",
+            src: getImagePath(
+              "images/projects/sgpv_7_03_tablet_shopdashboard_imgRec.png"
+            ),
+            alt: "Tablet interface displaying the shop dashboard and AI-based image recognition capture feature in SGPV v7.",
+          },
+          {
+            src: getImagePath("images/projects/sgpv_7_03_tablet_form.png"),
+            alt: "Tablet screens showing updated data entry forms and product status interface in SGPV v7.",
           },
         ]}
       />
+
       {/* Key Decisions */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
@@ -754,9 +809,12 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
+
       {/* Business Impact - CONSOLIDATED */}
+
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
           <div className="flex items-start gap-6 mb-8">
             <div className="text-6xl font-bold text-blue-400 opacity-20">
               05
@@ -770,37 +828,35 @@ export default function SGPVEvolution() {
 
           <div className="pl-0 md:pl-24 space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              The two-phase evolution delivered measurable improvements across
-              cost, efficiency, and user experience while establishing a
-              maintainable platform for future growth.
+              The two-phase evolution improved performance, cost efficiency, and
+              user satisfaction while establishing a sustainable multi-client
+              platform.
             </p>
 
+            {/* Consolidated Results */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Phase 1 Results
+                    Product Performance
                   </h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>
-                      <strong>−20% hardware cost:</strong> Mobile-first design
-                      eliminated tablet purchases for 15 clients
+                      <strong>Unified Flutter codebase:</strong> Reduced latency
+                      and improved responsiveness across iOS and Android.
                     </li>
                     <li>
-                      <strong>+80% development efficiency:</strong> Centralized
-                      CSS and assets enabled one-to-many deployment
+                      <strong>25% faster task completion:</strong> AI-based
+                      image recognition removed manual entry and reduced user
+                      effort.
                     </li>
                     <li>
-                      <strong>+25% faster updates:</strong> Unified styling
-                      accelerated future releases
+                      <strong>30% higher satisfaction:</strong> Field workers
+                      reported smoother, faster daily workflows.
                     </li>
                     <li>
-                      <strong>+15% user satisfaction:</strong> Responsive design
-                      better matched field worker needs
-                    </li>
-                    <li>
-                      <strong>Foundation for Phase 2:</strong> Created technical
-                      runway for Flutter migration
+                      <strong>Seamless adoption:</strong> Early pilot clients
+                      funded the migration, validating ROI before full rollout.
                     </li>
                   </ul>
                 </div>
@@ -809,75 +865,71 @@ export default function SGPVEvolution() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Phase 2 Results
+                    Operational & Financial Outcomes
                   </h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>
-                      <strong>Native performance:</strong> Flutter delivered
-                      faster responsiveness and lower latency than hybrid
+                      <strong>20% lower hardware cost:</strong> Mobile-first
+                      design removed the need for tablets.
                     </li>
                     <li>
-                      <strong>−25% task completion time:</strong> AI image
-                      recognition eliminated manual data entry
+                      <strong>80% deployment efficiency:</strong> Centralized
+                      styling and shared assets simplified updates for 15
+                      clients.
                     </li>
                     <li>
-                      <strong>−20% time per visit:</strong> Streamlined flows
-                      reduced errors and friction
+                      <strong>Faster delivery cycles:</strong> One-to-many
+                      rollout process shortened release time.
                     </li>
                     <li>
-                      <strong>+30% user satisfaction:</strong> Performance and
-                      usability gains transformed field experience
-                    </li>
-                    <li>
-                      <strong>Unified codebase:</strong> One app for all clients
-                      with configuration-based customization
-                    </li>
-                    <li>
-                      <strong>Zero critical incidents:</strong> Staged rollout
-                      protected business continuity
+                      <strong>Self-financed migration model:</strong>{" "}
+                      Demonstrated commercial viability and created a scalable
+                      adoption framework.
                     </li>
                   </ul>
                 </div>
               </GlassCard>
             </div>
 
+            {/* Long-Term Value */}
             <GlassCard>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-blue-400 mb-3">
                   Long-Term Platform Value
                 </h3>
                 <p className="text-gray-300 text-sm mb-3">
-                  Beyond immediate metrics, the transformation positioned SGPV
+                  Beyond short-term metrics, the transformation positioned SGPV
                   as a modern, competitive platform capable of rapid innovation.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">→</span>
                     <span>
-                      <strong>Scalability for growth:</strong> New clients can
-                      be onboarded with configuration instead of code forks
+                      <strong>Scalable growth:</strong> New clients can be
+                      onboarded through configuration instead of new code forks.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">→</span>
                     <span>
-                      <strong>AI-ready architecture:</strong> Image recognition
-                      proved the platform for future ML capabilities
+                      <strong>AI-ready architecture:</strong> The
+                      image-recognition module established a foundation for
+                      future machine-learning features.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">→</span>
                     <span>
-                      <strong>Reduced technical debt:</strong> Eliminated years
-                      of legacy code through strategic modernization
+                      <strong>Reduced technical debt:</strong> Legacy hybrid
+                      layers were replaced with a sustainable native stack.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">→</span>
                     <span>
-                      <strong>Competitive advantage:</strong> Native performance
-                      and AI features differentiated SGPV from competing field
-                      solutions
+                      <strong>Competitive differentiation:</strong> Native
+                      performance and AI automation positioned SGPV ahead of
+                      competing field solutions.
                     </span>
                   </li>
                 </ul>
@@ -886,9 +938,12 @@ export default function SGPVEvolution() {
           </div>
         </div>
       </section>
+
       {/* Key Learnings - EXPANDED */}
+
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
           <div className="flex items-start gap-6 mb-8">
             <div className="text-6xl font-bold text-blue-400 opacity-20">
               06
@@ -901,123 +956,83 @@ export default function SGPVEvolution() {
           </div>
 
           <div className="pl-0 md:pl-24 space-y-6">
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  1. Governance Beats Heroics
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  The Phase 1 theming system—replacing code forks with
-                  configuration—was more valuable than any individual feature.
-                  Establishing clear governance early (how customization works,
-                  who approves changes, what's configurable vs. fixed) prevented
-                  chaos as we scaled. The 80% efficiency gain came from
-                  structure, not individual developer speed.
-                </p>
-              </div>
-            </GlassCard>
+            {/* Optional Intro */}
+            <p className="text-gray-300 leading-relaxed mb-6">
+              Scaling SGPV taught us that sustainable impact comes from
+              structure, empathy, and clarity—not just code.
+            </p>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  2. Staged Rollout Protects Business Continuity
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Migrating 15 live client implementations to a completely new
-                  technology stack (PhoneGap → Flutter) could have been
-                  catastrophic with a big-bang launch. Starting with 3 pilot
-                  clients gave us real telemetry, surfaced edge cases we hadn't
-                  considered, and allowed us to refine training materials before
-                  full rollout. The result: zero critical incidents during
-                  migration across all clients.
-                </p>
-              </div>
-            </GlassCard>
+            {/* Responsive Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <GlassCard>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    1. Governance Beats Heroics
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Efficiency came from governance, not heroics. Replacing code
+                    forks with a theming and configuration system brought 80%
+                    faster rollouts through shared structure and clear
+                    ownership.
+                  </p>
+                </div>
+              </GlassCard>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  3. User Research Accelerates Stakeholder Buy-In
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Contextual inquiry with actual merchandisers in retail
-                  environments—watching them struggle with manual data entry—was
-                  more persuasive than any feature pitch. Video clips of users
-                  saying "this takes forever" secured executive approval for the
-                  AI image recognition investment faster than ROI projections
-                  alone. UX evidence builds conviction.
-                </p>
-              </div>
-            </GlassCard>
+              <GlassCard>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    2. User Research Drives Executive Buy-In
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Field studies and user videos proved pain points better than
+                    any slide deck. Real stories convinced leadership to invest
+                    in AI automation and UX upgrades.
+                  </p>
+                </div>
+              </GlassCard>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  4. Balancing Standardization with Client Autonomy
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  FMCG clients had legitimate reasons for
-                  customization—different promotional workflows, regional
-                  compliance requirements, brand identity needs. The challenge
-                  wasn't eliminating customization but moving it from code forks
-                  to configuration. Defining clear "customization slots"
-                  (branding, workflow toggles, field configurations) while
-                  keeping core functionality unified was the key architectural
-                  decision that made Phase 2 possible.
-                </p>
-              </div>
-            </GlassCard>
+              <GlassCard>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    3. Standardization with Client Freedom
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Instead of enforcing uniformity, we moved customization into
+                    configuration. Clients kept their identity while the
+                    platform stayed unified and maintainable.
+                  </p>
+                </div>
+              </GlassCard>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  5. Technology Migration Requires Change Management
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  The Flutter migration wasn't just a technical challenge—it
-                  required training 15 client organizations, managing user
-                  expectations about new UI patterns, and ensuring field workers
-                  (many older, less tech-savvy) could adapt. We created
-                  role-specific training videos, ran pilot sessions with each
-                  client's power users, and built "What's New" onboarding flows
-                  in the app itself. The 30% satisfaction increase came from
-                  managing the human side of change, not just shipping better
-                  code.
-                </p>
-              </div>
-            </GlassCard>
-
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  6. AI Features Require Thoughtful UX Design
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Image recognition technology alone doesn't solve problems—the
-                  workflow design matters more. We iterated on: camera guidance
-                  (framing helpers, lighting feedback), confidence thresholds
-                  (when to auto-accept vs. ask for confirmation), error recovery
-                  (what happens when recognition fails), and offline handling
-                  (processing locally vs. cloud). The 25% task time reduction
-                  came from these UX decisions, not just the AI model accuracy.
-                </p>
-              </div>
-            </GlassCard>
+              <GlassCard>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    4. Change Management Is Part of Design
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Migrating to Flutter meant retraining 15 client teams.
+                    Success came from onboarding tools, training materials, and
+                    empathy for field users adapting to new workflows.
+                  </p>
+                </div>
+              </GlassCard>
+            </div>
           </div>
         </div>
       </section>
+
       {/* CTA */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <GlassCard>
             <div className="text-center py-8">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Want to discuss multi-client product evolution?
+                Want to see more work?
               </h2>
               <p className="text-[#cbd5e1] mb-8 max-w-2xl mx-auto">
-                I can share deeper artifacts—research findings, design system
-                documentation, and migration playbooks—from the two-year SGPV
-                transformation.
+                This project shows how I lead multi-client product
+                evolution—turning research insights and governance into scalable
+                design systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

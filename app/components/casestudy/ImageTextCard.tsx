@@ -60,7 +60,11 @@ export default function ImageTextCard({
   const textSection = (
     <div className="md:w-2/3">
       <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-      <p className="text-gray-300 leading-relaxed mb-4">{description}</p>
+      <div className="text-gray-300 leading-relaxed mb-4 space-y-3">
+        {description.split(/\n+/).filter(p => p.trim()).map((paragraph, index) => (
+          <p key={index}>{paragraph.trim()}</p>
+        ))}
+      </div>
       <ul className="space-y-2 text-gray-400">
         {bulletPoints.map((point, index) => (
           <li key={index} className="flex items-start gap-2">
