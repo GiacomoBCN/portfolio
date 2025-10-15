@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation"; // ← Add this line
 import Link from "next/link";
 import { createPageUrl } from "@/utils";
 import { Menu, X, Mail, ChevronDown } from "lucide-react";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -288,6 +289,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+
+      {/* Scroll to top button */}
+      <ScrollToTop />
     </div>
   );
 }
