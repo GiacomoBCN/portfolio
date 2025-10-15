@@ -35,7 +35,7 @@ export default function ProductWork() {
     },
     {
       category: "B2C Multi-platform",
-      title: "VoD Platform Redesign",
+      title: "VOD Platform Redesign",
       role: "Product Consultant",
       year: "",
       description:
@@ -55,7 +55,7 @@ export default function ProductWork() {
         "WCAG 2.2 AA",
         "TV/10-foot UI",
       ],
-      slug: "VoDCaseStudy",
+      slug: "VODplatform",
     },
     {
       category: "SAAS",

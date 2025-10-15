@@ -466,7 +466,7 @@ export default function SGPVEvolution() {
               images={[
                 {
                   src: getImagePath("images/projects/SGPV_Research_01.png"),
-                  alt: "lorem",
+                  alt: "Diagram summarizing all the process + output tech reasearch.",
                 },
               ]}
               imagePosition="left"

@@ -170,11 +170,11 @@ export default function VoDPlatform() {
   const evaluationImages = [
     {
       src: getImagePath("images/projects/Vod-Old_Home_nav.png"),
-      alt: "Original VoD platform interface showing navigation complexity",
+      alt: "Original VOD platform interface showing navigation complexity",
     },
     {
       src: getImagePath("images/projects/Vod-Old_Welcom.png"),
-      alt: "Original VoD platform welcome screen interface",
+      alt: "Original VOD platform welcome screen interface",
     },
   ];
 
@@ -246,7 +246,7 @@ export default function VoDPlatform() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent"></div>
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="text-sm text-gray-400 mb-6">
-            Home &gt; Product Work &gt; VoD Platform Redesign
+            Home &gt; Product Work &gt; VOD Platform Redesign
           </p>
           <div className="mb-4">
             <span className="text-xs uppercase tracking-wider text-blue-400">
@@ -254,7 +254,7 @@ export default function VoDPlatform() {
             </span>
           </div>
           <h1 className="text-5xl font-bold text-white mb-4">
-            VoD Platform Redesign
+            VOD Platform Redesign
           </h1>
           <p className="text-lg text-gray-400 mb-4">
             Product Consultant · Confidential Client (MENA)
@@ -378,7 +378,7 @@ export default function VoDPlatform() {
           },
           {
             src: getImagePath("images/projects/Vod-2-New_Vod_Page.png"),
-            alt: "New version of VoD page",
+            alt: "New version of VOD page",
           },
           {
             src: getImagePath("images/projects/Vod-3- Nwe_Catch-up.png"),
@@ -458,13 +458,13 @@ export default function VoDPlatform() {
               images={[
                 {
                   src: getImagePath("images/projects/Vod-Old_Home_nav.png"),
-                  alt: "Original VoD platform home screen showing the cluttered three-axis navigation layout",
+                  alt: "Original VOD platform home screen showing the cluttered three-axis navigation layout",
                 },
                 {
                   src: getImagePath(
                     "images/projects/Vod_Redesing_Nav_Graf_Reason.png"
                   ),
-                  alt: "Diagram showing how redesigning VoD navigation improved usability and user experience through simplicity and accessibility.",
+                  alt: "Diagram showing how redesigning VOD navigation improved usability and user experience through simplicity and accessibility.",
                 },
               ]}
               imagePosition="left"
@@ -480,11 +480,11 @@ export default function VoDPlatform() {
               images={[
                 {
                   src: getImagePath("images/projects/Vod-Old_Welcom.png"),
-                  alt: "Original VoD welcome screen requiring multiple clicks before accessing content",
+                  alt: "Original VOD welcome screen requiring multiple clicks before accessing content",
                 },
                 {
                   src: getImagePath("images/projects/Vod-Old_ex_a11y.png"),
-                  alt: "Example of accessibility issues in the original VoD interface, showing low contrast and poor legibility",
+                  alt: "Example of accessibility issues in the original VOD interface, showing low contrast and poor legibility",
                 },
               ]}
               imagePosition="right"

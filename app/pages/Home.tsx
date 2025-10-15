@@ -149,7 +149,7 @@ export default function Home() {
               icon={TrendingUp}
               headline="40 %"
               subHeadline="INTERACTION FRICTION"
-              before="VoD platform required 10+ button presses to switch profiles. 3-axis navigation confused users."
+              before="VOD platform required 10+ button presses to switch profiles. 3-axis navigation confused users."
               after="Heuristic evaluation identified friction. Redesigned to 4 presses. Clear 2-axis structure."
               impact="60% faster profile switching. WCAG AA accessible. Scaled across TV, mobile, tablet, car."
               delay={0.1}
@@ -201,7 +201,7 @@ export default function Home() {
               title="Through Strategy"
               points={[
                 "Improved UAT/QA workflows - 30% team productivity increase",
-                "Proposed removing VoD welcome screen despite stakeholder attachment - prioritized user value over internal preference",
+                "Proposed removing VOD welcome screen despite stakeholder attachment - prioritized user value over internal preference",
                 "Managed feature backlog and prioritization for B2B platforms - balanced user value with technical constraints",
               ]}
               delay={0.2}
@@ -251,7 +251,7 @@ export default function Home() {
 
             <ProjectCard
               role="B2C Multi-platform"
-              title="VoD Platform Redesign"
+              title="VOD Platform Redesign"
               company="Confidential Client"
               timeframe=""
               description="Redesigned cross-device VOD experience with 40% fewer interaction steps (calculated via click-path analysis) and WCAG AA compliance across TV, mobile, and in-car displays."
@@ -271,7 +271,7 @@ export default function Home() {
                 "WCAG 2.2 AA",
                 "TV/10-foot UI",
               ]}
-              link={createPageUrl("VoDCaseStudy")}
+              link={createPageUrl("VODplatform")}
               delay={0.1}
             />
 
@@ -465,14 +465,15 @@ export default function Home() {
                   </div>
                 </GlassCard>
               </div>
-
-              <p className="text-lg text-[#cbd5e1] leading-relaxed mt-10">
-                My technical background allows me to bridge design and
-                engineering - prototyping rapidly and participating in
-                architecture discussions. I use AI tools to validate ideas in
-                hours instead of weeks, building working prototypes that teams
-                can react to instead of debating abstract specs.
-              </p>
+              <GlassCard hover={false} delay={0.1}>
+                <p className="text-lg text-[#cbd5e1] leading-relaxed ">
+                  My technical background allows me to bridge design and
+                  engineering - prototyping rapidly and participating in
+                  architecture discussions. I use AI tools to validate ideas in
+                  hours instead of weeks, building working prototypes that teams
+                  can react to instead of debating abstract specs.
+                </p>
+              </GlassCard>
             </motion.div>
           </div>
         </div>

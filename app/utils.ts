@@ -3,7 +3,7 @@ export function createPageUrl(name: string): string {
   const map: Record<string, string> = {
     Home: "/",
     Teaching: "/teaching",
-    VoDCaseStudy: "/vodcasestudy",
+    VODplatform: "/vodplatform",
     ProductWork: "/product-work",
     DowJones: "/dowjones",
     XpuntoCero: "/xpuntocero",

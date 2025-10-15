@@ -42,7 +42,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const projectLinks = [
     { name: "Dow Jones Design System", path: "DowJones" },
-    { name: "VoD Platform", path: "VoDCaseStudy" },
+    { name: "VOD Platform", path: "VODplatform" },
     { name: "SGPV Evolution", path: "SGPVEvolution" },
     { name: "XpuntoCero Transformation", path: "XpuntoCero" },
     { name: "Back Office Unification", path: "BackOffice" },
@@ -114,27 +114,32 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <ChevronDown className="w-4 h-4 ml-1" aria-hidden="true" />
               </Link>
               <div
-                className={`absolute top-full left-0 mt-2 w-64 glass rounded-xl p-4 transition-all ${
+                className={`absolute top-full left-0 mt-2 w-64 rounded-xl p-4 transition-all ${
                   isProductDropdownOpen
                     ? "opacity-100 visible"
                     : "opacity-0 invisible"
                 }`}
+                style={{
+                  background: "rgba(10, 14, 39, 0.95)",
+                  backdropFilter: "blur(20px) saturate(180%)",
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                }}
                 role="menu"
                 aria-label="Product work submenu"
               >
                 <Link
                   href={createPageUrl("ProductWork")}
-                  className="block px-4 py-2 text-white hover:text-blue-400"
+                  className="block px-4 py-2 text-white font-semibold hover:bg-[#0066ff]/20 hover:text-white rounded-lg transition-colors"
                   role="menuitem"
                 >
                   All Projects
                 </Link>
-                <div className="h-px bg-white/10 my-2" />
+                <div className="h-px bg-white/20 my-2" />
                 {projectLinks.map((p) => (
                   <Link
                     key={p.path}
                     href={createPageUrl(p.path)}
-                    className="block px-4 py-2 text-sm text-gray-300 hover:text-blue-400"
+                    className="block px-4 py-2 text-sm text-gray-200 hover:bg-[#0066ff]/20 hover:text-white rounded-lg transition-colors"
                     role="menuitem"
                   >
                     {p.name}
