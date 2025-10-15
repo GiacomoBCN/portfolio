@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative px-6">
+      <section className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative px-6">
         {/* Animated Background Grid */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div
@@ -59,7 +59,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mb-6"
+            className="mb-3 md:mb-6"
           >
             <span className="inline-block px-6 py-3 glass rounded-full text-[#0066ff] text-base md:text-lg uppercase tracking-[0.2em] font-semibold">
               Product & Design Leadership
@@ -109,7 +109,8 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <motion.div
+          <motion.a
+            href="#impact"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -118,15 +119,15 @@ export default function Home() {
               repeatType: "reverse",
               duration: 1.5,
             }}
-            className="flex justify-center"
+            className="flex justify-center cursor-pointer"
           >
             <ChevronDown size={32} className="text-[#0066ff] glow-blue" />
-          </motion.div>
+          </motion.a>
         </motion.div>
       </section>
 
       {/* Impact Metrics Section */}
-      <section className="py-24 px-6">
+      <section id="impact" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             title="Driving Measurable Impact"
