@@ -150,21 +150,22 @@ export default function ProductWork() {
       ],
       slug: "TuPlanRedondo",
     },
-    {
-      category: "PRODUCT MANAGEMENT · PORTFOLIO",
-      title: "E-Commerce Product Management",
-      role: "Project Managment & Product Design",
-      year: "",
-      description:
-        "Managed multiple e-commerce projects with 95% client satisfaction, 90% on-time delivery, and 20% boost in team productivity.",
-      metrics: [
-        { value: "95%", label: "Satisfaction" },
-        { value: "90%", label: "On-Time" },
-        { value: "20%", label: "Productivity" },
-      ],
-      tags: ["WordPress", "WooCommerce", "Agile", "Stakeholder Management"],
-      slug: "EcommerceManagement",
-    },
+    // TEMPORARILY HIDDEN - E-Commerce Product Management
+    // {
+    //   category: "PRODUCT MANAGEMENT · PORTFOLIO",
+    //   title: "E-Commerce Product Management",
+    //   role: "Project Managment & Product Design",
+    //   year: "",
+    //   description:
+    //     "Managed multiple e-commerce projects with 95% client satisfaction, 90% on-time delivery, and 20% boost in team productivity.",
+    //   metrics: [
+    //     { value: "95%", label: "Satisfaction" },
+    //     { value: "90%", label: "On-Time" },
+    //     { value: "20%", label: "Productivity" },
+    //   ],
+    //   tags: ["WordPress", "WooCommerce", "Agile", "Stakeholder Management"],
+    //   slug: "EcommerceManagement",
+    // },
   ];
 
   return (

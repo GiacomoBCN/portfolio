@@ -10,7 +10,8 @@ export function createPageUrl(name: string): string {
     SGPVEvolution: "/sgpvevolution",
     BackOffice: "/back-office",
     TuPlanRedondo: "/tu-plan-redondo",
-    EcommerceManagement: "/ecommerce-management",
+    // TEMPORARILY HIDDEN - E-Commerce Product Management
+    // EcommerceManagement: "/ecommerce-management",
   };
   return map[name] ?? "/";
 }

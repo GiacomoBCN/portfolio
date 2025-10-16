@@ -47,7 +47,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "XpuntoCero Transformation", path: "XpuntoCero" },
     { name: "Back Office Unification", path: "BackOffice" },
     { name: "TuPlanRedondo PWA", path: "TuPlanRedondo" },
-    { name: "E-Commerce Management", path: "EcommerceManagement" },
+    // TEMPORARILY HIDDEN - E-Commerce Management
+    // { name: "E-Commerce Management", path: "EcommerceManagement" },
   ];
 
   return (
