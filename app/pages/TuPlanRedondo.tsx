@@ -14,6 +14,9 @@ import {
   BarChart3,
   Users,
   Database,
+  GitBranch,
+  CircleDollarSign,
+  SmilePlus,
 } from "lucide-react";
 import OverviewCard from "../components/work/OverviewCard";
 import DecisionTable from "../components/work/DecisionTable";
@@ -113,31 +116,38 @@ export default function TuPlanRedondo() {
           <p className="text-sm text-gray-400 mb-6">
             Home &gt; Product Work &gt; TuPlanRedondo PWA
           </p>
+
           <div className="mb-4">
             <span className="text-xs uppercase tracking-wider text-blue-400">
-              B2B PWA · FIELD OPERATIONS
+              FULL-STACK DESIGN · RESEARCH → DESIGN → BUILD
             </span>
           </div>
+
           <h1 className="text-5xl font-bold text-white mb-4">
-            TuPlanRedondo PWA for McDonald's Franchise
+            TuPlanRedondo PWA
           </h1>
-          <p className="text-lg text-gray-400 mb-4">
-            Product Designer & Front-End Developer
-          </p>
+
+          <p className="text-lg text-gray-400 mb-4">Full-Stack Designer</p>
+
           <p className="text-xl text-gray-300 mb-8">
-            Streamlined employee evaluation workflows with a Progressive Web
-            App, saving 30% time and boosting satisfaction by 25%.
+            Digitized McDonald’s franchise evaluations through a Progressive Web
+            App, reducing manual work by{" "}
+            <span className="text-white font-semibold">30%</span> and cutting
+            delivery costs by{" "}
+            <span className="text-white font-semibold">45%</span>. <br />
+            Built end-to-end — from research to front-end code.
           </p>
+
           <div className="flex flex-wrap gap-2">
             {[
-              "End-to-end UX/UI Process",
-              "Figma",
+              "User Research",
+              "UI/UX Design",
+              "Visual Design",
               "Front-End Development",
               "PWA",
-              "HTML5",
-              "CSS3",
               "Bootstrap",
               "JavaScript",
+              "Figma",
             ].map((tag, i) => (
               <span
                 key={i}
@@ -149,6 +159,7 @@ export default function TuPlanRedondo() {
           </div>
         </div>
       </section>
+      {/* End Hero */}
 
       {/* Intro Card */}
       <ProjectIntroCard
@@ -157,20 +168,26 @@ export default function TuPlanRedondo() {
         showGradient={false}
       >
         <p className="text-gray-300 leading-relaxed">
-          A McDonald's franchise managing multiple locations needed to modernize
-          their employee performance evaluation process. Managers were
-          conducting evaluations manually with paper forms, leading to data
-          entry errors, delays in reporting, and no centralized way to track
-          performance trends across restaurants.
+          TuPlanRedondo was developed for a McDonald’s franchise through
+          XpuntoCero. The client needed to modernize its employee evaluation
+          process, which was still handled manually with paper forms — slow,
+          error-prone, and hard to track. After discussing different options, I
+          recommended a Progressive Web App as the most practical and
+          cost-effective solution: fast to deploy, simple to access, and usable
+          on any device without installation.
         </p>
+
         <p className="text-gray-300 leading-relaxed">
-          I designed and developed TuPlanRedondo, a Progressive Web App that
-          digitized the entire evaluation workflow. The solution enabled field
-          managers to conduct assessments on tablets and smartphones,
-          automatically sync data to a real-time dashboard, and eliminated the
-          need for app downloads through browser-based access. The result: 30%
-          time savings, 25% satisfaction improvement, and 30% cost reduction
-          compared to native app development.
+          I designed and built the full product — from research and UI design to
+          front-end development. Field managers could now run evaluations
+          directly from their browser and access real-time dashboards instantly.
+          The result:
+          <span className="text-white font-semibold"> 30%</span> faster
+          evaluations,
+          <span className="text-white font-semibold"> 25%</span> higher
+          satisfaction, and{" "}
+          <span className="text-white font-semibold"> 45%</span> lower
+          development cost compared to native apps.
         </p>
       </ProjectIntroCard>
 
@@ -179,29 +196,30 @@ export default function TuPlanRedondo() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <OverviewCard icon={AlertCircle} title="The Challenge">
-              Manual paper-based evaluations were time-consuming and
-              error-prone. No centralized data collection tool existed. Client
-              needed lightweight solution without app installation requirements.
+              Manual, paper-based evaluations slowed daily operations and caused
+              frequent data errors. <br /> The franchise needed a lightweight
+              digital solution that worked on any device and didn’t require app
+              store downloads or complex IT setup.
             </OverviewCard>
 
             <OverviewCard icon={User} title="My Role">
               <p className="font-semibold mb-2">
-                Product Designer & Front-End Developer
+                Product Designer &amp; Front-End Developer
               </p>
               <ul className="space-y-1">
-                <li>• User research & usability testing</li>
-                <li>• UI/UX design & prototyping</li>
-                <li>• PWA front-end development</li>
-                <li>• Dashboard analytics design</li>
+                <li>• Led user research and usability testing</li>
+                <li>• Designed UI, icons, and visual language</li>
+                <li>• Built the front-end as a Progressive Web App</li>
               </ul>
             </OverviewCard>
 
-            <OverviewCard icon={TrendingUp} title="Impact">
+            <OverviewCard icon={GitBranch} title="Scope">
               <ul className="space-y-1">
-                <li>• 30% time savings on evaluations</li>
-                <li>• 25% satisfaction increase</li>
-                <li>• 30% cost reduction vs native app</li>
-                <li>• Real-time performance insights</li>
+                <li>• End-to-end research → design → development</li>
+                <li>• Evaluation forms, dashboard, and secure login</li>
+                <li>
+                  • Cross-device PWA built with HTML5, CSS3, Bootstrap, JS
+                </li>
               </ul>
             </OverviewCard>
           </div>
@@ -214,25 +232,71 @@ export default function TuPlanRedondo() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Project Impact
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
-              <GlassCard key={index}>
-                <div className="flex flex-col items-center text-center p-6">
-                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
-                    <achievement.icon className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {achievement.metric}
-                  </div>
-                  <div className="text-sm font-semibold text-blue-400 mb-2">
-                    {achievement.label}
-                  </div>
-                  <div className="text-xs text-gray-400">
-                    {achievement.description}
-                  </div>
+            <GlassCard>
+              <div className="flex flex-col items-center text-center p-6">
+                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-blue-400" />
                 </div>
-              </GlassCard>
-            ))}
+                <div className="text-4xl font-bold text-white mb-2">30%</div>
+                <div className="text-sm font-semibold text-blue-400 mb-2">
+                  Faster Evaluations
+                </div>
+                <div className="text-xs text-gray-400">
+                  Streamlined digital workflow replaced manual paper forms.
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard>
+              <div className="flex flex-col items-center text-center p-6">
+                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
+                  <SmilePlus className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">25%</div>
+                <div className="text-sm font-semibold text-blue-400 mb-2">
+                  Higher Satisfaction
+                </div>
+                <div className="text-xs text-gray-400">
+                  Evaluators found the PWA faster, simpler, and easier to
+                  access.
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard>
+              <div className="flex flex-col items-center text-center p-6">
+                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
+                  <CircleDollarSign className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">45%</div>
+                <div className="text-sm font-semibold text-blue-400 mb-2">
+                  Lower Dev Cost
+                </div>
+                <div className="text-xs text-gray-400">
+                  PWA approach avoided native builds for iOS and Android.
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard>
+              <div className="flex flex-col items-center text-center p-6">
+                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
+                  <BarChart3 className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">
+                  Real-time
+                </div>
+                <div className="text-sm font-semibold text-blue-400 mb-2">
+                  Insights
+                </div>
+                <div className="text-xs text-gray-400">
+                  Live dashboards connected managers to instant performance
+                  data.
+                </div>
+              </div>
+            </GlassCard>
           </div>
         </div>
       </section>
