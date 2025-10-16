@@ -791,9 +791,9 @@ export default function XpuntoCero() {
                 Want to see more work?
               </h2>
               <p className="text-[#cbd5e1] mb-8 max-w-2xl mx-auto">
-                This case study demonstrates how research-driven design,
-                cohesive branding, and performant technical implementation
-                create measurable business impact.
+                This project demonstrates how research-driven design, cohesive
+                branding, and performant technical implementation create
+                measurable business impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

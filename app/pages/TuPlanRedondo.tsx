@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { createPageUrl } from "@/utils";
 import {
@@ -17,55 +17,90 @@ import {
   GitBranch,
   CircleDollarSign,
   SmilePlus,
+  X,
 } from "lucide-react";
 import OverviewCard from "../components/work/OverviewCard";
 import DecisionTable from "../components/work/DecisionTable";
 import GlassCard from "../components/portfolio/GlassCard";
 import ProjectIntroCard from "../components/work/ProjectIntroCard";
 import ProjectGallery from "../components/work/ProjectGallery";
+import ImageTextCard from "../components/casestudy/ImageTextCard";
+
 import { getImagePath } from "@/utils/image";
 
 export default function TuPlanRedondo() {
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [galleryImages, setGalleryImages] = useState<
+    { src: string; alt: string }[]
+  >([]);
+
+  const openImageModal = (src: string) => {
+    setModalImageSrc(src);
+    setIsImageModalOpen(true);
+  };
+
+  const openGallery = (
+    images: { src: string; alt: string }[],
+    startIndex: number = 0
+  ) => {
+    setGalleryImages(images);
+    setCurrentImageIndex(startIndex);
+    setModalImageSrc(images[startIndex].src);
+    setIsImageModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
+    setModalImageSrc("");
+    setGalleryImages([]);
+    setCurrentImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (galleryImages.length > 0) {
+      const nextIndex = (currentImageIndex + 1) % galleryImages.length;
+      setCurrentImageIndex(nextIndex);
+      setModalImageSrc(galleryImages[nextIndex].src);
+    }
+  };
+
+  const previousImage = () => {
+    if (galleryImages.length > 0) {
+      const prevIndex =
+        (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      setCurrentImageIndex(prevIndex);
+      setModalImageSrc(galleryImages[prevIndex].src);
+    }
+  };
+
   const keyDecisions = [
     {
-      point: "Technology Approach",
-      options: [
-        "Native app (iOS/Android)",
-        "Hybrid app",
-        "Progressive Web App",
-      ],
+      point: "Technology Choice",
+      options: ["Native app", "Hybrid", "Progressive Web App (PWA)"],
       rationale:
-        "PWA eliminated app store friction and installation barriers while enabling instant deployment across all devices. Franchise managers could access the tool immediately through a browser without IT approval or device management overhead.",
-      impact: "30% cost savings, zero installation friction",
+        "The client asked for a native app. After assessing devices, budget, and rollout constraints, I proposed a PWA: no installs, works on any browser, faster to ship.",
+      impact:
+        "Delivery costs ↓ 45%; instant access on tablets, phones, laptops",
     },
     {
-      point: "Offline Strategy",
-      options: [
-        "Online-only",
-        "Basic caching",
-        "Full offline-first architecture",
-      ],
+      point: "Connectivity Strategy",
+      options: ["Offline-first", "Basic caching", "Online real-time"],
       rationale:
-        "Field evaluators often work in areas with poor connectivity (restaurant back-of-house, parking lots). Offline-first architecture with local storage and background sync ensured data capture never failed due to network issues.",
-      impact: "100% data capture reliability",
+        "Restaurants had stable Wi-Fi. Offline would add complexity without clear value, so I optimized for fast loads and real-time submission.",
+      impact: "Simpler maintenance; reliable performance; shorter timeline",
     },
     {
-      point: "Authentication Model",
-      options: ["Open access", "Simple PIN", "Secure credential login"],
-      rationale:
-        "Employee performance data required secure authentication with role-based access. Managers needed dashboard visibility while field evaluators only accessed evaluation forms. Credential-based login protected sensitive HR data.",
-      impact: "Compliance with data privacy requirements",
-    },
-    {
-      point: "Dashboard Complexity",
+      point: "Interface Scope",
       options: [
-        "Basic reports",
-        "Static analytics",
-        "Real-time interactive dashboard",
+        "Complex evaluation suite",
+        "Feature creep",
+        "Focused forms + dashboard",
       ],
       rationale:
-        "Management needed immediate visibility into evaluation trends to respond quickly to performance issues. Real-time dashboard enabled data-driven decisions without waiting for manual report generation.",
-      impact: "Faster response to performance issues",
+        "Kept the MVP tight: streamlined forms, role-based access, and a simple live dashboard for managers.",
+      impact: "30% less manual work; quicker adoption; easier training",
     },
   ];
 
@@ -130,12 +165,13 @@ export default function TuPlanRedondo() {
           <p className="text-lg text-gray-400 mb-4">Full-Stack Designer</p>
 
           <p className="text-xl text-gray-300 mb-8">
-            Digitized McDonald’s franchise evaluations through a Progressive Web
-            App, reducing manual work by{" "}
-            <span className="text-white font-semibold">30%</span> and cutting
-            delivery costs by{" "}
-            <span className="text-white font-semibold">45%</span>. <br />
-            Built end-to-end — from research to front-end code.
+            I designed and built a Progressive Web App that replaced a
+            paper-based employee evaluation process across multiple McDonald’s
+            restaurants. <br />
+            The new system reduced manual work by{" "}
+            <span className="text-white font-semibold">30%</span>
+            and cut delivery costs by{" "}
+            <span className="text-white font-semibold">45%</span>.
           </p>
 
           <div className="flex flex-wrap gap-2">
@@ -164,30 +200,24 @@ export default function TuPlanRedondo() {
       {/* Intro Card */}
       <ProjectIntroCard
         image={getImagePath("images/projects/mc-1.png")}
-        title="Digitizing Employee Evaluations for Field Operations"
-        showGradient={false}
+        title="Digitizing Employee Evaluations for a McDonald’s Franchise"
       >
         <p className="text-gray-300 leading-relaxed">
-          TuPlanRedondo was developed for a McDonald’s franchise through
-          XpuntoCero. The client needed to modernize its employee evaluation
-          process, which was still handled manually with paper forms — slow,
-          error-prone, and hard to track. After discussing different options, I
-          recommended a Progressive Web App as the most practical and
-          cost-effective solution: fast to deploy, simple to access, and usable
-          on any device without installation.
+          A McDonald’s franchise needed to replace its manual evaluation forms
+          with a centralized digital solution. While working at
         </p>
 
         <p className="text-gray-300 leading-relaxed">
-          I designed and built the full product — from research and UI design to
-          front-end development. Field managers could now run evaluations
-          directly from their browser and access real-time dashboards instantly.
-          The result:
-          <span className="text-white font-semibold"> 30%</span> faster
-          evaluations,
-          <span className="text-white font-semibold"> 25%</span> higher
-          satisfaction, and{" "}
-          <span className="text-white font-semibold"> 45%</span> lower
-          development cost compared to native apps.
+          While working at XpuntoCero, I led the project from user research to
+          interface design and front-end development, delivering a lightweight
+          Progressive Web App (PWA) that runs on any device without
+          installation.
+        </p>
+
+        <p className="text-gray-300 leading-relaxed">
+          The app streamlined how supervisors evaluated team performance, synced
+          results in real time, and gave management a live dashboard to track
+          data across locations — all at a fraction of the cost of a native app.
         </p>
       </ProjectIntroCard>
 
@@ -196,10 +226,10 @@ export default function TuPlanRedondo() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <OverviewCard icon={AlertCircle} title="The Challenge">
-              Manual, paper-based evaluations slowed daily operations and caused
-              frequent data errors. <br /> The franchise needed a lightweight
-              digital solution that worked on any device and didn’t require app
-              store downloads or complex IT setup.
+              Manual, paper-based evaluations across the franchise’s restaurants
+              slowed daily operations and often led to data errors.
+              <br /> The client needed a simple digital solution that worked on
+              any device.
             </OverviewCard>
 
             <OverviewCard icon={User} title="My Role">
@@ -207,9 +237,18 @@ export default function TuPlanRedondo() {
                 Product Designer &amp; Front-End Developer
               </p>
               <ul className="space-y-1">
-                <li>• Led user research and usability testing</li>
-                <li>• Designed UI, icons, and visual language</li>
-                <li>• Built the front-end as a Progressive Web App</li>
+                <li>
+                  • Led user interviews, affinity mapping, and usability testing
+                </li>
+                <li>• Designed all wireframes, mockups, and icons in Figma</li>
+                <li>
+                  • Built the PWA front-end for tablets, laptops, and
+                  smartphones
+                </li>
+                <li>
+                  • Delivered a cost-effective digital solution that cut
+                  delivery costs by 45%
+                </li>
               </ul>
             </OverviewCard>
 
@@ -307,20 +346,19 @@ export default function TuPlanRedondo() {
         images={[
           {
             src: getImagePath("images/projects/mc-2.png"),
-            alt: "Design system and user flow documentation",
+            alt: "Different profiles of the PWA",
           },
           {
             src: getImagePath("images/projects/mc-3.png"),
-            alt: "Mobile evaluation interface and dashboard",
+            alt: "Mobile first design",
           },
           {
             src: getImagePath("images/projects/mc-4.png"),
-            alt: "PWA architecture - standalone and browser modes",
+            alt: "Different screens of the PWA",
           },
         ]}
       />
 
-      {/* Section 1: Business Context */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-start gap-6 mb-8">
@@ -333,38 +371,36 @@ export default function TuPlanRedondo() {
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-4">
-            <p className="text-gray-300 leading-relaxed">
-              The McDonald's franchise operated multiple restaurant locations
-              and needed a scalable way to conduct employee performance
-              evaluations. The existing process relied on paper forms that
-              managers filled out during shift observations, then manually
-              transferred to spreadsheets for reporting. This workflow was slow,
-              prone to transcription errors, and provided no real-time
-              visibility into performance trends.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              Management wanted a digital solution but faced constraints: field
-              evaluators used a mix of personal and company devices (tablets,
-              smartphones, laptops), IT resources were limited, and app store
-              approval/installation processes were seen as too complex and slow.
-              The franchise needed a tool that "just worked" without requiring
-              users to download anything or IT teams to manage device
-              configurations.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              Additionally, the solution needed to work reliably in environments
-              with poor connectivity-restaurant back-of-house areas, parking
-              lots during outdoor evaluations, and remote locations with limited
-              cellular coverage. Data capture failures due to network issues
-              were unacceptable, as evaluators couldn't return to re-observe
-              employee performance.
-            </p>
+
+          <div className="pl-0 md:pl-24">
+            <GlassCard>
+              <div className="p-6 space-y-4">
+                <p className="text-gray-300 leading-relaxed">
+                  The McDonald’s franchise approached requesting a mobile
+                  application to digitalize employee evaluations and track
+                  performance across its restaurants. The existing process
+                  relied on printed forms and manual data entry, which made
+                  reporting slow, fragmented, and prone to errors.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Managers wanted a simple tool to collect evaluations, review
+                  results, and monitor staff performance more efficiently. The
+                  priority was to eliminate paperwork and centralize all data in
+                  a single digital system accessible during daily operations in
+                  each restaurant.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  They initially asked for a native app, but after mapping their
+                  environment, we realized a PWA would solve the same problem
+                  faster, cheaper, and without app-store friction.
+                </p>
+              </div>
+            </GlassCard>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Research & Problem Definition */}
+      {/* 02: Research & Definition */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-start gap-6 mb-8">
@@ -373,118 +409,98 @@ export default function TuPlanRedondo() {
             </div>
             <div className="flex-1 pt-2">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Research & Problem Definition
+                Research & Definition
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-6">
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  User Research Process
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I conducted comprehensive research to understand both
-                  evaluator workflows and management reporting needs, combining
-                  qualitative interviews with iterative usability testing.
-                </p>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Desk research:</strong> Analyzed existing paper
-                      forms and spreadsheet workflows
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>5 user interviews:</strong> Field evaluators and
-                      restaurant managers to understand pain points
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Affinity mapping:</strong> Synthesized insights
-                      into themes around efficiency, accuracy, and reporting
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Personas:</strong> Developed profiles for field
-                      evaluators and franchise managers
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Journey mapping:</strong> Documented end-to-end
-                      evaluation and reporting workflows
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>10 usability tests:</strong> Iterative testing
-                      validated design decisions and interaction patterns
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Key Findings
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Research revealed critical pain points that shaped the product
-                  requirements and design approach.
-                </p>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Time waste:</strong> Managers spent 30-40 minutes
-                      per evaluation between observation, paper completion, and
-                      data entry
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Transcription errors:</strong> Manual data entry
-                      from paper to spreadsheets introduced mistakes
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Delayed insights:</strong> Weeks passed before
-                      management could see performance trends
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>App friction:</strong> Users strongly resisted
-                      downloading apps due to device storage concerns
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Connectivity issues:</strong> Evaluators
-                      frequently experienced network failures during data
-                      submission
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
+          <div className="pl-0 md:pl-24 space-y-8">
+            {/* --- User Research Process --- */}
+
+            <ImageTextCard
+              title="  User Research Processs"
+              description="I conducted comprehensive research to understand both evaluator workflows and management reporting needs, combining qualitative interviews with iterative usability testing."
+              bulletPoints={[
+                {
+                  label: "Desk research",
+                  text: "Analyzed existing paper forms and spreadsheet workflows.",
+                },
+                {
+                  label: "5 user interviews",
+                  text: "Field administrator/crew/supervisors to understand pain points.",
+                },
+                {
+                  label: "Affinity mapping",
+                  text: "Synthesized insights into themes around efficiency, accuracy, and reporting.",
+                },
+                {
+                  label: "Personas",
+                  text: "Developed profiles for field administrator/crew/supervisors.",
+                },
+                {
+                  label: "Journey mapping",
+                  text: "Documented end-to-end evaluation and reporting workflows.",
+                },
+                {
+                  label: "10 usability tests",
+                  text: "Iterative testing validated design decisions and interaction patterns.",
+                },
+              ]}
+              images={[
+                {
+                  src: getImagePath(
+                    "images/projects/mc-userflowEvol_Difprofiles.png"
+                  ),
+                  alt: "User flow boards showing administrator/restaurant manager/supervisors/crew paths",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
+
+            {/* --- Key Findings --- */}
+
+            <ImageTextCard
+              title="Key Findings"
+              description="Research revealed critical pain points that shaped the product requirements and guided the design approach."
+              bulletPoints={[
+                {
+                  label: "Time waste",
+                  text: "Selects restaurants, reviews reports, manages global data.",
+                },
+                {
+                  label: "Transcription errors",
+                  text: "Manual data entry from paper to spreadsheets introduced mistakes.",
+                },
+                {
+                  label: "Delayed insights",
+                  text: "Weeks passed before management could see performance trends.",
+                },
+                {
+                  label: "App friction",
+                  text: "Users strongly resisted downloading apps due to privacy concern.",
+                },
+
+                {
+                  label: "Connectivity",
+                  text: "no iusse with Connectivity",
+                },
+                {
+                  label: "User types",
+                  text: "Administrator, restaurant manager, supervisor and crew members under one streamlined workflow.",
+                },
+              ]}
+              images={[
+                {
+                  src: getImagePath("images/projects/mc-painPoints.png"),
+                  alt: "Pain points in product development",
+                },
+              ]}
+              imagePosition="right"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
           </div>
         </div>
       </section>
@@ -508,7 +524,9 @@ export default function TuPlanRedondo() {
         </div>
       </section>
 
-      {/* Section 4: Design Solution */}
+      {/* =========================
+      04 · DESIGN & IMPLEMENTATION[])
+      ========================= */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-start gap-6 mb-8">
@@ -517,295 +535,115 @@ export default function TuPlanRedondo() {
             </div>
             <div className="flex-1 pt-2">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Design & Development Solution
+                Design & Implementation
               </h2>
             </div>
           </div>
-          <div className="pl-0 md:pl-24 space-y-6">
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Progressive Web App Architecture
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Built as a PWA using HTML5, Bootstrap 4, CSS3, and JavaScript
-                  with service workers for offline functionality. Users access
-                  the app through any browser-no installation required-but can
-                  optionally "install" it for a native-like home screen
-                  experience.
-                </p>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Browser mode:</strong> Instant access via URL, no
-                      friction
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Standalone mode:</strong> Optional home screen
-                      install for native app feel
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Offline-first:</strong> Service workers cache UI
-                      and queue data for background sync
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      <strong>Responsive design:</strong> Single codebase works
-                      on tablets, phones, and laptops
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Streamlined Evaluation Interface
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Designed evaluation forms to match the mental model of paper
-                  workflows while leveraging digital affordances. Visual
-                  indicators (thumbs up/down, color coding) enabled fast data
-                  entry during observations.
-                </p>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Employee selection with avatar-based visual identification
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Quick-tap approval/rejection for common criteria (food
-                      safety, cleanliness, appearance)
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      McDonald's brand colors (green = approved, red = needs
-                      improvement) for instant recognition
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Auto-save functionality ensured no data loss if evaluators
-                      were interrupted
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
+          <div className="pl-0 md:pl-24 space-y-8">
+            {/* 1) Brand-Aligned Visual Design */}
+            <ImageTextCard
+              title="Brand-Aligned Visual Design"
+              description="Created all icons and visual elements to align with McDonald’s brand guidelines while maintaining clarity and usability. The design balances brand recognition with functional requirements."
+              bulletPoints={[
+                {
+                  label: "Employee selection",
+                  text: "Avatar-based visual identification",
+                },
+                {
+                  label: "Quick-tap input",
+                  text: "Approval/rejection for criteria like food safety, cleanliness, and appearance",
+                },
+                {
+                  label: "Color coding",
+                  text: "McDonald’s brand colors (green = approved, red = needs improvement) for instant recognition",
+                },
+                {
+                  label: "Autosave",
+                  text: "Prevents data loss if evaluators are interrupted",
+                },
+              ]}
+              images={[
+                // replace with your real screenshots
+                {
+                  src: getImagePath(
+                    "images/projects/mc-iconsVisualElements.png"
+                  ),
+                  alt: "Brand-aligned components and icons",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Real-Time Management Dashboard
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Built an analytics dashboard that gave franchise management
-                  instant visibility into evaluation results. Data synced
-                  automatically as evaluators submitted assessments, eliminating
-                  the weeks-long delay of manual reporting.
-                </p>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Performance trends by employee, restaurant, and evaluation
-                      category
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>Visual charts showing approval rates over time</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Drill-down capability to view individual evaluation
-                      details
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Role-based access: managers see all data, evaluators only
-                      see their submissions
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
+            {/* 2) Streamlined Evaluation Interface */}
+            <ImageTextCard
+              title="Streamlined Evaluation Interface"
+              description="Designed evaluation forms to match the mental model of paper workflows while leveraging digital affordances. Visual indicators (thumbs up/down, color coding) enable fast data entry during observations."
+              bulletPoints={[
+                {
+                  label: "Employee selection",
+                  text: "Avatar-based visual identification",
+                },
+                {
+                  label: "Quick-tap input",
+                  text: "Approval/rejection for criteria like food safety, cleanliness, and appearance",
+                },
+                {
+                  label: "Color coding",
+                  text: "McDonald’s brand colors (green = approved, red = needs improvement) for instant recognition",
+                },
+                {
+                  label: "Autosave",
+                  text: "Prevents data loss if evaluators are interrupted",
+                },
+              ]}
+              images={[
+                // replace with your real screenshots
+                {
+                  src: getImagePath(
+                    "images/projects/mc-userflowEvol-restaurantManager.png"
+                  ),
+                  alt: "Mockup of evaluation flow of general restaurant manager",
+                },
+              ]}
+              imagePosition="right"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
 
-            <GlassCard>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Brand-Aligned Visual Design
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Created all icons and visual elements to align with McDonald's
-                  brand guidelines while maintaining clarity and usability. The
-                  design balanced brand recognition with functional
-                  requirements.
-                </p>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      McDonald's golden arches and brand colors throughout the
-                      interface
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Custom icons for evaluation categories matching McDonald's
-                      visual language
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Clean, professional typography appropriate for franchise
-                      operations
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>
-                      Consistent spacing and layout following Bootstrap's
-                      responsive grid system
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </GlassCard>
-          </div>
-        </div>
-      </section>
-
-      {/* Research Workflow Table */}
-      <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-start gap-6 mb-8">
-            <div className="text-6xl font-bold text-blue-400 opacity-20">
-              05
-            </div>
-            <div className="flex-1 pt-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Development & Delivery
-              </h2>
-            </div>
-          </div>
-          <div className="pl-0 md:pl-24">
-            <GlassCard>
-              <div className="p-6">
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  As the sole designer and front-end developer, I owned the
-                  entire product lifecycle from research through production
-                  deployment. The project followed an iterative process with
-                  continuous user feedback.
-                </p>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left">
-                    <thead>
-                      <tr className="border-b border-gray-700">
-                        <th className="pb-4 pr-4 text-blue-400 font-semibold">
-                          Phase
-                        </th>
-                        <th className="pb-4 pr-4 text-blue-400 font-semibold">
-                          Activities
-                        </th>
-                        <th className="pb-4 pr-4 text-blue-400 font-semibold">
-                          Purpose
-                        </th>
-                        <th className="pb-4 text-blue-400 font-semibold">
-                          Deliverables
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-gray-300">
-                      <tr className="border-b border-gray-800">
-                        <td className="py-4 pr-4">Research</td>
-                        <td className="py-4 pr-4">
-                          Desk research, 5 interviews, affinity mapping,
-                          personas
-                        </td>
-                        <td className="py-4 pr-4">
-                          Understand workflows, pain points, and requirements
-                        </td>
-                        <td className="py-4">
-                          Research findings, user personas, journey maps
-                        </td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-4 pr-4">Design</td>
-                        <td className="py-4 pr-4">
-                          Wireframes, mockups, visual design system
-                        </td>
-                        <td className="py-4 pr-4">
-                          Define UI patterns and user flows
-                        </td>
-                        <td className="py-4">
-                          Figma prototypes, icon library, component specs
-                        </td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-4 pr-4">Validate</td>
-                        <td className="py-4 pr-4">
-                          10 usability tests with evaluators and managers
-                        </td>
-                        <td className="py-4 pr-4">
-                          Verify usability and gather feedback
-                        </td>
-                        <td className="py-4">
-                          Usability findings, design refinements
-                        </td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-4 pr-4">Build</td>
-                        <td className="py-4 pr-4">
-                          HTML5, Bootstrap 4, JavaScript, PWA features
-                        </td>
-                        <td className="py-4 pr-4">
-                          Develop responsive, offline-capable web app
-                        </td>
-                        <td className="py-4">
-                          Working PWA with evaluation and dashboard modules
-                        </td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-4 pr-4">Deploy</td>
-                        <td className="py-4 pr-4">
-                          Hosting setup, SSL configuration, user training
-                        </td>
-                        <td className="py-4 pr-4">
-                          Launch to franchise locations
-                        </td>
-                        <td className="py-4">
-                          Production app, training documentation
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </GlassCard>
+            {/* 3) Performance Evaluation */}
+            <ImageTextCard
+              title="Performance Evaluation"
+              description="Managers select a worker and score core McDonald’s service metrics with quick taps. Visual fries icons make scoring unambiguous during fast service."
+              bulletPoints={[
+                {
+                  label: "Core metrics",
+                  text: "CLS (Quality | Service | Cleanliness) · Attitude · Appearance",
+                },
+                {
+                  label: "Fast input",
+                  text: "Green/red fries icons for quick, intuitive scoring",
+                },
+                {
+                  label: "Autosave",
+                  text: "No data loss if an evaluation is interrupted",
+                },
+              ]}
+              images={[
+                // replace with your real screenshots
+                {
+                  src: getImagePath(
+                    "images/projects/mc-PerformanceEvaluation.png"
+                  ),
+                  alt: "PWA screenshoot of pervormance evaluation page",
+                },
+              ]}
+              imagePosition="left"
+              onOpenGallery={openGallery}
+              additionalText=""
+            />
           </div>
         </div>
       </section>
@@ -815,7 +653,7 @@ export default function TuPlanRedondo() {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-start gap-6 mb-8">
             <div className="text-6xl font-bold text-blue-400 opacity-20">
-              06
+              05
             </div>
             <div className="flex-1 pt-2">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -835,24 +673,20 @@ export default function TuPlanRedondo() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Operational Efficiency
+                    Operational Efficiency & User Experience
                   </h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>
                       <strong>30% time savings:</strong> Evaluations that took
-                      30-40 minutes now complete in 20-25 minutes
+                      30-40 minutes now complete in 20-25 minutes.
                     </li>
                     <li>
                       <strong>Eliminated data entry:</strong> Zero manual
-                      transcription from paper to spreadsheets
+                      transcription from paper to spreadsheets.
                     </li>
                     <li>
-                      <strong>Real-time insights:</strong> Management sees
-                      performance data instantly instead of weeks later
-                    </li>
-                    <li>
-                      <strong>100% data reliability:</strong> Offline-first
-                      architecture prevented data loss from connectivity issues
+                      <strong>25% satisfaction increase:</strong> managers
+                      praised simplicity and speed.
                     </li>
                   </ul>
                 </div>
@@ -861,24 +695,26 @@ export default function TuPlanRedondo() {
               <GlassCard>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                    Cost & User Experience
+                    Cost
                   </h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>
-                      <strong>30% cost reduction:</strong> PWA development
-                      cheaper than native iOS + Android apps
-                    </li>
-                    <li>
-                      <strong>Zero installation friction:</strong> Users access
-                      via browser without app store approval delays
-                    </li>
-                    <li>
-                      <strong>25% satisfaction increase:</strong> Evaluators and
-                      managers praised simplicity and speed
+                      <strong>45% cost reduction:</strong> PWA development
+                      cheaper than native iOS + Android apps.
                     </li>
                     <li>
                       <strong>Cross-device compatibility:</strong> Single
-                      codebase works on tablets, phones, and laptops
+                      codebase works on tablets, phones, and laptops.
+                    </li>
+                    <li>
+                      <strong>Zero update friction:</strong> Directly ralise, no
+                      app store approval delays.
+                    </li>
+
+                    <li>
+                      <strong>Zero installation friction:</strong> Users access
+                      via browser or they cand add to Home screen without app
+                      store, without use the device memory.
                     </li>
                   </ul>
                 </div>
@@ -898,9 +734,9 @@ export default function TuPlanRedondo() {
                 Want to see more work?
               </h2>
               <p className="text-[#cbd5e1] mb-8 max-w-2xl mx-auto">
-                This case study demonstrates how research-driven design,
-                cohesive branding, and performant technical implementation
-                create measurable business impact.
+                This project demonstrates how research-driven design, cohesive
+                branding, and performant technical implementation create
+                measurable business impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -920,6 +756,65 @@ export default function TuPlanRedondo() {
           </GlassCard>
         </div>
       </section>
+
+      {/* Image Gallery Modal */}
+      {isImageModalOpen && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeImageModal}
+        >
+          <button
+            onClick={closeImageModal}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+          >
+            <X size={32} />
+          </button>
+
+          {galleryImages.length > 1 && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  previousImage();
+                }}
+                className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3"
+              >
+                <ArrowLeft size={32} />
+              </button>
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextImage();
+                }}
+                className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3"
+              >
+                <ArrowLeft size={32} className="rotate-180" />
+              </button>
+
+              <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+                {currentImageIndex + 1} / {galleryImages.length}
+              </div>
+            </>
+          )}
+
+          <div
+            className="flex flex-col items-center max-w-full max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={modalImageSrc}
+              alt="Enlarged view"
+              className="max-w-full max-h-[85vh] object-contain"
+            />
+            {galleryImages.length > 0 && galleryImages[currentImageIndex] && (
+              <p className="text-white text-center mt-4 px-8 py-3 bg-black/70 rounded-lg max-w-3xl">
+                {galleryImages[currentImageIndex].alt}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

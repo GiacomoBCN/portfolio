@@ -686,7 +686,7 @@ export default function OnlineBackOfficeCaseStudy() {
                   Want to see more work?
                 </h2>
                 <p className="text-[#cbd5e1] mb-8 max-w-2xl mx-auto">
-                  This case study shows how a design‑led front‑end refactor can
+                  This project shows how a design‑led front‑end refactor can
                   unlock scale and lower costs across a legacy estate.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
